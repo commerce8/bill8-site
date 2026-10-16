@@ -18,7 +18,10 @@ Sentin8:Dash with zero compile-time coupling.
 - **Vertical admin scopes** — runtime-registered at enrollment
   (`admin_scopes`), never hardcoded in the platform.
 
-## Deep dive
+## Full documentation
 
-[Admin reference](/docs/reference/admin/) — harvested from
-`commerce8/bill8-admin`.
+The complete detail lives in this product's sub-pages:
+
+- [Security](security) — the full document, harvested from the unit's repository at build time.
+- [Overview (repo README)](/docs/reference/admin/) — the maintainer's README in the consolidated reference section.
+

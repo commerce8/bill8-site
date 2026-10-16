@@ -17,7 +17,10 @@ everything the merchant needs to run their commerce operation.
 - **RFW-native** — the merchant-facing surfaces ride the vertical's
   admin definitions where applicable.
 
-## Deep dive
+## Full documentation
 
-[Merchant reference](/docs/reference/merchant/) — README, DESIGN,
-BUSINESS harvested from `commerce8/bill8-merchant`.
+The complete detail lives in this product's sub-pages:
+
+- [Security](security) — the full document, harvested from the unit's repository at build time.
+- [Overview (repo README)](/docs/reference/merchant/) — the maintainer's README in the consolidated reference section.
+

@@ -22,7 +22,12 @@ queue adjudicates the gray zone.
 - **Rule authoring** — rules are data; a merchant's fraud team
   tunes the rule set without a release.
 
-## Deep dive
+## Full documentation
 
-[Risk reference](/docs/reference/risk/) — harvested from
-`commerce8/bill8-risk`.
+The complete detail lives in this product's sub-pages:
+
+- [Architecture (DDD)](design) — the full document, harvested from the unit's repository at build time.
+- [Business rules (BRD)](business) — the full document, harvested from the unit's repository at build time.
+- [Security](security) — the full document, harvested from the unit's repository at build time.
+- [Overview (repo README)](/docs/reference/risk/) — the maintainer's README in the consolidated reference section.
+

@@ -20,7 +20,12 @@ deterministically.
 - **Coupons & credits** — promotional pricing and account credits
   apply through the same deterministic rules as list prices.
 
-## Deep dive
+## Full documentation
 
-[Billing reference](/docs/reference/billing/) — harvested from
-`commerce8/bill8-billing`.
+The complete detail lives in this product's sub-pages:
+
+- [Architecture (DDD)](design) — the full document, harvested from the unit's repository at build time.
+- [Business rules (BRD)](business) — the full document, harvested from the unit's repository at build time.
+- [Security](security) — the full document, harvested from the unit's repository at build time.
+- [Overview (repo README)](/docs/reference/billing/) — the maintainer's README in the consolidated reference section.
+

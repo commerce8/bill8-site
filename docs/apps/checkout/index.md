@@ -17,7 +17,10 @@ payer needs, nothing else.
 - **Fail-closed bootstrap** — unknown host or missing runtime
   context renders the error scaffold.
 
-## Deep dive
+## Full documentation
 
-[Checkout reference](/docs/reference/checkout/) — harvested from
-`commerce8/bill8-checkout`.
+The complete detail lives in this product's sub-pages:
+
+- [Security](security) — the full document, harvested from the unit's repository at build time.
+- [Overview (repo README)](/docs/reference/checkout/) — the maintainer's README in the consolidated reference section.
+

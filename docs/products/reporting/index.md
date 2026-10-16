@@ -17,7 +17,12 @@ storage — the merchant's analytics window into their money.
 - **Scheduled delivery** — recurring reports ride the platform's
   declarative schedule registration (Sentin8:Cron proxy-back).
 
-## Deep dive
+## Full documentation
 
-[Reporting reference](/docs/reference/reporting/) — harvested from
-`commerce8/bill8-reporting`.
+The complete detail lives in this product's sub-pages:
+
+- [Architecture (DDD)](design) — the full document, harvested from the unit's repository at build time.
+- [Business rules (BRD)](business) — the full document, harvested from the unit's repository at build time.
+- [Security](security) — the full document, harvested from the unit's repository at build time.
+- [Overview (repo README)](/docs/reference/reporting/) — the maintainer's README in the consolidated reference section.
+

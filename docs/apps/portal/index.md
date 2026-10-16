@@ -16,7 +16,10 @@ methods, and history — self-service without a support ticket.
 - **Payment method management** — add/remove methods; card data
   passes to the delegated rail, never stored in the portal's tables.
 
-## Deep dive
+## Full documentation
 
-[Portal reference](/docs/reference/portal/) — harvested from
-`commerce8/bill8-portal`.
+The complete detail lives in this product's sub-pages:
+
+- [Security](security) — the full document, harvested from the unit's repository at build time.
+- [Overview (repo README)](/docs/reference/portal/) — the maintainer's README in the consolidated reference section.
+

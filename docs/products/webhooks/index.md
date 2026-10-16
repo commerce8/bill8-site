@@ -22,7 +22,12 @@ never miss an event silently.
 - **Delivery history** — every attempt is visible with response
   codes; debugging an integration is a query, not a support ticket.
 
-## Deep dive
+## Full documentation
 
-[Webhooks reference](/docs/reference/webhooks/) — harvested from
-`commerce8/bill8-webhooks`.
+The complete detail lives in this product's sub-pages:
+
+- [Architecture (DDD)](design) — the full document, harvested from the unit's repository at build time.
+- [Business rules (BRD)](business) — the full document, harvested from the unit's repository at build time.
+- [Security](security) — the full document, harvested from the unit's repository at build time.
+- [Overview (repo README)](/docs/reference/webhooks/) — the maintainer's README in the consolidated reference section.
+

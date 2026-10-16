@@ -21,7 +21,12 @@ delegated to [Bank8:Payments](https://bank8.dev/docs/products/payments/)).
 - **Screened before money moves** — every charge passes Bill8:Risk
   before the rail call (see [Risk](/docs/products/risk)).
 
-## Deep dive
+## Full documentation
 
-[Payments reference](/docs/reference/payments/) — README, DESIGN,
-BUSINESS harvested from `commerce8/bill8-payments`.
+The complete detail lives in this product's sub-pages:
+
+- [Architecture (DDD)](design) — the full document, harvested from the unit's repository at build time.
+- [Business rules (BRD)](business) — the full document, harvested from the unit's repository at build time.
+- [Security](security) — the full document, harvested from the unit's repository at build time.
+- [Overview (repo README)](/docs/reference/payments/) — the maintainer's README in the consolidated reference section.
+

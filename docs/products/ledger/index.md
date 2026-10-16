@@ -21,7 +21,12 @@ moves money by asking it to post — nothing shadow-writes.
 - **Event-sourced** — balances rebuild from the posting stream; the
   books are replayable, never a mystery.
 
-## Deep dive
+## Full documentation
 
-[Ledger reference](/docs/reference/ledger/) — harvested from
-`commerce8/bill8-ledger`.
+The complete detail lives in this product's sub-pages:
+
+- [Architecture (DDD)](design) — the full document, harvested from the unit's repository at build time.
+- [Business rules (BRD)](business) — the full document, harvested from the unit's repository at build time.
+- [Security](security) — the full document, harvested from the unit's repository at build time.
+- [Overview (repo README)](/docs/reference/ledger/) — the maintainer's README in the consolidated reference section.
+

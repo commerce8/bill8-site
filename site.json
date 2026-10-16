@@ -3,29 +3,29 @@
   "name": "Bill8",
   "org": "commerce8",
   "domain": "bill8.dev",
-  "tagline": "Billing and payments on Sentin8 — merchants, checkout, recurring billing, a double-entry money engine, webhooks, fraud screening, and reporting as one commerce vertical.",
+  "tagline": "Billing and payments on Sentin8 - merchants, checkout, recurring billing, a double-entry money engine, webhooks, fraud screening, and reporting as one commerce vertical.",
   "accent": "#7B4FBF",
-  "pillarsLead": "Bill8 inherits the Sentin8 security model and adds commerce guarantees — one money authority, screened charges, and signed webhook delivery.",
+  "pillarsLead": "Bill8 inherits the Sentin8 security model and adds commerce guarantees - one money authority, screened charges, and signed webhook delivery.",
   "pillars": [
     {
       "title": "One money authority",
-      "summary": "Bill8:Ledger is the single authority that mutates balances; every other service moves money by asking it to post — nothing shadow-writes."
+      "summary": "Bill8:Ledger is the single authority that mutates balances; every other service moves money by asking it to post - nothing shadow-writes."
     },
     {
       "title": "Screened before money moves",
-      "summary": "Risk screens every charge through declarative rules and velocity checks before the payment path — fraud prevention is a gate, not a report."
+      "summary": "Risk screens every charge through declarative rules and velocity checks before the payment path - fraud prevention is a gate, not a report."
     },
     {
       "title": "Signed, retried webhooks",
-      "summary": "Every outbound webhook is signed, persisted, and delivered with retries — merchants never miss an event silently."
+      "summary": "Every outbound webhook is signed, persisted, and delivered with retries - merchants never miss an event silently."
     },
     {
       "title": "Recurring revenue with proration",
-      "summary": "Billing owns the product/price catalog, subscriptions with proration, per-cycle invoices, and metered usage — upgrades never lose a cent."
+      "summary": "Billing owns the product/price catalog, subscriptions with proration, per-cycle invoices, and metered usage - upgrades never lose a cent."
     },
     {
       "title": "Payments delegated once",
-      "summary": "The charge lifecycle (intent → authorize → capture → settle → refund → dispute) rides Bank8:Payment rails — bill8 never re-implements a rail."
+      "summary": "The charge lifecycle (intent → authorize → capture → settle → refund → dispute) rides Bank8:Payment rails - bill8 never re-implements a rail."
     }
   ],
   "units": [
@@ -35,7 +35,7 @@
       "name": "Bill8:Payments",
       "repo": "bill8-payments",
       "org": "commerce8",
-      "summary": "The charge lifecycle: from a payment intent through authorization, capture, and settlement to refund and dispute — routed through selectable payment rails.",
+      "summary": "The charge lifecycle: from a payment intent through authorization, capture, and settlement to refund and dispute - routed through selectable payment rails.",
       "scopes": [
         "bill8:payments:charges:write",
         "bill8:payments:refunds:write"
@@ -59,7 +59,7 @@
       "name": "Bill8:Ledger",
       "repo": "bill8-ledger",
       "org": "commerce8",
-      "summary": "The money engine: every money position and movement in the bill8 vertical — the single authority that mutates balances; others post through it.",
+      "summary": "The money engine: every money position and movement in the bill8 vertical - the single authority that mutates balances; others post through it.",
       "scopes": [
         "bill8:ledger:entries:write",
         "bill8:ledger:balances:read"
@@ -143,19 +143,19 @@
       "name": "bill8 Rust SDK",
       "repo": "bill8-sdk",
       "org": "commerce8",
-      "summary": "The unified namespace facade (bill8::payments::…, bill8:billing::…) over the contracts crates — the typed integration surface for every bill8 API.",
+      "summary": "The unified namespace facade (bill8::payments::…, bill8:billing::…) over the contracts crates - the typed integration surface for every bill8 API.",
       "href": "/docs/sdk/"
     }
   ],
   "showcaseTitle": "Built on the Sentin8 platform",
-  "showcaseLead": "Bill8 contains no platform infrastructure of its own — identity, events, storage, scheduling, and money movement are delegated.",
+  "showcaseLead": "Bill8 contains no platform infrastructure of its own - identity, events, storage, scheduling, and money movement are delegated.",
   "showcase": [
     {
       "slug": "sentin8",
-      "name": "Sentin8 — the platform",
+      "name": "Sentin8 - the platform",
       "chip": "sentin8.dev",
       "accent": "#D4AF37",
-      "summary": "17 services: identity, events, storage, workflows, scheduling — everything bill8 doesn't rebuild.",
+      "summary": "17 services: identity, events, storage, workflows, scheduling - everything bill8 doesn't rebuild.",
       "href": "https://sentin8.dev/"
     },
     {
@@ -163,7 +163,7 @@
       "name": "Bank8",
       "chip": "bank8.dev",
       "accent": "#1B6CA8",
-      "summary": "Bill8 settlement rides Bank8:Payments — the commerce vertical delegates the rails.",
+      "summary": "Bill8 settlement rides Bank8:Payments - the commerce vertical delegates the rails.",
       "href": "https://bank8.dev/"
     }
   ],

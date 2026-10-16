@@ -1,11 +1,11 @@
 ---
-title: "Bill8:Reporting — Architecture (DDD)"
+title: "Bill8:Reporting - Architecture (DDD)"
 sidebar_label: "Architecture (DDD)"
 mdx:
   format: md
 custom_edit_url: https://github.com/commerce8/bill8-reporting/edit/main/DESIGN.md
 ---
-# Bill8:Reporting — Detailed Design Document
+# Bill8:Reporting - Detailed Design Document
 
 ## 1. Scope & Context
 
@@ -82,7 +82,7 @@ stateDiagram-v2
 |---|---|---|---|
 | Report types | `/v1/report-types` | `bill8:reporting:types:{read,write}` | `report_type:created` |
 | Report runs | `/v1/report-runs` | `bill8:reporting:runs:{read,write}` | `report_run:created/succeeded/failed` |
-| Internal | `/v1/internal/*` | M2M | — |
+| Internal | `/v1/internal/*` | M2M | - |
 
 ## 5. Cross-Cutting Concerns
 
@@ -116,8 +116,8 @@ flowchart TD
 
 ```mermaid
 graph TD
-    U["Unit — aggregation, period bucketing"] --> I["Integration — DB-backed run suites"]
-    I --> E["E2E — e2e-ts UI + BFF proxy only"]
+    U["Unit - aggregation, period bucketing"] --> I["Integration - DB-backed run suites"]
+    I --> E["E2E - e2e-ts UI + BFF proxy only"]
 ```
 
 ## 10. Open Questions

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Samples
 
-First calls against a running bill8 deployment — through the BFF
+First calls against a running bill8 deployment - through the BFF
 proxy, from cURL and Dart.
 
 ## 1. Create a payment intent (checkout flow)
@@ -52,7 +52,7 @@ sig=$(openssl dgst -sha256 -hmac "$WEBHOOK_SECRET" <<< "$payload" | awk '{print 
 # compare against the delivery's X-Bill8-Signature header
 ```
 
-Every delivery retries with backoff until acknowledged — missed
+Every delivery retries with backoff until acknowledged - missed
 events dead-letter for replay from the merchant dashboard.
 
 ## 4. From Dart (the Checkout pattern)
@@ -79,5 +79,5 @@ let charge = payments_client
     .await?;
 ```
 
-The client rides the platform's certificate-presenting transport —
+The client rides the platform's certificate-presenting transport -
 no static secret to leak.

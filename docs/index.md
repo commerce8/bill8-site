@@ -2,11 +2,11 @@
 sidebar_position: 1
 ---
 
-# Bill8 — the commerce vertical
+# Bill8 - the commerce vertical
 
 Bill8 is billing and payments for platforms on Sentin8: merchants,
 checkout, recurring billing, a double-entry money engine, signed
-webhooks, fraud screening, and reporting — six Rust services, four
+webhooks, fraud screening, and reporting - six Rust services, four
 Flutter apps, and a unified Rust SDK. Money movement is delegated to
 [Bank8:Payments](https://bank8.dev/docs/products/payments/); bill8
 owns the commerce domain.
@@ -40,11 +40,11 @@ graph TD
 
 | Product | Role |
 |---|---|
-| [Payments](/docs/products/payments) | the charge lifecycle — intent to dispute |
-| [Billing](/docs/products/billing) | recurring revenue — subscriptions, invoices, metering |
-| [Ledger](/docs/products/ledger) | the money engine — one balance authority |
+| [Payments](/docs/products/payments) | the charge lifecycle - intent to dispute |
+| [Billing](/docs/products/billing) | recurring revenue - subscriptions, invoices, metering |
+| [Ledger](/docs/products/ledger) | the money engine - one balance authority |
 | [Webhooks](/docs/products/webhooks) | signed outbound event delivery |
-| [Risk](/docs/products/risk) | fraud screening — rules, velocity, review queue |
+| [Risk](/docs/products/risk) | fraud screening - rules, velocity, review queue |
 | [Reporting](/docs/products/reporting) | report types, runs, scheduled delivery |
 
 ## Security

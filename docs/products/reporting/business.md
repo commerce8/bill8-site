@@ -1,11 +1,11 @@
 ---
-title: "Bill8:Reporting — Business rules (BRD)"
+title: "Bill8:Reporting - Business rules (BRD)"
 sidebar_label: "Business rules (BRD)"
 mdx:
   format: md
 custom_edit_url: https://github.com/commerce8/bill8-reporting/edit/main/BUSINESS.md
 ---
-# Bill8:Reporting — Business Requirements & Functionality
+# Bill8:Reporting - Business Requirements & Functionality
 
 > Audience: product owners, business analysts, and anyone evaluating what
 > Bill8:Reporting **does for the business**. For architecture read
@@ -15,9 +15,9 @@ custom_edit_url: https://github.com/commerce8/bill8-reporting/edit/main/BUSINESS
 
 Bill8:Reporting is the **reporting surface**. It delivers:
 
-- **Consistent reports** — report types define a query shape, and runs
+- **Consistent reports** - report types define a query shape, and runs
   snapshot data at a point in time.
-- **Scheduled delivery** — scheduled reports deliver output files.
+- **Scheduled delivery** - scheduled reports deliver output files.
 
 ## 2. Business Scope (What the Service Provides)
 

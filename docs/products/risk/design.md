@@ -1,11 +1,11 @@
 ---
-title: "Bill8:Risk — Architecture (DDD)"
+title: "Bill8:Risk - Architecture (DDD)"
 sidebar_label: "Architecture (DDD)"
 mdx:
   format: md
 custom_edit_url: https://github.com/commerce8/bill8-risk/edit/main/DESIGN.md
 ---
-# Bill8:Risk — Detailed Design Document
+# Bill8:Risk - Detailed Design Document
 
 ## 1. Scope & Context
 
@@ -79,7 +79,7 @@ stateDiagram-v2
 | Rules | `/v1/rules` | `bill8:risk:rules:{read,write}` | `rule:created/updated` |
 | Screenings | `/v1/screenings` | `bill8:risk:screenings:read` (write is M2M) | `screening:created` |
 | Reviews | `/v1/reviews` | `bill8:risk:reviews:{read,write}` | `review:opened/resolved` |
-| Internal | `/v1/internal/*` | M2M | — |
+| Internal | `/v1/internal/*` | M2M | - |
 
 ## 5. Cross-Cutting Concerns
 
@@ -94,12 +94,12 @@ stateDiagram-v2
 flowchart TD
     EVAL_FAIL["rule evaluation error"] -->|"fail-closed"| BLOCK["screening returns block"]
     CRASH["crash mid-tx"] -->|"atomic"| RB["screening + review roll back"]
-    RELAY_FAIL["Bus outage"] -->|"producer"| OUTBOX["risk.outbox persists — retry ≤10"]
+    RELAY_FAIL["Bus outage"] -->|"producer"| OUTBOX["risk.outbox persists - retry ≤10"]
 ```
 
 ## 7. Concurrency & Performance Model
 
-- Pool cap 3; screening is on the payments hot path — evaluation is
+- Pool cap 3; screening is on the payments hot path - evaluation is
   in-memory and pure (no row locks), results persisted best-effort.
 
 ## 8. Invariants, Insecure-Defaults Rejected, Unsafe Rationale
@@ -112,8 +112,8 @@ flowchart TD
 
 ```mermaid
 graph TD
-    U["Unit — rule predicates, velocity windows"] --> I["Integration — DB-backed screening/review suites"]
-    I --> E["E2E — e2e-ts UI + BFF proxy only"]
+    U["Unit - rule predicates, velocity windows"] --> I["Integration - DB-backed screening/review suites"]
+    I --> E["E2E - e2e-ts UI + BFF proxy only"]
 ```
 
 ## 10. Open Questions

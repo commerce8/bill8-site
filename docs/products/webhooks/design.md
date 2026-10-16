@@ -1,11 +1,11 @@
 ---
-title: "Bill8:Webhooks — Architecture (DDD)"
+title: "Bill8:Webhooks - Architecture (DDD)"
 sidebar_label: "Architecture (DDD)"
 mdx:
   format: md
 custom_edit_url: https://github.com/commerce8/bill8-webhooks/edit/main/DESIGN.md
 ---
-# Bill8:Webhooks — Detailed Design Document
+# Bill8:Webhooks - Detailed Design Document
 
 ## 1. Scope & Context
 
@@ -75,9 +75,9 @@ erDiagram
 | Endpoint group | Prefix | Authorization | Events |
 |---|---|---|---|
 | Endpoints | `/v1/webhook-endpoints` | `bill8:webhooks:endpoints:{read,write}` | `webhook_endpoint:created/updated/deleted` |
-| Events | `/v1/events` | `bill8:webhooks:events:read` | — |
-| Replay | `/v1/events/{id}/replay` | `bill8:webhooks:events:write` | — |
-| Internal | `/v1/internal/*` | M2M | — |
+| Events | `/v1/events` | `bill8:webhooks:events:read` | - |
+| Replay | `/v1/events/{id}/replay` | `bill8:webhooks:events:write` | - |
+| Internal | `/v1/internal/*` | M2M | - |
 
 ## 5. Cross-Cutting Concerns
 
@@ -112,8 +112,8 @@ flowchart TD
 
 ```mermaid
 graph TD
-    U["Unit — signature generation/verification, backoff"] --> I["Integration — DB-backed delivery suites"]
-    I --> E["E2E — e2e-ts UI + BFF proxy only"]
+    U["Unit - signature generation/verification, backoff"] --> I["Integration - DB-backed delivery suites"]
+    I --> E["E2E - e2e-ts UI + BFF proxy only"]
 ```
 
 ## 10. Open Questions

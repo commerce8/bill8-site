@@ -1,11 +1,11 @@
 ---
-title: "Bill8:Webhooks — Business rules (BRD)"
+title: "Bill8:Webhooks - Business rules (BRD)"
 sidebar_label: "Business rules (BRD)"
 mdx:
   format: md
 custom_edit_url: https://github.com/commerce8/bill8-webhooks/edit/main/BUSINESS.md
 ---
-# Bill8:Webhooks — Business Requirements & Functionality
+# Bill8:Webhooks - Business Requirements & Functionality
 
 > Audience: product owners, business analysts, and anyone evaluating what
 > Bill8:Webhooks **does for the business**. For architecture read
@@ -15,10 +15,10 @@ custom_edit_url: https://github.com/commerce8/bill8-webhooks/edit/main/BUSINESS.
 
 Bill8:Webhooks is the **integration delivery surface**. It delivers:
 
-- **Reliable event delivery** — every lifecycle event is materialized and
+- **Reliable event delivery** - every lifecycle event is materialized and
   delivered as a signed payload.
-- **Durable retry** — deliveries retry with backoff until acknowledged.
-- **Replay** — a merchant can replay a past event.
+- **Durable retry** - deliveries retry with backoff until acknowledged.
+- **Replay** - a merchant can replay a past event.
 
 ## 2. Business Scope (What the Service Provides)
 

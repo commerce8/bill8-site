@@ -1,11 +1,11 @@
 ---
-title: "Bill8:Billing — Business rules (BRD)"
+title: "Bill8:Billing - Business rules (BRD)"
 sidebar_label: "Business rules (BRD)"
 mdx:
   format: md
 custom_edit_url: https://github.com/commerce8/bill8-billing/edit/main/BUSINESS.md
 ---
-# Bill8:Billing — Business Requirements & Functionality
+# Bill8:Billing - Business Requirements & Functionality
 
 > Audience: product owners, business analysts, and anyone evaluating what
 > Bill8:Billing **does for the business**. For architecture read
@@ -15,12 +15,12 @@ custom_edit_url: https://github.com/commerce8/bill8-billing/edit/main/BUSINESS.m
 
 Bill8:Billing is the **recurring revenue engine**. It delivers:
 
-- **Subscriptions** — a customer subscribes to a price and is billed per
+- **Subscriptions** - a customer subscribes to a price and is billed per
   cycle.
-- **Metered usage** — usage records aggregate deterministically onto
+- **Metered usage** - usage records aggregate deterministically onto
   invoices.
-- **Correct proration** — a plan change prorates to the cent.
-- **Discounts and credits** — coupons and prepaid credits adjust the
+- **Correct proration** - a plan change prorates to the cent.
+- **Discounts and credits** - coupons and prepaid credits adjust the
   amount owed.
 
 ## 2. Business Scope (What the Service Provides)

@@ -1,11 +1,11 @@
 ---
-title: "Bill8:Risk — Business rules (BRD)"
+title: "Bill8:Risk - Business rules (BRD)"
 sidebar_label: "Business rules (BRD)"
 mdx:
   format: md
 custom_edit_url: https://github.com/commerce8/bill8-risk/edit/main/BUSINESS.md
 ---
-# Bill8:Risk — Business Requirements & Functionality
+# Bill8:Risk - Business Requirements & Functionality
 
 > Audience: product owners, business analysts, and anyone evaluating what
 > Bill8:Risk **does for the business**. For architecture read
@@ -15,9 +15,9 @@ custom_edit_url: https://github.com/commerce8/bill8-risk/edit/main/BUSINESS.md
 
 Bill8:Risk is the **fraud-prevention layer**. It delivers:
 
-- **Pre-authorization screening** — charges are screened before money
+- **Pre-authorization screening** - charges are screened before money
   moves, so a block prevents a bad charge rather than flagging it after.
-- **Review queue** — suspicious charges route to manual adjudication.
+- **Review queue** - suspicious charges route to manual adjudication.
 
 ## 2. Business Scope (What the Service Provides)
 

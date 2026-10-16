@@ -1,4 +1,4 @@
-# README.md: Bill8:Site — bill8.dev
+# README.md: Bill8:Site - bill8.dev
 
 > The Bill8 public website at [bill8.dev](https://bill8.dev): every
 > product, app, and SDK of the vertical, with its domain invariants
@@ -12,7 +12,7 @@ bill8.dev is the Bill8 vertical's product site: a landing page
 detailing all six products and four apps, per-product
 pages with use cases and API surfaces, the vertical's security
 invariants, developer lifecycle, samples, and a **Reference** section
-harvested at build time from each unit repo's own docs — the
+harvested at build time from each unit repo's own docs - the
 repositories stay the source of truth.
 
 ## 2. Motivation

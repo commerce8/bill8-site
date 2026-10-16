@@ -5,7 +5,7 @@ sidebar_position: 1
 # bill8 Rust SDK
 
 The unified namespace facade: every bill8 crate imports through
-`bill8::{service}::{…}` — the typed integration surface for every
+`bill8::{service}::{…}` - the typed integration surface for every
 bill8 API, consumed as a pinned git tag.
 
 ```rust
@@ -35,5 +35,5 @@ use bill8::billing::client::BillingClient;
 
 ## Deep dive
 
-[bill8-sdk reference](/docs/reference/sdk/) — harvested from
+[bill8-sdk reference](/docs/reference/sdk/) - harvested from
 `commerce8/bill8-sdk`.

@@ -1,11 +1,11 @@
 ---
-title: "Bill8:Ledger — Architecture (DDD)"
+title: "Bill8:Ledger - Architecture (DDD)"
 sidebar_label: "Architecture (DDD)"
 mdx:
   format: md
 custom_edit_url: https://github.com/commerce8/bill8-ledger/edit/main/DESIGN.md
 ---
-# Bill8:Ledger — Detailed Design Document
+# Bill8:Ledger - Detailed Design Document
 
 ## 1. Scope & Context
 
@@ -21,7 +21,7 @@ batches), the **payout schedule engine**, and the
 It does NOT own: payment orchestration (Bill8:Payments calls in to
 post transactions), billing (Bill8:Billing calls in for invoice
 movements), connected-account lifecycle (Bill8:Merchants creates
-balances via the public API), or the fee *policy* — the ledger applies
+balances via the public API), or the fee *policy* - the ledger applies
 the fee model as explicit balance transactions but the rate table is
 configured by the vertical.
 
@@ -44,9 +44,9 @@ graph TD
     BFF -->|"user tokens"| L
     L <-->|"verify / certificate identity"| AUTH
     L -->|"ledger.outbox → relay"| BUS
-    PAY -->|"public API — post transactions"| L
-    BI -->|"public API — post transactions"| L
-    M -->|"public API — create balances"| L
+    PAY -->|"public API - post transactions"| L
+    BI -->|"public API - post transactions"| L
+    M -->|"public API - create balances"| L
     L <-->|"schema ledger: domain + producer tables"| PG
 ```
 
@@ -55,7 +55,7 @@ graph TD
 Boot is shell-owned. `build_state` adds the ledger wiring: config, Bus
 client, AppState, and the sys-family env-init consumer.
 
-**Request lifecycle — balance transaction posting** (the canonical
+**Request lifecycle - balance transaction posting** (the canonical
 family; every other handler is a subset):
 
 ```mermaid
@@ -120,7 +120,7 @@ erDiagram
 | Table | Purpose | RLS tier |
 |---|---|---|
 | `accounts` | Internal ledger accounts (customer / platform / connected) | env |
-| `balances` | Named money positions per currency: `available`, `pending`, `connected_reserved`, `platform_fee` — keyed `(account_id, name, currency)` | env |
+| `balances` | Named money positions per currency: `available`, `pending`, `connected_reserved`, `platform_fee` - keyed `(account_id, name, currency)` | env |
 | `balance_transactions` | Append-only double-entry movements | env |
 | `payouts` | Withdrawals to external accounts | env |
 | `payout_schedules` | Automatic payout intervals (daily/weekly/monthly + minimum) | env |
@@ -128,16 +128,16 @@ erDiagram
 | `fees` | Configured fee model (per-transaction + percentage) | env |
 | `fx_rates` | Conversion rates; every conversion posts as an explicit batch with a spread fee | env |
 
-**Multi-currency** — balances and movements are currency-keyed; a
-balance transacts only in its own currency — cross-currency movement
+**Multi-currency** - balances and movements are currency-keyed; a
+balance transacts only in its own currency - cross-currency movement
 is rejected pre-write (422, nothing written). Conversion between
 currencies is an **explicit** double-entry batch (rate + spread fee
 posted, never implicit), owned by the FX story.
 
-**Destination-charge posting rules** — a split-at-charge
+**Destination-charge posting rules** - a split-at-charge
 (`on_behalf_of` + `application_fee_amount`) is a single validated
 batch: debit the payer's side, credit the connected account's
-`available`, credit the platform `platform_fee` — Σ legs == charge
+`available`, credit the platform `platform_fee` - Σ legs == charge
 amount, net-zero enforced by the same pre-write check.
 
 **State machine**:
@@ -161,7 +161,7 @@ stateDiagram-v2
 | Payout schedules | `/v1/payout-schedules` | `bill8:ledger:payout-schedules:{read,write}` | `payout_schedule:created/updated` |
 | Transfers | `/v1/transfers` | `bill8:ledger:transfers:{read,write}` | `transfer:created` |
 | Fees | `/v1/fees` | `bill8:ledger:fees:{read,write}` | `fee:updated` |
-| Internal (proxy-back) | `/v1/internal/*` | M2M | — |
+| Internal (proxy-back) | `/v1/internal/*` | M2M | - |
 
 ## 5. Cross-Cutting Concerns
 
@@ -177,8 +177,8 @@ stateDiagram-v2
 
 ```mermaid
 flowchart TD
-    IMBALANCE["batch does not net to zero"] -->|"pre-write"| REJ["422 — nothing written"]
-    INSUF["payout > available"] -->|"row lock + check"| REJ2["422 — nothing written"]
+    IMBALANCE["batch does not net to zero"] -->|"pre-write"| REJ["422 - nothing written"]
+    INSUF["payout > available"] -->|"row lock + check"| REJ2["422 - nothing written"]
     CRASH["crash mid-transaction"] -->|"atomic"| RB["balances + tx + outbox roll back"]
     RELAY_FAIL["Bus outage"] -->|"producer"| OUTBOX["rows persist in ledger.outbox<br/>relay retries ≤10"]
 ```
@@ -207,15 +207,15 @@ flowchart TD
 
 ```mermaid
 graph TD
-    U["Unit — double-entry math, fee model,<br/>payout state machine"] --> I["Integration — DB-backed posting/payout<br/>suites, registration checks"]
-    I --> E["E2E — e2e-ts UI + BFF proxy only"]
+    U["Unit - double-entry math, fee model,<br/>payout state machine"] --> I["Integration - DB-backed posting/payout<br/>suites, registration checks"]
+    I --> E["E2E - e2e-ts UI + BFF proxy only"]
 ```
 
 ## 10. Open Questions
 
 - FX conversion and settlement currency per connected account are
-  sequenced as two stories — presentment first (`LED-5a`), conversion
-  after (`LED-5b`) — both at final target state when built; no phased
+  sequenced as two stories - presentment first (`LED-5a`), conversion
+  after (`LED-5b`) - both at final target state when built; no phased
   rollouts (see `backlog.md`).
 
 ---

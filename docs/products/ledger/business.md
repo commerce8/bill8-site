@@ -1,11 +1,11 @@
 ---
-title: "Bill8:Ledger — Business rules (BRD)"
+title: "Bill8:Ledger - Business rules (BRD)"
 sidebar_label: "Business rules (BRD)"
 mdx:
   format: md
 custom_edit_url: https://github.com/commerce8/bill8-ledger/edit/main/BUSINESS.md
 ---
-# Bill8:Ledger — Business Requirements & Functionality
+# Bill8:Ledger - Business Requirements & Functionality
 
 > Audience: product owners, business analysts, and anyone evaluating what
 > Bill8:Ledger **does for the business**. For architecture read
@@ -16,9 +16,9 @@ custom_edit_url: https://github.com/commerce8/bill8-ledger/edit/main/BUSINESS.md
 Bill8:Ledger is the **single authority for money positions**. It
 delivers:
 
-- **Truthful balances** — every movement is a double-entry balance
+- **Truthful balances** - every movement is a double-entry balance
   transaction that nets to zero, so the books can never drift.
-- **Marketplace money movement** — payouts and transfers move funds
+- **Marketplace money movement** - payouts and transfers move funds
   between balances and external accounts with a provable fee model.
 
 ## 2. Business Scope (What the Service Provides)

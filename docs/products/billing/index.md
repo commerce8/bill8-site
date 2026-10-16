@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Bill8:Billing — recurring revenue
+# Bill8:Billing - recurring revenue
 
 Recurring revenue as a first-class domain: a product/price catalog,
 subscriptions with proration, invoices generated per billing cycle,
@@ -11,21 +11,21 @@ deterministically.
 
 ## Use cases
 
-- **Subscriptions** — sign-up, upgrade, downgrade, pause, cancel —
+- **Subscriptions** - sign-up, upgrade, downgrade, pause, cancel -
   proration computes the mid-cycle adjustments exactly once.
-- **Invoicing** — per-cycle invoice generation; failed charges retry
+- **Invoicing** - per-cycle invoice generation; failed charges retry
   on schedule (dunning); every invoice is an audited document.
-- **Usage metering** — metered usage records aggregate into line
-  items at billing time — usage never bills twice.
-- **Coupons & credits** — promotional pricing and account credits
+- **Usage metering** - metered usage records aggregate into line
+  items at billing time - usage never bills twice.
+- **Coupons & credits** - promotional pricing and account credits
   apply through the same deterministic rules as list prices.
 
 ## Full documentation
 
 The complete detail lives in this product's sub-pages:
 
-- [Architecture (DDD)](design) — the full document, harvested from the unit's repository at build time.
-- [Business rules (BRD)](business) — the full document, harvested from the unit's repository at build time.
-- [Security](security) — the full document, harvested from the unit's repository at build time.
-- [Overview (repo README)](/docs/reference/billing/) — the maintainer's README in the consolidated reference section.
+- [Architecture (DDD)](design) - the full document, harvested from the unit's repository at build time.
+- [Business rules (BRD)](business) - the full document, harvested from the unit's repository at build time.
+- [Security](security) - the full document, harvested from the unit's repository at build time.
+- [Overview (repo README)](/docs/reference/billing/) - the maintainer's README in the consolidated reference section.
 

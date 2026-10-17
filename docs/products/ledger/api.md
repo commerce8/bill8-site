@@ -26,12 +26,11 @@ Gate: `bill8:ledger:accounts:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of accounts | `AccountResponse`[] |
-| 403 | Missing bill8:ledger:accounts:read | - |
+| 403 | Missing `bill8:ledger:accounts:read` | - |
 
 ### `POST /v1/accounts`
 
-`POST /v1/accounts` - create a ledger account with its standard
-balances (`available`, `pending`).
+`POST /v1/accounts` - create a ledger account with its standard balances (`available`, `pending`).
 
 Gate: `bill8:ledger:accounts:write`
 
@@ -47,7 +46,7 @@ Gate: `bill8:ledger:accounts:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Account created | `AccountResponse` |
-| 403 | Missing bill8:ledger:accounts:write | - |
+| 403 | Missing `bill8:ledger:accounts:write` | - |
 
 ### `GET /v1/balance-transactions`
 
@@ -66,7 +65,7 @@ Gate: `bill8:ledger:balance-transactions:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of transactions | `BalanceTransaction`[] |
-| 403 | Missing bill8:ledger:balance-transactions:read | - |
+| 403 | Missing `bill8:ledger:balance-transactions:read` | - |
 
 ### `POST /v1/balance-transactions`
 
@@ -92,7 +91,7 @@ Gate: `bill8:ledger:balance-transactions:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Transaction posted | `BalanceTransaction` |
-| 403 | Missing bill8:ledger:balance-transactions:write | - |
+| 403 | Missing `bill8:ledger:balance-transactions:write` | - |
 | 422 | Imbalanced/currency-mismatch - nothing written | - |
 
 ### `GET /v1/balances`
@@ -113,11 +112,11 @@ Gate: `bill8:ledger:balances:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of balances | `Balance`[] |
-| 403 | Missing bill8:ledger:balances:read | - |
+| 403 | Missing `bill8:ledger:balances:read` | - |
 
 ### `GET /v1/balances/{id}`
 
-`GET /v1/balances/{id}` - read one balance.
+`GET /v1/balances/&#123;id&#125;` - read one balance.
 
 Gate: `bill8:ledger:balances:read`
 
@@ -139,7 +138,7 @@ Gate: `bill8:ledger:fees:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of fee entries | `FeeResponse`[] |
-| 403 | Missing bill8:ledger:fees:read | - |
+| 403 | Missing `bill8:ledger:fees:read` | - |
 
 ### `POST /v1/fees`
 
@@ -161,14 +160,11 @@ Gate: `bill8:ledger:fees:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Fee model saved | - |
-| 403 | Missing bill8:ledger:fees:write | - |
+| 403 | Missing `bill8:ledger:fees:write` | - |
 
 ### `POST /v1/internal/payout-schedules/run`
 
-`POST /v1/internal/payout-schedules/run` - the Cron proxy-back tick.
-Creates a payout for each enabled schedule whose available balance
-meets its minimum. At most one payout per tick (the balance guard
-itself enforces it: the available row lock serializes).
+`POST /v1/internal/payout-schedules/run` - the Cron proxy-back tick. Creates a payout for each enabled schedule whose available balance meets its minimum. At most one payout per tick (the balance guard itself enforces it: the available row lock serializes).
 
 Gate: `sentin8:cron:write`
 
@@ -189,7 +185,7 @@ Gate: `bill8:ledger:payout-schedules:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of schedules | `PayoutScheduleResponse`[] |
-| 403 | Missing bill8:ledger:payout-schedules:read | - |
+| 403 | Missing `bill8:ledger:payout-schedules:read` | - |
 
 ### `POST /v1/payout-schedules`
 
@@ -212,11 +208,11 @@ Gate: `bill8:ledger:payout-schedules:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Schedule created | `PayoutScheduleResponse` |
-| 403 | Missing bill8:ledger:payout-schedules:write | - |
+| 403 | Missing `bill8:ledger:payout-schedules:write` | - |
 
 ### `DELETE /v1/payout-schedules/{id}`
 
-`DELETE /v1/payout-schedules/{id}` - disable a schedule.
+`DELETE /v1/payout-schedules/&#123;id&#125;` - disable a schedule.
 
 Gate: `bill8:ledger:payout-schedules:write`
 
@@ -238,7 +234,7 @@ Gate: `bill8:ledger:payouts:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of payouts | `Payout`[] |
-| 403 | Missing bill8:ledger:payouts:read | - |
+| 403 | Missing `bill8:ledger:payouts:read` | - |
 
 ### `POST /v1/payouts`
 
@@ -261,12 +257,12 @@ Gate: `bill8:ledger:payouts:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Payout created (pending) | `Payout` |
-| 403 | Missing bill8:ledger:payouts:write | - |
+| 403 | Missing `bill8:ledger:payouts:write` | - |
 | 422 | Insufficient available balance - nothing written | - |
 
 ### `GET /v1/payouts/{id}`
 
-`GET /v1/payouts/{id}` - read one payout.
+`GET /v1/payouts/&#123;id&#125;` - read one payout.
 
 Gate: `bill8:ledger:payouts:read`
 
@@ -288,7 +284,7 @@ Gate: `bill8:ledger:transfers:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of transfers | `Transfer`[] |
-| 403 | Missing bill8:ledger:transfers:read | - |
+| 403 | Missing `bill8:ledger:transfers:read` | - |
 
 ### `POST /v1/transfers`
 
@@ -311,6 +307,6 @@ Gate: `bill8:ledger:transfers:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Transfer created | `Transfer` |
-| 403 | Missing bill8:ledger:transfers:write | - |
+| 403 | Missing `bill8:ledger:transfers:write` | - |
 | 422 | Insufficient funds - nothing written | - |
 

@@ -45,7 +45,7 @@ Gate: `bill8:payments:routing:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Default channel saved | - |
-| 403 | Missing bill8:payments:routing:write | - |
+| 403 | Missing `bill8:payments:routing:write` | - |
 
 ### `GET /v1/channels`
 
@@ -58,7 +58,7 @@ Gate: `bill8:payments:channels:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of channels | `Channel`[] |
-| 403 | Missing bill8:payments:channels:read | - |
+| 403 | Missing `bill8:payments:channels:read` | - |
 
 ### `GET /v1/charges`
 
@@ -77,7 +77,7 @@ Gate: `bill8:payments:charges:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of charges | `Charge`[] |
-| 403 | Missing bill8:payments:charges:read | - |
+| 403 | Missing `bill8:payments:charges:read` | - |
 
 ### `POST /v1/charges`
 
@@ -104,12 +104,12 @@ Gate: `bill8:payments:charges:write`
 | --- | --- | --- |
 | 200 | Charge succeeded | `Charge` |
 | 402 | Screening blocked / channel declined - nothing written | - |
-| 403 | Missing bill8:payments:charges:write | - |
+| 403 | Missing `bill8:payments:charges:write` | - |
 | 422 | Domain rejection - nothing written | - |
 
 ### `GET /v1/charges/{id}`
 
-`GET /v1/charges/{id}` - read one charge.
+`GET /v1/charges/&#123;id&#125;` - read one charge.
 
 Gate: `bill8:payments:charges:read`
 
@@ -131,7 +131,7 @@ Gate: `bill8:payments:customers:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of customers | `Customer`[] |
-| 403 | Missing bill8:payments:customers:read | - |
+| 403 | Missing `bill8:payments:customers:read` | - |
 
 ### `POST /v1/customers`
 
@@ -151,7 +151,7 @@ Gate: `bill8:payments:customers:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Customer created | `Customer` |
-| 403 | Missing bill8:payments:customers:write | - |
+| 403 | Missing `bill8:payments:customers:write` | - |
 
 ### `GET /v1/disputes`
 
@@ -164,7 +164,7 @@ Gate: `bill8:payments:disputes:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of disputes | `Dispute`[] |
-| 403 | Missing bill8:payments:disputes:read | - |
+| 403 | Missing `bill8:payments:disputes:read` | - |
 
 ### `POST /v1/disputes`
 
@@ -188,11 +188,11 @@ Gate: `bill8:payments:disputes:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Dispute opened | `Dispute` |
-| 403 | Missing bill8:payments:disputes:write | - |
+| 403 | Missing `bill8:payments:disputes:write` | - |
 
 ### `POST /v1/disputes/{id}/evidence`
 
-`POST /v1/disputes/{id}/evidence` - submit evidence (Storage refs).
+`POST /v1/disputes/&#123;id&#125;/evidence` - submit evidence (Storage refs).
 
 Gate: `bill8:payments:disputes:write`
 
@@ -211,12 +211,7 @@ Gate: `bill8:payments:disputes:write`
 
 ### `POST /v1/disputes/{id}/resolve`
 
-`POST /v1/disputes/{id}/resolve` - close a dispute with an outcome
-(PAY-6). A `lost` dispute claws the funds back via a ledger
-reversal transaction (the ONLY money movement) and returns the
-charge to `succeeded` minus the disputed amount; a `won` dispute
-keeps the charge as-is. The `under_review → won|lost` transition is
-guarded - resolving twice is a 409, never a second clawback.
+`POST /v1/disputes/&#123;id&#125;/resolve` - close a dispute with an outcome (PAY-6). A `lost` dispute claws the funds back via a ledger reversal transaction (the ONLY money movement) and returns the charge to `succeeded` minus the disputed amount; a `won` dispute keeps the charge as-is. The `under_review → won\|lost` transition is guarded - resolving twice is a 409, never a second clawback.
 
 Gate: `bill8:payments:disputes:write`
 
@@ -245,12 +240,11 @@ Gate: `bill8:payments:intents:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of intents | `PaymentIntent`[] |
-| 403 | Missing bill8:payments:intents:read | - |
+| 403 | Missing `bill8:payments:intents:read` | - |
 
 ### `POST /v1/payment-intents`
 
-`POST /v1/payment-intents` - create an intent in
-`requires_confirmation` (no money moves).
+`POST /v1/payment-intents` - create an intent in `requires_confirmation` (no money moves).
 
 Gate: `bill8:payments:intents:write`
 
@@ -270,13 +264,11 @@ Gate: `bill8:payments:intents:write`
 | --- | --- | --- |
 | 200 | Intent created | `PaymentIntent` |
 | 400 | Amount must be a positive decimal string | - |
-| 403 | Missing bill8:payments:intents:write | - |
+| 403 | Missing `bill8:payments:intents:write` | - |
 
 ### `POST /v1/payment-intents/{id}/confirm`
 
-`POST /v1/payment-intents/{id}/confirm` - the guarded
-`requires_confirmation → processing` transition. Terminal states
-never regress; confirming a terminal intent is a 409.
+`POST /v1/payment-intents/&#123;id&#125;/confirm` - the guarded `requires_confirmation → processing` transition. Terminal states never regress; confirming a terminal intent is a 409.
 
 Gate: `bill8:payments:intents:write`
 
@@ -299,7 +291,7 @@ Gate: `bill8:payments:refunds:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of refunds | `Refund`[] |
-| 403 | Missing bill8:payments:refunds:read | - |
+| 403 | Missing `bill8:payments:refunds:read` | - |
 
 ### `POST /v1/refunds`
 
@@ -320,7 +312,7 @@ Gate: `bill8:payments:refunds:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Refund succeeded | `Refund` |
-| 403 | Missing bill8:payments:refunds:write | - |
+| 403 | Missing `bill8:payments:refunds:write` | - |
 | 422 | Over-refund / non-succeeded charge - nothing written | - |
 
 ### `POST /v1/routing-rules`
@@ -343,7 +335,7 @@ Gate: `bill8:payments:routing:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Rule created | - |
-| 403 | Missing bill8:payments:routing:write | - |
+| 403 | Missing `bill8:payments:routing:write` | - |
 
 ### `GET /v1/setup-intents`
 
@@ -356,7 +348,7 @@ Gate: `bill8:payments:setup-intents:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of setup intents | `SetupIntent`[] |
-| 403 | Missing bill8:payments:setup-intents:read | - |
+| 403 | Missing `bill8:payments:setup-intents:read` | - |
 
 ### `POST /v1/setup-intents`
 
@@ -377,12 +369,11 @@ Gate: `bill8:payments:setup-intents:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Setup intent created | `SetupIntent` |
-| 403 | Missing bill8:payments:setup-intents:write | - |
+| 403 | Missing `bill8:payments:setup-intents:write` | - |
 
 ### `POST /v1/setup-intents/{id}/confirm`
 
-`POST /v1/setup-intents/{id}/confirm` - the guarded
-`requires_confirmation → processing` transition for setup intents.
+`POST /v1/setup-intents/&#123;id&#125;/confirm` - the guarded `requires_confirmation → processing` transition for setup intents.
 
 Gate: `bill8:payments:setup-intents:write`
 

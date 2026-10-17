@@ -26,11 +26,11 @@ Gate: `bill8:webhooks:events:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of events | `Event`[] |
-| 403 | Missing bill8:webhooks:events:read | - |
+| 403 | Missing `bill8:webhooks:events:read` | - |
 
 ### `GET /v1/events/{id}/deliveries`
 
-`GET /v1/events/{id}/deliveries` - the delivery log for an event.
+`GET /v1/events/&#123;id&#125;/deliveries` - the delivery log for an event.
 
 Gate: `bill8:webhooks:events:read`
 
@@ -39,12 +39,11 @@ Gate: `bill8:webhooks:events:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Delivery attempts | `Delivery`[] |
-| 403 | Missing bill8:webhooks:events:read | - |
+| 403 | Missing `bill8:webhooks:events:read` | - |
 
 ### `POST /v1/events/{id}/replay`
 
-`POST /v1/events/{id}/replay` - re-queue a DLQ/failed delivery for
-manual replay (never silently dropped).
+`POST /v1/events/&#123;id&#125;/replay` - re-queue a DLQ/failed delivery for manual replay (never silently dropped).
 
 Gate: `bill8:webhooks:events:write`
 
@@ -53,7 +52,7 @@ Gate: `bill8:webhooks:events:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Requeued for delivery | - |
-| 403 | Missing bill8:webhooks:events:write | - |
+| 403 | Missing `bill8:webhooks:events:write` | - |
 
 ### `GET /v1/webhook-endpoints`
 
@@ -66,7 +65,7 @@ Gate: `bill8:webhooks:endpoints:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of endpoints | `WebhookEndpoint`[] |
-| 403 | Missing bill8:webhooks:endpoints:read | - |
+| 403 | Missing `bill8:webhooks:endpoints:read` | - |
 
 ### `POST /v1/webhook-endpoints`
 
@@ -86,5 +85,5 @@ Gate: `bill8:webhooks:endpoints:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Endpoint created | `WebhookEndpoint` |
-| 403 | Missing bill8:webhooks:endpoints:write | - |
+| 403 | Missing `bill8:webhooks:endpoints:write` | - |
 

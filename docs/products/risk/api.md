@@ -26,11 +26,11 @@ Gate: `bill8:risk:reviews:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Review queue | `Review`[] |
-| 403 | Missing bill8:risk:reviews:read | - |
+| 403 | Missing `bill8:risk:reviews:read` | - |
 
 ### `POST /v1/reviews/{id}/resolve`
 
-`POST /v1/reviews/{id}/resolve` - resolve a review (idempotent).
+`POST /v1/reviews/&#123;id&#125;/resolve` - resolve a review (idempotent).
 
 Gate: `bill8:risk:reviews:write`
 
@@ -56,7 +56,7 @@ Gate: `bill8:risk:rules:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of rules | `Rule`[] |
-| 403 | Missing bill8:risk:rules:read | - |
+| 403 | Missing `bill8:risk:rules:read` | - |
 
 ### `POST /v1/rules`
 
@@ -78,12 +78,11 @@ Gate: `bill8:risk:rules:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Rule created | `Rule` |
-| 403 | Missing bill8:risk:rules:write | - |
+| 403 | Missing `bill8:risk:rules:write` | - |
 
 ### `POST /v1/screenings`
 
-`POST /v1/screenings` - screen a charge context (M2M from payments).
-The evaluator is pure; the outcome persists as an auditable screening.
+`POST /v1/screenings` - screen a charge context (M2M from payments). The evaluator is pure; the outcome persists as an auditable screening.
 
 Gate: `bill8:risk:screenings:write`
 
@@ -98,5 +97,5 @@ Gate: `bill8:risk:screenings:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Screening outcome | `Screening` |
-| 403 | Missing bill8:risk:screenings:write | - |
+| 403 | Missing `bill8:risk:screenings:write` | - |
 

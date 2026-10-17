@@ -17,10 +17,7 @@ Sentin8 Bill8:Reporting - report types, runs, scheduled reports.
 
 ### `POST /v1/internal/report-schedules/run`
 
-`POST /v1/internal/report-schedules/run` - the Cron proxy-back
-tick. Creates one run per enabled schedule for the current period;
-the run's (env, type, period) uniqueness (RPT-2) makes two ticks in
-one window produce exactly one run.
+`POST /v1/internal/report-schedules/run` - the Cron proxy-back tick. Creates one run per enabled schedule for the current period; the run's (env, type, period) uniqueness (RPT-2) makes two ticks in one window produce exactly one run.
 
 Gate: `sentin8:cron:write`
 
@@ -41,12 +38,11 @@ Gate: `bill8:reporting:runs:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of runs | `ReportRun`[] |
-| 403 | Missing bill8:reporting:runs:read | - |
+| 403 | Missing `bill8:reporting:runs:read` | - |
 
 ### `POST /v1/report-runs`
 
-`POST /v1/report-runs` - run a report (idempotent per
-`(env_id, type, period)`; two identical runs yield one row).
+`POST /v1/report-runs` - run a report (idempotent per `(env_id, type, period)`; two identical runs yield one row).
 
 Gate: `bill8:reporting:runs:write`
 
@@ -64,12 +60,12 @@ Gate: `bill8:reporting:runs:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Report run created | `ReportRun` |
-| 403 | Missing bill8:reporting:runs:write | - |
+| 403 | Missing `bill8:reporting:runs:write` | - |
 | 409 | Run already exists for this period (idempotent) | - |
 
 ### `GET /v1/report-runs/{id}`
 
-`GET /v1/report-runs/{id}` - read one run.
+`GET /v1/report-runs/&#123;id&#125;` - read one run.
 
 Gate: `bill8:reporting:runs:read`
 
@@ -91,7 +87,7 @@ Gate: `bill8:reporting:schedules:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of schedules | `ReportSchedule`[] |
-| 403 | Missing bill8:reporting:schedules:read | - |
+| 403 | Missing `bill8:reporting:schedules:read` | - |
 
 ### `POST /v1/report-schedules`
 
@@ -111,11 +107,11 @@ Gate: `bill8:reporting:schedules:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Schedule created | `ReportSchedule` |
-| 403 | Missing bill8:reporting:schedules:write | - |
+| 403 | Missing `bill8:reporting:schedules:write` | - |
 
 ### `DELETE /v1/report-schedules/{id}`
 
-`DELETE /v1/report-schedules/{id}` - remove a schedule.
+`DELETE /v1/report-schedules/&#123;id&#125;` - remove a schedule.
 
 Gate: `bill8:reporting:schedules:write`
 
@@ -128,7 +124,7 @@ Gate: `bill8:reporting:schedules:write`
 
 ### `PATCH /v1/report-schedules/{id}`
 
-`PATCH /v1/report-schedules/{id}` - enable/disable a schedule.
+`PATCH /v1/report-schedules/&#123;id&#125;` - enable/disable a schedule.
 
 Gate: `bill8:reporting:schedules:write`
 
@@ -156,7 +152,7 @@ Gate: `bill8:reporting:types:read`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | List of report types | `ReportType`[] |
-| 403 | Missing bill8:reporting:types:read | - |
+| 403 | Missing `bill8:reporting:types:read` | - |
 
 ### `POST /v1/report-types`
 
@@ -169,5 +165,5 @@ Gate: `bill8:reporting:types:write`
 | Status | Description | Body |
 | --- | --- | --- |
 | 200 | Report type created | `ReportType` |
-| 403 | Missing bill8:reporting:types:write | - |
+| 403 | Missing `bill8:reporting:types:write` | - |
 

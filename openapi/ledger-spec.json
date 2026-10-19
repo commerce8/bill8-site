@@ -40,7 +40,7 @@
             "bill8:ledger:accounts:read": []
           }
         ],
-        "description": "list ledger accounts."
+        "description": "List accounts.\n\nlist ledger accounts."
       },
       "post": {
         "tags": [
@@ -78,7 +78,7 @@
             "bill8:ledger:accounts:write": []
           }
         ],
-        "description": "create a ledger account with its standard\nbalances (`available`, `pending`)."
+        "description": "Create account.\n\ncreate a ledger account with its standard\nbalances (`available`, `pending`)."
       }
     },
     "/v1/balance-transactions": {
@@ -123,7 +123,7 @@
             "bill8:ledger:balance-transactions:read": []
           }
         ],
-        "description": "list movements (optionally by balance)."
+        "description": "List transactions.\n\nlist movements (optionally by balance)."
       },
       "post": {
         "tags": [
@@ -218,7 +218,7 @@
             "bill8:ledger:balances:read": []
           }
         ],
-        "description": "list balances (optionally filtered)."
+        "description": "List balances.\n\nlist balances (optionally filtered)."
       }
     },
     "/v1/balances/{id}": {
@@ -248,7 +248,7 @@
             "bill8:ledger:balances:read": []
           }
         ],
-        "description": "read one balance."
+        "description": "Get balance.\n\nread one balance."
       }
     },
     "/v1/fees": {
@@ -281,7 +281,7 @@
             "bill8:ledger:fees:read": []
           }
         ],
-        "description": "list the configured fee model."
+        "description": "List fees.\n\nlist the configured fee model."
       },
       "post": {
         "tags": [
@@ -312,7 +312,7 @@
             "bill8:ledger:fees:write": []
           }
         ],
-        "description": "upsert the fee model for a transaction type."
+        "description": "Upsert fee.\n\nupsert the fee model for a transaction type."
       }
     },
     "/v1/health": {
@@ -333,7 +333,7 @@
           }
         },
         "security": [],
-        "description": "Health probe payload."
+        "description": "Health .\n\nHealth probe payload."
       }
     },
     "/v1/internal/payout-schedules/run": {
@@ -353,7 +353,7 @@
             "sentin8:cron:write": []
           }
         ],
-        "description": "the Cron proxy-back tick.\nCreates a payout for each enabled schedule whose available balance\nmeets its minimum. At most one payout per tick (the balance guard\nitself enforces it: the available row lock serializes)."
+        "description": "Run payout schedules.\n\nthe Cron proxy-back tick.\nCreates a payout for each enabled schedule whose available balance\nmeets its minimum. At most one payout per tick (the balance guard\nitself enforces it: the available row lock serializes)."
       }
     },
     "/v1/payout-schedules": {
@@ -386,7 +386,7 @@
             "bill8:ledger:payout-schedules:read": []
           }
         ],
-        "description": "list schedules."
+        "description": "List payout schedules.\n\nlist schedules."
       },
       "post": {
         "tags": [
@@ -424,7 +424,7 @@
             "bill8:ledger:payout-schedules:write": []
           }
         ],
-        "description": "create an automatic payout schedule."
+        "description": "Create payout schedule.\n\ncreate an automatic payout schedule."
       }
     },
     "/v1/payout-schedules/{id}": {
@@ -447,7 +447,7 @@
             "bill8:ledger:payout-schedules:write": []
           }
         ],
-        "description": "disable a schedule."
+        "description": "Delete payout schedule.\n\ndisable a schedule."
       }
     },
     "/v1/payouts": {
@@ -480,7 +480,7 @@
             "bill8:ledger:payouts:read": []
           }
         ],
-        "description": "list payouts."
+        "description": "List payouts.\n\nlist payouts."
       },
       "post": {
         "tags": [
@@ -521,7 +521,7 @@
             "bill8:ledger:payouts:write": []
           }
         ],
-        "description": "pay out available balance to an external account."
+        "description": "Create payout.\n\npay out available balance to an external account."
       }
     },
     "/v1/payouts/{id}": {
@@ -551,7 +551,7 @@
             "bill8:ledger:payouts:read": []
           }
         ],
-        "description": "read one payout."
+        "description": "Get payout.\n\nread one payout."
       }
     },
     "/v1/transfers": {
@@ -584,7 +584,7 @@
             "bill8:ledger:transfers:read": []
           }
         ],
-        "description": "list transfers."
+        "description": "List transfers.\n\nlist transfers."
       },
       "post": {
         "tags": [
@@ -625,7 +625,7 @@
             "bill8:ledger:transfers:write": []
           }
         ],
-        "description": "move funds between connected balances."
+        "description": "Create transfer.\n\nmove funds between connected balances."
       }
     }
   },

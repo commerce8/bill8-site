@@ -28,7 +28,7 @@
           }
         },
         "security": [],
-        "description": "Health probe payload."
+        "description": "Health .\n\nHealth probe payload."
       }
     },
     "/v1/reviews": {
@@ -61,7 +61,7 @@
             "bill8:risk:reviews:read": []
           }
         ],
-        "description": "list the review queue."
+        "description": "List reviews.\n\nlist the review queue."
       }
     },
     "/v1/reviews/{id}/resolve": {
@@ -95,7 +95,7 @@
             "bill8:risk:reviews:write": []
           }
         ],
-        "description": "resolve a review (idempotent)."
+        "description": "Resolve review.\n\nresolve a review (idempotent)."
       }
     },
     "/v1/rules": {
@@ -128,7 +128,7 @@
             "bill8:risk:rules:read": []
           }
         ],
-        "description": "list rules."
+        "description": "List rules.\n\nlist rules."
       },
       "post": {
         "tags": [
@@ -166,7 +166,7 @@
             "bill8:risk:rules:write": []
           }
         ],
-        "description": "create a rule."
+        "description": "Create rule.\n\ncreate a rule."
       }
     },
     "/v1/screenings": {
@@ -206,7 +206,7 @@
             "bill8:risk:screenings:write": []
           }
         ],
-        "description": "screen a charge context (M2M from payments).\nThe evaluator is pure; the outcome persists as an auditable screening."
+        "description": "Screen .\n\nscreen a charge context (M2M from payments).\nThe evaluator is pure; the outcome persists as an auditable screening."
       }
     }
   },

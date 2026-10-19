@@ -30,7 +30,7 @@
             "bill8:payments:channels:read": []
           }
         ],
-        "description": "read the env's default channel."
+        "description": "Get channel config.\n\nread the env's default channel."
       },
       "put": {
         "tags": [
@@ -61,7 +61,7 @@
             "bill8:payments:routing:write": []
           }
         ],
-        "description": "set the env's default channel."
+        "description": "Set channel config.\n\nset the env's default channel."
       }
     },
     "/v1/channels": {
@@ -94,7 +94,7 @@
             "bill8:payments:channels:read": []
           }
         ],
-        "description": "list the runtime channel registry."
+        "description": "List channels.\n\nlist the runtime channel registry."
       }
     },
     "/v1/charges": {
@@ -139,7 +139,7 @@
             "bill8:payments:charges:read": []
           }
         ],
-        "description": "list charges."
+        "description": "List charges.\n\nlist charges."
       },
       "post": {
         "tags": [
@@ -183,7 +183,7 @@
             "bill8:payments:charges:write": []
           }
         ],
-        "description": "create a charge through a settlement channel."
+        "description": "Create charge.\n\ncreate a charge through a settlement channel."
       }
     },
     "/v1/charges/{id}": {
@@ -213,7 +213,7 @@
             "bill8:payments:charges:read": []
           }
         ],
-        "description": "read one charge."
+        "description": "Get charge.\n\nread one charge."
       }
     },
     "/v1/customers": {
@@ -246,7 +246,7 @@
             "bill8:payments:customers:read": []
           }
         ],
-        "description": "list customers."
+        "description": "List customers.\n\nlist customers."
       },
       "post": {
         "tags": [
@@ -284,7 +284,7 @@
             "bill8:payments:customers:write": []
           }
         ],
-        "description": "create a customer."
+        "description": "Create customer.\n\ncreate a customer."
       }
     },
     "/v1/disputes": {
@@ -317,7 +317,7 @@
             "bill8:payments:disputes:read": []
           }
         ],
-        "description": "list disputes."
+        "description": "List disputes.\n\nlist disputes."
       },
       "post": {
         "tags": [
@@ -355,7 +355,7 @@
             "bill8:payments:disputes:write": []
           }
         ],
-        "description": "open a dispute on a charge."
+        "description": "Create dispute.\n\nopen a dispute on a charge."
       }
     },
     "/v1/disputes/{id}/evidence": {
@@ -388,7 +388,7 @@
             "bill8:payments:disputes:write": []
           }
         ],
-        "description": "submit evidence (Storage refs)."
+        "description": "Submit evidence.\n\nsubmit evidence (Storage refs)."
       }
     },
     "/v1/disputes/{id}/resolve": {
@@ -424,7 +424,7 @@
             "bill8:payments:disputes:write": []
           }
         ],
-        "description": "close a dispute with an outcome\n(PAY-6). A `lost` dispute claws the funds back via a ledger\nreversal transaction (the ONLY money movement) and returns the\ncharge to `succeeded` minus the disputed amount; a `won` dispute\nkeeps the charge as-is. The `under_review → won|lost` transition is\nguarded - resolving twice is a 409, never a second clawback."
+        "description": "Resolve dispute.\n\nclose a dispute with an outcome\n(PAY-6). A `lost` dispute claws the funds back via a ledger\nreversal transaction (the ONLY money movement) and returns the\ncharge to `succeeded` minus the disputed amount; a `won` dispute\nkeeps the charge as-is. The `under_review → won|lost` transition is\nguarded - resolving twice is a 409, never a second clawback."
       }
     },
     "/v1/health": {
@@ -445,7 +445,7 @@
           }
         },
         "security": [],
-        "description": "Health probe payload."
+        "description": "Health .\n\nHealth probe payload."
       }
     },
     "/v1/intents/{id}/handback": {
@@ -481,7 +481,7 @@
             "bill8:payments:intents:write": []
           }
         ],
-        "description": "the SCA challenge handback\n(PAY-12). Completes a held charge from the CHANNEL-VERIFIED result -\nnever a client-asserted outcome. The handback token is single-use."
+        "description": "Sca handback.\n\nthe SCA challenge handback\n(PAY-12). Completes a held charge from the CHANNEL-VERIFIED result -\nnever a client-asserted outcome. The handback token is single-use."
       }
     },
     "/v1/methods": {
@@ -514,7 +514,7 @@
             "bill8:payments:read": []
           }
         ],
-        "description": "The static capability matrix of the built-in method types. New\nmethods register as channel data; the catalog reads from the\nchannels' capability matrices at runtime (methods ∪ across\nchannels)."
+        "description": "Method catalog.\n\nThe static capability matrix of the built-in method types. New\nmethods register as channel data; the catalog reads from the\nchannels' capability matrices at runtime (methods ∪ across\nchannels)."
       }
     },
     "/v1/payment-intents": {
@@ -547,7 +547,7 @@
             "bill8:payments:intents:read": []
           }
         ],
-        "description": "list intents for the env."
+        "description": "List payment intents.\n\nlist intents for the env."
       },
       "post": {
         "tags": [
@@ -588,7 +588,7 @@
             "bill8:payments:intents:write": []
           }
         ],
-        "description": "create an intent in\n`requires_confirmation` (no money moves)."
+        "description": "Create payment intent.\n\ncreate an intent in\n`requires_confirmation` (no money moves)."
       }
     },
     "/v1/payment-intents/{id}/confirm": {
@@ -621,7 +621,7 @@
             "bill8:payments:intents:write": []
           }
         ],
-        "description": "the guarded\n`requires_confirmation → processing` transition. Terminal states\nnever regress; confirming a terminal intent is a 409."
+        "description": "Confirm payment intent.\n\nthe guarded\n`requires_confirmation → processing` transition. Terminal states\nnever regress; confirming a terminal intent is a 409."
       }
     },
     "/v1/refunds": {
@@ -654,7 +654,7 @@
             "bill8:payments:refunds:read": []
           }
         ],
-        "description": "list refunds."
+        "description": "List refunds.\n\nlist refunds."
       },
       "post": {
         "tags": [
@@ -695,7 +695,7 @@
             "bill8:payments:refunds:write": []
           }
         ],
-        "description": "refund a charge (bounded)."
+        "description": "Create refund.\n\nrefund a charge (bounded)."
       }
     },
     "/v1/routing-rules": {
@@ -728,7 +728,7 @@
             "bill8:payments:routing:write": []
           }
         ],
-        "description": "create a routing rule."
+        "description": "Create routing rule.\n\ncreate a routing rule."
       }
     },
     "/v1/setup-intents": {
@@ -761,7 +761,7 @@
             "bill8:payments:setup-intents:read": []
           }
         ],
-        "description": "list setup intents for the env."
+        "description": "List setup intents.\n\nlist setup intents for the env."
       },
       "post": {
         "tags": [
@@ -799,7 +799,7 @@
             "bill8:payments:setup-intents:write": []
           }
         ],
-        "description": "save a method for later use (no charge)."
+        "description": "Create setup intent.\n\nsave a method for later use (no charge)."
       }
     },
     "/v1/setup-intents/{id}/confirm": {
@@ -832,7 +832,7 @@
             "bill8:payments:setup-intents:write": []
           }
         ],
-        "description": "the guarded\n`requires_confirmation → processing` transition for setup intents."
+        "description": "Confirm setup intent.\n\nthe guarded\n`requires_confirmation → processing` transition for setup intents."
       }
     },
     "/v1/tokens": {
@@ -901,7 +901,7 @@
             "bill8:payments:tokens:write": []
           }
         ],
-        "description": "consume a token\n(single-use guard: the first consume wins; every later consume of the\nsame token is rejected)."
+        "description": "Consume token.\n\nconsume a token\n(single-use guard: the first consume wins; every later consume of the\nsame token is rejected)."
       }
     }
   },

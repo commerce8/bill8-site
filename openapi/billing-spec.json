@@ -38,7 +38,7 @@
             "bill8:billing:coupons:write": []
           }
         ],
-        "description": "create a coupon (redemption-limit bounded)."
+        "description": "Create coupon.\n\ncreate a coupon (redemption-limit bounded)."
       }
     },
     "/v1/coupons/{code}/redeem": {
@@ -64,7 +64,7 @@
             "bill8:billing:coupons:write": []
           }
         ],
-        "description": "redeem a coupon (row-lock bounded:\nconcurrent redemptions never exceed the limit; expired coupons and\nexhausted limits are rejected)."
+        "description": "Redeem coupon.\n\nredeem a coupon (row-lock bounded:\nconcurrent redemptions never exceed the limit; expired coupons and\nexhausted limits are rejected)."
       }
     },
     "/v1/credit-notes": {
@@ -98,7 +98,7 @@
             "bill8:billing:credit-notes:write": []
           }
         ],
-        "description": "issue an invoice-level adjustment, bounded\nby the invoice's paid amount (row-lock serialized - credit notes\nadjust invoices; refunds adjust charges)."
+        "description": "Create credit note.\n\nissue an invoice-level adjustment, bounded\nby the invoice's paid amount (row-lock serialized - credit notes\nadjust invoices; refunds adjust charges)."
       }
     },
     "/v1/credit-notes/{id}/void": {
@@ -124,7 +124,7 @@
             "bill8:billing:credit-notes:write": []
           }
         ],
-        "description": "void a credit note (terminal)."
+        "description": "Void credit note.\n\nvoid a credit note (terminal)."
       }
     },
     "/v1/credits": {
@@ -155,7 +155,7 @@
             "bill8:billing:credits:write": []
           }
         ],
-        "description": "grant prepaid value to a customer."
+        "description": "Create credit.\n\ngrant prepaid value to a customer."
       }
     },
     "/v1/health": {
@@ -196,7 +196,7 @@
             "sentin8:cron:write": []
           }
         ],
-        "description": "the dunning-ladder tick (BIL-12):\nre-charge past-due invoices on the configured schedule. The ladder\nis DATA (`dunning_configs` rows): count + backoff per env; after the\nfinal failure the subscription cancels (guarded terminal)."
+        "description": "Dunning retry.\n\nthe dunning-ladder tick (BIL-12):\nre-charge past-due invoices on the configured schedule. The ladder\nis DATA (`dunning_configs` rows): count + backoff per env; after the\nfinal failure the subscription cancels (guarded terminal)."
       }
     },
     "/v1/internal/invoices/run": {
@@ -216,7 +216,7 @@
             "sentin8:cron:write": []
           }
         ],
-        "description": "the Cron proxy-back tick: find\nsubscriptions due this cycle, aggregate usage, finalize invoices,\ncharge via the payments public API. Idempotent per\n(subscription, cycle): a subscription with an open/paid/retrying\ninvoice covering its current period is skipped."
+        "description": "Run invoice cycle.\n\nthe Cron proxy-back tick: find\nsubscriptions due this cycle, aggregate usage, finalize invoices,\ncharge via the payments public API. Idempotent per\n(subscription, cycle): a subscription with an open/paid/retrying\ninvoice covering its current period is skipped."
       }
     },
     "/v1/invoices": {
@@ -249,7 +249,7 @@
             "bill8:billing:invoices:read": []
           }
         ],
-        "description": "list invoices."
+        "description": "List invoices.\n\nlist invoices."
       }
     },
     "/v1/invoices/upcoming": {
@@ -284,7 +284,7 @@
             "bill8:billing:invoices:read": []
           }
         ],
-        "description": "the read-only upcoming-invoice preview\n(BIL-14): projects the next cycle's invoice for a subscription with\nZERO writes."
+        "description": "Upcoming invoice.\n\nthe read-only upcoming-invoice preview\n(BIL-14): projects the next cycle's invoice for a subscription with\nZERO writes."
       }
     },
     "/v1/prices": {
@@ -317,7 +317,7 @@
             "bill8:billing:prices:read": []
           }
         ],
-        "description": "list prices."
+        "description": "List prices.\n\nlist prices."
       },
       "post": {
         "tags": [
@@ -355,7 +355,7 @@
             "bill8:billing:prices:write": []
           }
         ],
-        "description": "create a price (immutable once referenced)."
+        "description": "Create price.\n\ncreate a price (immutable once referenced)."
       }
     },
     "/v1/products": {
@@ -385,7 +385,7 @@
             "bill8:billing:products:write": []
           }
         ],
-        "description": "create a product."
+        "description": "Create product.\n\ncreate a product."
       }
     },
     "/v1/subscriptions": {
@@ -418,7 +418,7 @@
             "bill8:billing:subscriptions:read": []
           }
         ],
-        "description": "list subscriptions."
+        "description": "List subscriptions.\n\nlist subscriptions."
       },
       "post": {
         "tags": [
@@ -456,7 +456,7 @@
             "bill8:billing:subscriptions:write": []
           }
         ],
-        "description": "subscribe a customer to a price (with\ntrial support and proration-consistent cycle math)."
+        "description": "Create subscription.\n\nsubscribe a customer to a price (with\ntrial support and proration-consistent cycle math)."
       }
     },
     "/v1/subscriptions/proration-quote": {
@@ -500,7 +500,7 @@
             "bill8:billing:subscriptions:read": []
           }
         ],
-        "description": "quote a hypothetical plan\nchange (read-only, ZERO writes; the same proration math the real\nchange applies)."
+        "description": "Proration quote.\n\nquote a hypothetical plan\nchange (read-only, ZERO writes; the same proration math the real\nchange applies)."
       }
     },
     "/v1/subscriptions/{id}": {
@@ -530,7 +530,7 @@
             "bill8:billing:subscriptions:read": []
           }
         ],
-        "description": "read one subscription."
+        "description": "Get subscription.\n\nread one subscription."
       }
     },
     "/v1/subscriptions/{id}/pause": {
@@ -553,7 +553,7 @@
             "bill8:billing:subscriptions:write": []
           }
         ],
-        "description": "pause billing (no invoices\ngenerated while paused; terminal-state guard applies)."
+        "description": "Pause subscription.\n\npause billing (no invoices\ngenerated while paused; terminal-state guard applies)."
       }
     },
     "/v1/subscriptions/{id}/resume": {
@@ -576,7 +576,7 @@
             "bill8:billing:subscriptions:write": []
           }
         ],
-        "description": "resume with proration against\nthe remaining cycle (cent-exact, BIL-4 math)."
+        "description": "Resume subscription.\n\nresume with proration against\nthe remaining cycle (cent-exact, BIL-4 math)."
       }
     },
     "/v1/tax-rates": {
@@ -607,7 +607,7 @@
             "bill8:billing:tax-rates:write": []
           }
         ],
-        "description": "configure a jurisdiction rate."
+        "description": "Create tax rate.\n\nconfigure a jurisdiction rate."
       }
     },
     "/v1/usage-records": {
@@ -647,7 +647,7 @@
             "bill8:billing:usage-records:write": []
           }
         ],
-        "description": "meter a usage event (deterministic\naggregation at invoice time; duplicate keys counted once)."
+        "description": "Create usage record.\n\nmeter a usage event (deterministic\naggregation at invoice time; duplicate keys counted once)."
       }
     }
   },

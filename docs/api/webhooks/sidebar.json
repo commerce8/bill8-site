@@ -1,0 +1,99 @@
+[
+  {
+    "type": "category",
+    "label": "webhooks",
+    "link": {
+      "type": "doc",
+      "id": "api/webhooks/bill-8-webhooks"
+    },
+    "items": [
+      {
+        "type": "doc",
+        "id": "api/webhooks/bill-8-webhooks",
+        "label": "Overview",
+        "className": "api-overview"
+      },
+      {
+        "type": "category",
+        "label": "v1",
+        "link": {
+          "type": "doc",
+          "id": "api/webhooks/list-deliveries"
+        },
+        "items": [
+          {
+            "type": "category",
+            "label": "v1/events",
+            "link": {
+              "type": "doc",
+              "id": "api/webhooks/list-deliveries"
+            },
+            "items": [
+              {
+                "type": "category",
+                "label": "v1/events/{id}",
+                "link": {
+                  "type": "doc",
+                  "id": "api/webhooks/list-deliveries"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "api/webhooks/list-deliveries",
+                    "label": "`GET v1/events/{id}/deliveries`",
+                    "className": "api-method get"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "api/webhooks/replay-event",
+                    "label": "`POST v1/events/{id}/replay`",
+                    "className": "api-method post"
+                  }
+                ],
+                "collapsed": true
+              },
+              {
+                "type": "doc",
+                "id": "api/webhooks/list-events",
+                "label": "`GET v1/events`",
+                "className": "api-method get"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "type": "doc",
+            "id": "api/webhooks/health",
+            "label": "`GET v1/health`",
+            "className": "api-method get"
+          },
+          {
+            "type": "category",
+            "label": "v1/webhook-endpoints",
+            "link": {
+              "type": "doc",
+              "id": "api/webhooks/list-endpoints"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/webhooks/list-endpoints",
+                "label": "`GET v1/webhook-endpoints`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/webhooks/create-endpoint",
+                "label": "`POST v1/webhook-endpoints`",
+                "className": "api-method post"
+              }
+            ],
+            "collapsed": true
+          }
+        ],
+        "collapsed": true
+      }
+    ],
+    "collapsed": true
+  }
+]

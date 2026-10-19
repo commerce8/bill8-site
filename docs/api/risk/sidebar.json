@@ -1,0 +1,88 @@
+[
+  {
+    "type": "category",
+    "label": "risk",
+    "link": {
+      "type": "doc",
+      "id": "api/risk/bill-8-risk"
+    },
+    "items": [
+      {
+        "type": "doc",
+        "id": "api/risk/bill-8-risk",
+        "label": "Overview",
+        "className": "api-overview"
+      },
+      {
+        "type": "category",
+        "label": "v1",
+        "link": {
+          "type": "doc",
+          "id": "api/risk/health"
+        },
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/risk/health",
+            "label": "`GET v1/health`",
+            "className": "api-method get"
+          },
+          {
+            "type": "category",
+            "label": "v1/reviews",
+            "link": {
+              "type": "doc",
+              "id": "api/risk/resolve-review"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/risk/resolve-review",
+                "label": "`POST v1/reviews/{id}/resolve`",
+                "className": "api-method post"
+              },
+              {
+                "type": "doc",
+                "id": "api/risk/list-reviews",
+                "label": "`GET v1/reviews`",
+                "className": "api-method get"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "type": "category",
+            "label": "v1/rules",
+            "link": {
+              "type": "doc",
+              "id": "api/risk/list-rules"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/risk/list-rules",
+                "label": "`GET v1/rules`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/risk/create-rule",
+                "label": "`POST v1/rules`",
+                "className": "api-method post"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "type": "doc",
+            "id": "api/risk/screen",
+            "label": "`POST v1/screenings`",
+            "className": "api-method post"
+          }
+        ],
+        "collapsed": true
+      }
+    ],
+    "collapsed": true
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "type": "category",
+    "label": "reporting",
+    "link": {
+      "type": "doc",
+      "id": "api/reporting/bill-8-reporting"
+    },
+    "items": [
+      {
+        "type": "doc",
+        "id": "api/reporting/bill-8-reporting",
+        "label": "Overview",
+        "className": "api-overview"
+      },
+      {
+        "type": "category",
+        "label": "v1",
+        "link": {
+          "type": "doc",
+          "id": "api/reporting/health"
+        },
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/reporting/health",
+            "label": "`GET v1/health`",
+            "className": "api-method get"
+          },
+          {
+            "type": "doc",
+            "id": "api/reporting/run-report-schedules",
+            "label": "`POST v1/internal/report-schedules/run`",
+            "className": "api-method post"
+          },
+          {
+            "type": "category",
+            "label": "v1/report-runs",
+            "link": {
+              "type": "doc",
+              "id": "api/reporting/get-report-run"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/reporting/get-report-run",
+                "label": "`GET v1/report-runs/{id}`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/reporting/list-report-runs",
+                "label": "`GET v1/report-runs`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/reporting/create-report-run",
+                "label": "`POST v1/report-runs`",
+                "className": "api-method post"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "type": "category",
+            "label": "v1/report-schedules",
+            "link": {
+              "type": "doc",
+              "id": "api/reporting/delete-report-schedule"
+            },
+            "items": [
+              {
+                "type": "category",
+                "label": "v1/report-schedules/{id}",
+                "link": {
+                  "type": "doc",
+                  "id": "api/reporting/delete-report-schedule"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "api/reporting/delete-report-schedule",
+                    "label": "`DELETE v1/report-schedules/{id}`",
+                    "className": "api-method delete"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "api/reporting/patch-report-schedule",
+                    "label": "`PATCH v1/report-schedules/{id}`",
+                    "className": "api-method patch"
+                  }
+                ],
+                "collapsed": true
+              },
+              {
+                "type": "doc",
+                "id": "api/reporting/list-report-schedules",
+                "label": "`GET v1/report-schedules`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/reporting/create-report-schedule",
+                "label": "`POST v1/report-schedules`",
+                "className": "api-method post"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "type": "category",
+            "label": "v1/report-types",
+            "link": {
+              "type": "doc",
+              "id": "api/reporting/list-report-types"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/reporting/list-report-types",
+                "label": "`GET v1/report-types`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/reporting/create-report-type",
+                "label": "`POST v1/report-types`",
+                "className": "api-method post"
+              }
+            ],
+            "collapsed": true
+          }
+        ],
+        "collapsed": true
+      }
+    ],
+    "collapsed": true
+  }
+]

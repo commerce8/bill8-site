@@ -1,0 +1,215 @@
+[
+  {
+    "type": "category",
+    "label": "ledger",
+    "link": {
+      "type": "doc",
+      "id": "api/ledger/bill-8-ledger"
+    },
+    "items": [
+      {
+        "type": "doc",
+        "id": "api/ledger/bill-8-ledger",
+        "label": "Overview",
+        "className": "api-overview"
+      },
+      {
+        "type": "category",
+        "label": "v1",
+        "link": {
+          "type": "doc",
+          "id": "api/ledger/list-accounts"
+        },
+        "items": [
+          {
+            "type": "category",
+            "label": "v1/accounts",
+            "link": {
+              "type": "doc",
+              "id": "api/ledger/list-accounts"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/ledger/list-accounts",
+                "label": "`GET v1/accounts`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/ledger/create-account",
+                "label": "`POST v1/accounts`",
+                "className": "api-method post"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "type": "category",
+            "label": "v1/balance-transactions",
+            "link": {
+              "type": "doc",
+              "id": "api/ledger/list-transactions"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/ledger/list-transactions",
+                "label": "`GET v1/balance-transactions`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/ledger/post-transaction",
+                "label": "`POST v1/balance-transactions`",
+                "className": "api-method post"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "type": "category",
+            "label": "v1/balances",
+            "link": {
+              "type": "doc",
+              "id": "api/ledger/get-balance"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/ledger/get-balance",
+                "label": "`GET v1/balances/{id}`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/ledger/list-balances",
+                "label": "`GET v1/balances`",
+                "className": "api-method get"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "type": "category",
+            "label": "v1/fees",
+            "link": {
+              "type": "doc",
+              "id": "api/ledger/list-fees"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/ledger/list-fees",
+                "label": "`GET v1/fees`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/ledger/upsert-fee",
+                "label": "`POST v1/fees`",
+                "className": "api-method post"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "type": "doc",
+            "id": "api/ledger/health",
+            "label": "`GET v1/health`",
+            "className": "api-method get"
+          },
+          {
+            "type": "doc",
+            "id": "api/ledger/run-payout-schedules",
+            "label": "`POST v1/internal/payout-schedules/run`",
+            "className": "api-method post"
+          },
+          {
+            "type": "category",
+            "label": "v1/payout-schedules",
+            "link": {
+              "type": "doc",
+              "id": "api/ledger/delete-payout-schedule"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/ledger/delete-payout-schedule",
+                "label": "`DELETE v1/payout-schedules/{id}`",
+                "className": "api-method delete"
+              },
+              {
+                "type": "doc",
+                "id": "api/ledger/list-payout-schedules",
+                "label": "`GET v1/payout-schedules`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/ledger/create-payout-schedule",
+                "label": "`POST v1/payout-schedules`",
+                "className": "api-method post"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "type": "category",
+            "label": "v1/payouts",
+            "link": {
+              "type": "doc",
+              "id": "api/ledger/get-payout"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/ledger/get-payout",
+                "label": "`GET v1/payouts/{id}`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/ledger/list-payouts",
+                "label": "`GET v1/payouts`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/ledger/create-payout",
+                "label": "`POST v1/payouts`",
+                "className": "api-method post"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "type": "category",
+            "label": "v1/transfers",
+            "link": {
+              "type": "doc",
+              "id": "api/ledger/list-transfers"
+            },
+            "items": [
+              {
+                "type": "doc",
+                "id": "api/ledger/list-transfers",
+                "label": "`GET v1/transfers`",
+                "className": "api-method get"
+              },
+              {
+                "type": "doc",
+                "id": "api/ledger/create-transfer",
+                "label": "`POST v1/transfers`",
+                "className": "api-method post"
+              }
+            ],
+            "collapsed": true
+          }
+        ],
+        "collapsed": true
+      }
+    ],
+    "collapsed": true
+  }
+]

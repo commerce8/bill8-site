@@ -1,1 +1,1 @@
-{"title":"Body","body":{"content":{"application/json":{"schema":{}}},"required":true}}
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","description":"Request body for `POST /v1/reviews/{id}/resolve` (idempotent resolve).","properties":{"decision":{"type":["string","null"],"description":"Resolution decision: `approve`/`approved` resolves approved;\nanything else resolves declined (defaults to `declined`)."}},"title":"ResolveReviewRequest"}}},"required":true}}

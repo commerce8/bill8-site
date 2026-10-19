@@ -1,1 +1,1 @@
-{"title":"Body","body":{"content":{"application/json":{"schema":{}}},"required":true}}
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","description":"Request body for `POST /v1/tax-rates`.","required":["jurisdiction"],"properties":{"inclusive":{"type":"boolean","description":"Inclusive-in-price flag (exclusive when absent)."},"jurisdiction":{"type":"string","description":"Tax jurisdiction code (required)."},"rate_bps":{"type":"integer","format":"int32","description":"Rate in basis points."}},"title":"CreateTaxRateRequest"}}},"required":true}}

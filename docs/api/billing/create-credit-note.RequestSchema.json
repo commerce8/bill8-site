@@ -1,1 +1,1 @@
-{"title":"Body","body":{"content":{"application/json":{"schema":{}}},"required":true}}
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","description":"Request body for `POST /v1/credit-notes`.","required":["invoice_id","amount"],"properties":{"amount":{"type":"string","description":"Credit-note amount (decimal string, capped at the paid amount)."},"invoice_id":{"type":"string","format":"uuid","description":"Invoice being adjusted."}},"title":"CreateCreditNoteRequest"}}},"required":true}}

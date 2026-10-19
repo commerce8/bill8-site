@@ -1,19 +1,11 @@
 ---
 id: run-invoice-cycle
-title: "`POST /v1/internal/invoices/run` — the Cron proxy-back tick: find
-subscriptions due this cycle, aggregate usage, finalize invoices,
-charge via the payments public API. Idempotent per
-(subscription, cycle): a subscription with an open/paid/retrying
-invoice covering its current period is skipped."
-description: "`POST /v1/internal/invoices/run` — the Cron proxy-back tick: find"
-sidebar_label: "`POST /v1/internal/invoices/run` — the Cron proxy-back tick: find
-subscriptions due this cycle, aggregate usage, finalize invoices,
-charge via the payments public API. Idempotent per
-(subscription, cycle): a subscription with an open/paid/retrying
-invoice covering its current period is skipped."
+title: "`POST /v1/internal/invoices/run`"
+description: "the Cron proxy-back tick: find"
+sidebar_label: "`POST /v1/internal/invoices/run`"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVMFu2zAM/RWCpw1Q4qSnQrd2pxyGFmt3SoJWkRmbiENpkuw2CwzsI/aF+5JBdrqlxXbYfScbFMlHvvfAIyZTRdRL3HDTsFS4Vug8BZPYyaJEjaGVB5bOsaUHe7ANocJA0TuJFFEf8WI2y5+Sog3scx1qXIwVEFoBH5ylGKnEvlcYybaB0wH18oiRJLFcahuc6KfAiVAv1/1avWn3eHtzdw9FNy9YEgUxTXGaKRahlUf48e07pJrgQ3AD4PNhsjF2B4ntTsOWpVxJbDe/ekYoW4JUc4RhKQWmqgJVJhG00VSkcpFp+CvBC5Jaia1NqAg6NgOaN4c9SYrg203DFq5uF1NYlLT3LpEk8BRW8u4cV41w7zUYOI/DE6cajIDzJIU3XBaBUjiwVCs5DQDWdRRYKuAUwbYhnDDYlcAR4o69p3KKCveUapfV8y4mVOhNqlHjXwlEhSxbl3VMnBpCPRjicvJii7eC3I3CwXXO0tdj1qDCK5bVb/KyKqOtFOwpDYvkURu2JJEytJh9Rv64uIebT3Dlja1pcjGd5enKDLhlCn9M6BV2FOI422w6H0N5+b2Rs9b/ffRvPnol+hHTwWcWEz2nwjeGJbPchia/jRZbYjcfzDSyO/yOW+ez0Uq+L3X2pF7i8bgxkT6Hpu9z+EtLIV+FtcLOBDabZjwGZ27O6mHf/wSyoq0H
+api: eJztVM1u2zAMfhWCpw1Q4rSnQrd2pxyGFmt3SoJWkVmbqENplOw2C/zug+J2zYrtDXayIZD8+P1IB8yuSWhXuOWuY2lwYzBEUpc5yLJGi9rLPcsQ2NO93/uO0KBSikESJbQHPF8syqem5JVj6UOLy6kDtBeIGjylRDWOo8FEvlfOe7SrAyaSzHJhvQaxz8qZ0K4248Z8GJdbgi8ajrNe9rOt80+Q2T9ZeGSp15L67e/yBHVPkFtOcNzXgGsapcZlgj65hkxpch3/JHgllsxafOu0IRjYQUGLbr8jyQliv+3Yw+XNcg7LmnYxZJIMkXQtn05xzQT32YKD03N45tyCEwiRpIqO60op656lWcvrAuDDQMrSAOcEvld9xeBQAydITxwj1XM0uKPchmJMDCmjwehyixar4axiyaTiuuqNVqW9oEGWx1Asypw7Qnv0+mL25vhHrW8nT+CqVNmrqQpmf3BK5l264smUFwM7ykcaZdGOPUmiAixuV3C/Lu/g+htcRudbmp3PF2W3usA9MulfC0aDA2maNlvMz6ajQn3n5GT0w8317R38U4SHjywP6IMUI/+H6zRceR+LmplechU7x1LU7rUrgk1BW+FwdozUpPLxd6JZ3oVeygPSlmTaFR4OW5fou3bjWI5/9KTl2m8MDk7Zbbvptp9kuriI4/gLWGKfIA==
 sidebar_class_name: "post api-method"
 info_path: docs/api/billing/bill-8-billing
 custom_edit_url: null
@@ -31,7 +23,7 @@ import Translate from "@docusaurus/Translate";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"`POST /v1/internal/invoices/run` — the Cron proxy-back tick: find\nsubscriptions due this cycle, aggregate usage, finalize invoices,\ncharge via the payments public API. Idempotent per\n(subscription, cycle): a subscription with an open/paid/retrying\ninvoice covering its current period is skipped."}
+  children={"`POST /v1/internal/invoices/run`"}
 >
 </Heading>
 
@@ -45,7 +37,7 @@ import Translate from "@docusaurus/Translate";
 
 
 
-`POST /v1/internal/invoices/run` — the Cron proxy-back tick: find
+the Cron proxy-back tick: find
 subscriptions due this cycle, aggregate usage, finalize invoices,
 charge via the payments public API. Idempotent per
 (subscription, cycle): a subscription with an open/paid/retrying

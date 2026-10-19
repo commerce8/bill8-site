@@ -1,11 +1,11 @@
 ---
 id: create-refund
-title: "`POST /v1/refunds` — refund a charge (bounded)."
-description: "`POST /v1/refunds` — refund a charge (bounded)."
-sidebar_label: "`POST /v1/refunds` — refund a charge (bounded)."
+title: "`POST /v1/refunds`"
+description: "refund a charge (bounded)."
+sidebar_label: "`POST /v1/refunds`"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVl1PGzkU/SvWfQJphkCAlM4bRfvQVbtUwD5FiNzYdxK3Hntqe6BRFKk/Yn/h/pLVtSckEErVVfOSked+HJ9zrj1LiDgLUI2hxUVDNga4LcC15DFqZ98rqEB6wkh3nurOKijA09eOQnzn1AKqJUhnI9nIj9i2RsuUOfgcnOW1IOfUID/FRUtQgZt+JhmhAEVBet1yNFRwlauKqVMLUTsvJp8ur2/E4P5okDuHyUHfXHtSDFnO0c/oTivG3HpGHTWFhKRxXcaUu44hRK/tDAqwnTGc8LT9eUoQGAQKRVI3aEROEXuKauxMDCI6EeckPDWoLb/KyHBqaP8AVsUWos1+HxvXzjcYoYKu02pn/zdzEjmd2+TCqaZW1LQukpWLuy+0+IU9XaAx5MvQsSykxFYl8YUWB7BaFRB1NAzzIql8lfr2WsCKAzaMR99RWgitsyETPTw85L/nWnIVETopiRTxZn+TS86FdE1LNmDM/EvnlfB0Tz4krVr0Ubh6X2DP5nPTJOo3OhVrqxQQIsYu8NtEhbrD+HNjbTT4sZ/+vL78a20mZ5OFHrSnpO4UDVpJd9GjDSg5+4l9XhD5dR99IDUj31OCptwqzK4iT1bSbzTrlDaDQNmxW/y9VllhpDLqhnbKJy8yYH4bIjZtPwm/jrS3os7Ieol/qt4HXZNcSEOCM0jsTR69PBEDMalRG1KT/acjlHvx1KwKODk83h2Mjzokm061MWfV+sit+gOuevA6EuM8GQ53ky/vyZc5VAyEdbZ8BLUW49/v/wjr4px7cLFINiEMJDuv4wKq8RJebV6Nb1c7B8nuUZw69VjWkyb2pi6ZYJ9nrqE4d3x9tC7wdLUY51DBVhEogMf/anOd/PENm5ap3MzZRqEtu8JxjWen9eikPH1z9KY8OR0Ny+lxLcuhfDs6rkcjrHEELxyd62psJlu7ZIRevMRK+XgLPqfgmmzU9ky8S+R96sMSDRlYKHo+QiGUDm0XeSlQjIY4lsOsJROYHKMl2ZA2arHh9h/f34jLK3HeopxTOTw4zPBt1LUm/2LAqoB07CV8hwdHeYnpbtBulf4/6j3Z/OO0RPoWB61BbblT5w2/y8KO4f4onbRZ2tsC5qx7NYblcoqB/vZmteLlrx159uFtAffoNd+dyXQFzAkVb3W8hCzWRb4zyhvuzuGmYxQ798eqWGecS0ltfDX2dsuaTAwUMO2/ZBqnOMfjA+8EH6AC4I8hzk6HRlpbgkE763DGsbkm//4DHw40vA==
+api: eJytVl1PGzsQ/SvWPIG0S0KAlLtvFPWhV+2lAu5ThMjEnk3ceu2t7YVGUf57NfaGBEKpKjUvWXnn48ycM+NdQcR5gGoCLS4bsjHAXQGuJY9RO/tRQQXSE0a691R3VkEBnr53FOJ7p5ZQrUA6G8lGfsS2NVomz8HX4CyfBbmgBvkpLluCCtzsK8kIBSgK0uuWraGC6xxVzJxaitp5Mf1ydXMrBg/Hg5w5TI/65NqTYshygX5O91ox5tYz6qgpJCSN6zKmnHUCIXpt51CA7Yxhh+fpL5KDwCBQKJK6QSOyizhQVGNnYhDRibgg4alBbflVRoYzQ4dHsC52EG3rfUpcO99ghAq6Tqu9+m8XJLI7p8mBU0ytqGldJCuX999o+Qc1XaIx5MvQMS2kxE4k8Y2WR7BeFxB1NAzzMrF8nfL2XMCaDbYdj76jdBBaZ0Nu9Gg45L+XXHIUETopiRRxsX9JJRdCuqYlGzDm/kvnlfD0QD4krlr0Ubj6UGDfzZeiSa3f8lRspFJAiBi7wG9TK9Q9xt8La8vBr/X0783VfxsxOZsk9Kg9JXZnaNBKuo8ebUDJ3s/k8wrJb+voE6k5+b4laMqdwKwq8mQl/UWxzmg7CJQVu9O/tyIrjFRG3dBe+KRFBsxvQ8Sm7Sfhz5H2UtQZWU/xb9n7pGuSS2lIsAeJg+mTlqdiIKY1akNqevh8hHIunpp1AafDk/3B+KxDkulMG3NebVZu1S+46tHrSIzzdDTad756IF9mUzEQ1tnyCdSGjFJYFxecgUNFsglfINl5HZdQTVbwZupqcrfeWyN9ys1AiYOZS1wf8mg1FBeOb4nWBR6iFuMCKthZ21AAT/n19tb48AOblju2HactETuqhJMaz8/q8Wl59u74XXl6Nh6Vs5NaliP5z/ikHo+xxjG8siE30VgztnaJ756jVH75dNm9rPWGbNT2XLxPXfrSm4myrz0UvdJDIZQObRf5KFCMhtiSzawlE7g1RkuyIZVpseHknz/eiqtrcdGiXFA5Ohpm8DbqWpN/1WBdQNptCd3w6DgfcbMbtDuh92/Ll7Xt3NRvU9qPRqQfcdAa1JYzdt5wiEzvBB6O01rNBN8VsGD2qwmsVjMM9L836zUff+/Is+zuCnhAr/miTBorYEGouOTJCjJllxlcecvZ2dx0jGLvslgXG48LKamNb9re7QiUGwQFzPrPlsYp9vH4yJXgI1QA/OXD3mlDpLMVGLTzDudsm2Py7yca/iqF
 sidebar_class_name: "post api-method"
 info_path: docs/api/payments/bill-8-payments
 custom_edit_url: null
@@ -23,7 +23,7 @@ import Translate from "@docusaurus/Translate";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"`POST /v1/refunds` — refund a charge (bounded)."}
+  children={"`POST /v1/refunds`"}
 >
 </Heading>
 
@@ -37,7 +37,7 @@ import Translate from "@docusaurus/Translate";
 
 
 
-`POST /v1/refunds` — refund a charge (bounded).
+refund a charge (bounded).
 
 <Heading
   id={"request"}

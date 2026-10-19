@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "bill8-ledger",
-    "description": "Sentin8 Bill8:Ledger — double-entry money engine, balances, payouts, transfers.",
+    "description": "Sentin8 Bill8:Ledger - double-entry money engine, balances, payouts, transfers.",
     "license": {
       "name": "MIT OR Apache-2.0",
       "identifier": "MIT OR Apache-2.0"
@@ -15,7 +15,7 @@
         "tags": [
           "ledger"
         ],
-        "summary": "`GET /v1/accounts` — list ledger accounts.",
+        "summary": "`GET /v1/accounts`",
         "operationId": "list_accounts",
         "responses": {
           "200": {
@@ -39,13 +39,14 @@
           {
             "bill8:ledger:accounts:read": []
           }
-        ]
+        ],
+        "description": "list ledger accounts."
       },
       "post": {
         "tags": [
           "ledger"
         ],
-        "summary": "`POST /v1/accounts` — create a ledger account with its standard\nbalances (`available`, `pending`).",
+        "summary": "`POST /v1/accounts`",
         "operationId": "create_account",
         "requestBody": {
           "content": {
@@ -76,7 +77,8 @@
           {
             "bill8:ledger:accounts:write": []
           }
-        ]
+        ],
+        "description": "create a ledger account with its standard\nbalances (`available`, `pending`)."
       }
     },
     "/v1/balance-transactions": {
@@ -84,7 +86,7 @@
         "tags": [
           "ledger"
         ],
-        "summary": "`GET /v1/balance-transactions` — list movements (optionally by balance).",
+        "summary": "`GET /v1/balance-transactions`",
         "operationId": "list_transactions",
         "parameters": [
           {
@@ -120,14 +122,15 @@
           {
             "bill8:ledger:balance-transactions:read": []
           }
-        ]
+        ],
+        "description": "list movements (optionally by balance)."
       },
       "post": {
         "tags": [
           "ledger"
         ],
-        "summary": "`POST /v1/balance-transactions` — post one double-entry movement.",
-        "description": "The money path: BEGIN → tenant context → idempotency check →\ncurrency/currency validation → row-lock both balances → append the\ntransaction → mutate both balance rows → outbox (same tx) → COMMIT.\nA rejected batch writes NOTHING (imbalanced, currency mismatch, or\ninsufficient debit funds all fail pre-write).",
+        "summary": "`POST /v1/balance-transactions`",
+        "description": "The money path: BEGIN → tenant context → idempotency check →\ncurrency/currency validation → row-lock both balances → append the\ntransaction → mutate both balance rows → outbox (same tx) → COMMIT.\nA rejected batch writes NOTHING (imbalanced, currency mismatch, or\ninsufficient debit funds all fail pre-write).\n\npost one double-entry movement.",
         "operationId": "post_transaction",
         "requestBody": {
           "content": {
@@ -154,7 +157,7 @@
             "description": "Missing bill8:ledger:balance-transactions:write"
           },
           "422": {
-            "description": "Imbalanced/currency-mismatch — nothing written"
+            "description": "Imbalanced/currency-mismatch - nothing written"
           }
         },
         "security": [
@@ -169,7 +172,7 @@
         "tags": [
           "ledger"
         ],
-        "summary": "`GET /v1/balances` — list balances (optionally filtered).",
+        "summary": "`GET /v1/balances`",
         "operationId": "list_balances",
         "parameters": [
           {
@@ -214,7 +217,8 @@
           {
             "bill8:ledger:balances:read": []
           }
-        ]
+        ],
+        "description": "list balances (optionally filtered)."
       }
     },
     "/v1/balances/{id}": {
@@ -222,7 +226,7 @@
         "tags": [
           "ledger"
         ],
-        "summary": "`GET /v1/balances/{id}` — read one balance.",
+        "summary": "`GET /v1/balances/{id}`",
         "operationId": "get_balance",
         "responses": {
           "200": {
@@ -243,7 +247,8 @@
           {
             "bill8:ledger:balances:read": []
           }
-        ]
+        ],
+        "description": "read one balance."
       }
     },
     "/v1/fees": {
@@ -251,7 +256,7 @@
         "tags": [
           "ledger"
         ],
-        "summary": "`GET /v1/fees` — list the configured fee model.",
+        "summary": "`GET /v1/fees`",
         "operationId": "list_fees",
         "responses": {
           "200": {
@@ -275,13 +280,14 @@
           {
             "bill8:ledger:fees:read": []
           }
-        ]
+        ],
+        "description": "list the configured fee model."
       },
       "post": {
         "tags": [
           "ledger"
         ],
-        "summary": "`POST /v1/fees` — upsert the fee model for a transaction type.",
+        "summary": "`POST /v1/fees`",
         "operationId": "upsert_fee",
         "requestBody": {
           "content": {
@@ -305,7 +311,8 @@
           {
             "bill8:ledger:fees:write": []
           }
-        ]
+        ],
+        "description": "upsert the fee model for a transaction type."
       }
     },
     "/v1/health": {
@@ -313,7 +320,7 @@
         "tags": [
           "meta"
         ],
-        "summary": "Health probe payload.",
+        "summary": "`GET /v1/health`",
         "operationId": "health",
         "responses": {
           "200": {
@@ -325,7 +332,8 @@
             }
           }
         },
-        "security": []
+        "security": [],
+        "description": "Health probe payload."
       }
     },
     "/v1/internal/payout-schedules/run": {
@@ -333,7 +341,7 @@
         "tags": [
           "ledger"
         ],
-        "summary": "`POST /v1/internal/payout-schedules/run` — the Cron proxy-back tick.\nCreates a payout for each enabled schedule whose available balance\nmeets its minimum. At most one payout per tick (the balance guard\nitself enforces it: the available row lock serializes).",
+        "summary": "`POST /v1/internal/payout-schedules/run`",
         "operationId": "run_payout_schedules",
         "responses": {
           "200": {
@@ -344,7 +352,8 @@
           {
             "sentin8:cron:write": []
           }
-        ]
+        ],
+        "description": "the Cron proxy-back tick.\nCreates a payout for each enabled schedule whose available balance\nmeets its minimum. At most one payout per tick (the balance guard\nitself enforces it: the available row lock serializes)."
       }
     },
     "/v1/payout-schedules": {
@@ -352,7 +361,7 @@
         "tags": [
           "ledger"
         ],
-        "summary": "`GET /v1/payout-schedules` — list schedules.",
+        "summary": "`GET /v1/payout-schedules`",
         "operationId": "list_payout_schedules",
         "responses": {
           "200": {
@@ -376,13 +385,14 @@
           {
             "bill8:ledger:payout-schedules:read": []
           }
-        ]
+        ],
+        "description": "list schedules."
       },
       "post": {
         "tags": [
           "ledger"
         ],
-        "summary": "`POST /v1/payout-schedules` — create an automatic payout schedule.",
+        "summary": "`POST /v1/payout-schedules`",
         "operationId": "create_payout_schedule",
         "requestBody": {
           "content": {
@@ -413,7 +423,8 @@
           {
             "bill8:ledger:payout-schedules:write": []
           }
-        ]
+        ],
+        "description": "create an automatic payout schedule."
       }
     },
     "/v1/payout-schedules/{id}": {
@@ -421,7 +432,7 @@
         "tags": [
           "ledger"
         ],
-        "summary": "`DELETE /v1/payout-schedules/{id}` — disable a schedule.",
+        "summary": "`DELETE /v1/payout-schedules/{id}`",
         "operationId": "delete_payout_schedule",
         "responses": {
           "200": {
@@ -435,7 +446,8 @@
           {
             "bill8:ledger:payout-schedules:write": []
           }
-        ]
+        ],
+        "description": "disable a schedule."
       }
     },
     "/v1/payouts": {
@@ -443,7 +455,7 @@
         "tags": [
           "ledger"
         ],
-        "summary": "`GET /v1/payouts` — list payouts.",
+        "summary": "`GET /v1/payouts`",
         "operationId": "list_payouts",
         "responses": {
           "200": {
@@ -467,13 +479,14 @@
           {
             "bill8:ledger:payouts:read": []
           }
-        ]
+        ],
+        "description": "list payouts."
       },
       "post": {
         "tags": [
           "ledger"
         ],
-        "summary": "`POST /v1/payouts` — pay out available balance to an external account.",
+        "summary": "`POST /v1/payouts`",
         "operationId": "create_payout",
         "requestBody": {
           "content": {
@@ -500,14 +513,15 @@
             "description": "Missing bill8:ledger:payouts:write"
           },
           "422": {
-            "description": "Insufficient available balance — nothing written"
+            "description": "Insufficient available balance - nothing written"
           }
         },
         "security": [
           {
             "bill8:ledger:payouts:write": []
           }
-        ]
+        ],
+        "description": "pay out available balance to an external account."
       }
     },
     "/v1/payouts/{id}": {
@@ -515,7 +529,7 @@
         "tags": [
           "ledger"
         ],
-        "summary": "`GET /v1/payouts/{id}` — read one payout.",
+        "summary": "`GET /v1/payouts/{id}`",
         "operationId": "get_payout",
         "responses": {
           "200": {
@@ -536,7 +550,8 @@
           {
             "bill8:ledger:payouts:read": []
           }
-        ]
+        ],
+        "description": "read one payout."
       }
     },
     "/v1/transfers": {
@@ -544,7 +559,7 @@
         "tags": [
           "ledger"
         ],
-        "summary": "`GET /v1/transfers` — list transfers.",
+        "summary": "`GET /v1/transfers`",
         "operationId": "list_transfers",
         "responses": {
           "200": {
@@ -568,13 +583,14 @@
           {
             "bill8:ledger:transfers:read": []
           }
-        ]
+        ],
+        "description": "list transfers."
       },
       "post": {
         "tags": [
           "ledger"
         ],
-        "summary": "`POST /v1/transfers` — move funds between connected balances.",
+        "summary": "`POST /v1/transfers`",
         "operationId": "create_transfer",
         "requestBody": {
           "content": {
@@ -601,14 +617,15 @@
             "description": "Missing bill8:ledger:transfers:write"
           },
           "422": {
-            "description": "Insufficient funds — nothing written"
+            "description": "Insufficient funds - nothing written"
           }
         },
         "security": [
           {
             "bill8:ledger:transfers:write": []
           }
-        ]
+        ],
+        "description": "move funds between connected balances."
       }
     }
   },

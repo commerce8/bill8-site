@@ -1,13 +1,11 @@
 ---
 id: screen
-title: "`POST /v1/screenings` — screen a charge context (M2M from payments).
-The evaluator is pure; the outcome persists as an auditable screening."
-description: "`POST /v1/screenings` — screen a charge context (M2M from payments)."
-sidebar_label: "`POST /v1/screenings` — screen a charge context (M2M from payments).
-The evaluator is pure; the outcome persists as an auditable screening."
+title: "`POST /v1/screenings`"
+description: "screen a charge context (M2M from payments)."
+sidebar_label: "`POST /v1/screenings`"
 hide_title: true
 hide_table_of_contents: true
-api: eJzNVstuIzcQ/JVGn2SAetjJYTE57QY57MFwYCsnrWBRZEvDNYcckxxpBWGAfES+MF+yaM5oZT3gwyKH6DQgm8Wq6ge1xyTXEYsZBhNfcC7Q1xRkMt591lhgVIHIocBArw3F9MnrHRZ7VN4lcok/ZV1bo/KR8dfoHa9FVVIl+SvtasIC/fIrqYQCNUUVTM3RWOBjhwpLr3ew8gEWfz48TWG8uR13Nxu3jgsY3N/dwyr4Cmq5q8ileDPqOZlAmumrUoY1PWde3xILqQNLSYZiJny6X+zPmExLgi4G+hhIHjoSMJCVb1wSoJoQyKmdgIpS6bWAQGvj3c0I21ZgMsmy2qd8rBeHLW8duabQUF6ItXexY3c3mVxSejo4AL5JyleE4r/yndX2oOBX8MNrkOcmyLU0LiZIJUFoLEGkdO690SiQ3OY5f5w5LfAN+0AykX6WP5mgjifpM5IjbE+wj/JjCsatUeDKh4p3UMtEw2QyndMLfmcA4x3wbkyyqjNur+s9zKbJwk/hHrbZ0EROugTkNiZ4x7WbUX8G8VgPRmeQSiZVkn7mvJxwnB0hXWMtm/0+9PSQ3VTKBJqU0aRhsDIhJsjXwHIHdTA+mLS7ybcf0npFx5kTfaENFtJav13AGBaBNoa6z6X16mVxA//+/Q+spLFDZX0kDd4BbaRtclK+OArBBxjIwwEBjjYUQDroca82IRNqcwf+OvnlsqruTYzs6NJY+6HgGVgcB0+xDSZRBo2kGpaOxWyP7wUXs3k7P3fg+lRjwf2AuWi7axPvi+M09Z74ACZC3QT6LffmoZtrCtHEFEFGtkY22iS5tHTsce7ebnphgbWP3KK1TCUWeMoQBfJceTxO/j++yapmc/dcwm7lc/J7v7Mrw/yMXFQuuWTcB/iUjXs08SWL54qL4siMpymXBbw21BDztEaRi7nGnORaw/vPU3h4hI+1VCUN70YT5GZi/JWhcDWgFbhhVzKVyei2W2LllXRvoP93WTox8UeX8c3j2krjWEYTLO91CZzh5hYFvknhXGDJKS5muN8vZaS/gm1bXn5tKHA5zwVuZDB8ey5egSVJzVbO9vhCO56M3aMznDIBDrcNE7l4gFpxOPFRKarTu7HzN1XIxqPAZf/novKazwS55YdGbrFAfkayEfmtyGt7tNKtG7nm2A6Tf98BzDgTwg==
+api: eJzFVstuIzcQ/JVGn2SAetjJYTE57QY57MFwYCsnrWBRZEvDNYcckxxpBWH+PWjOaPWED4sA0Ykge4pV1Q9qj0muIxYzDCa+4VygrynIZLz7qrHAqAKRQ4GB3huK6YvXOyz2qLxL5BIvZV1bo/In4+/RO96LqqRK8irtasIC/fI7qYQCNUUVTM3RWOBzhwpLr3ew8gEWfz+9TGG8uR93Nxu3jgsYPD48wir4Cmq5q8ileDfqOZlAmumrUoY1vWZePxILqQNLSYZiJnx+XuwvmExLgi4G+hhIHjoSMJCVb1wSoJoQyKmdgIpS6bWAQGvj3d0I21ZgMsmy2pf8WS8OWz46ck2hobwRa+9ix+5hMrmm9HJwAHyTlK8IxX/lO6vtQcGv4KfXIC9NkGtpXEyQSoLQWIJI6dJ7o1Eguc1rXlw4LfCEfSCZSL/KX0xQx5P0BckRtmfYR/kxBePWKHDlQ8UnqGWiYTKZzvkFfzKA8Q74NCZZ1Rm31/URZtNk4edwT9tsaCInXQJyGxO849rNqL+CeKwHozNIJZMqSb9yXs44zo6QrrGWzf4YenrIbiplAk3KaNIwWJkQE+RrYLmDOhgfTNrd5dsPab2h48KJvtAGC2mt3y5gDItAG0Pdcmm9elvcwRBW0tihsj6SBu+ANtI2OSXfHIXgAwzkIVyAow0FkA561JstyHTa3H+/T367rqlHEyP7uTTWfip4AhbHsVNsg0mUQSOphoVjMdvjR8HFbN7OL/X3Q+SqtW5NtW+OU9Er9wFMhLoJ9Efuv0PH1hSiiSmCjGyAbLRJcmnp2Mfcod2EwgJrH7kNa5lKLPB8tqJAnh3Px+n+1w9Z1WzhnsvUrXxOcO9q1j7MT8VVdZJLxn2CL9meZxPfYJhrKoojL56XnHh4b6ghZmmNIhdzFTnJ1YSPX6fw9Ayfa6lKGj6MJsjtwugrQ+FmQCtww55kIpPRfbfFuivpTqBvvi6XSk4et/8rdX0/8VXj2krjWE4TLJPr0jjDzT0KPEnkXGDJiS5muN8vZaR/gm1b3n5vKHDpzgVuZDB8XS5UgSVJzZbO9vhGO56BnfLhlAlwuG2YyNVT04rDF5+Vojp9GDs/qUVOAApc9n8jKq/5myC3/KTILRbID0bORH4V8t4erXTrRq45tsPk379hSwhR
 sidebar_class_name: "post api-method"
 info_path: docs/api/risk/bill-8-risk
 custom_edit_url: null
@@ -25,7 +23,7 @@ import Translate from "@docusaurus/Translate";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"`POST /v1/screenings` — screen a charge context (M2M from payments).\nThe evaluator is pure; the outcome persists as an auditable screening."}
+  children={"`POST /v1/screenings`"}
 >
 </Heading>
 
@@ -39,7 +37,7 @@ import Translate from "@docusaurus/Translate";
 
 
 
-`POST /v1/screenings` — screen a charge context (M2M from payments).
+screen a charge context (M2M from payments).
 The evaluator is pure; the outcome persists as an auditable screening.
 
 <Heading

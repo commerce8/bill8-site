@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "bill8-payments",
-    "description": "Sentin8 Bill8:Payments — charges, refunds, disputes, settlement channels.",
+    "description": "Sentin8 Bill8:Payments - charges, refunds, disputes, settlement channels.",
     "license": {
       "name": "MIT OR Apache-2.0",
       "identifier": "MIT OR Apache-2.0"
@@ -15,7 +15,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`GET /v1/channel-config` — read the env's default channel.",
+        "summary": "`GET /v1/channel-config`",
         "operationId": "get_channel_config",
         "responses": {
           "200": {
@@ -29,13 +29,14 @@
           {
             "bill8:payments:channels:read": []
           }
-        ]
+        ],
+        "description": "read the env's default channel."
       },
       "put": {
         "tags": [
           "payments"
         ],
-        "summary": "`PUT /v1/channel-config` — set the env's default channel.",
+        "summary": "`PUT /v1/channel-config`",
         "operationId": "set_channel_config",
         "requestBody": {
           "content": {
@@ -59,7 +60,8 @@
           {
             "bill8:payments:routing:write": []
           }
-        ]
+        ],
+        "description": "set the env's default channel."
       }
     },
     "/v1/channels": {
@@ -67,7 +69,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`GET /v1/channels` — list the runtime channel registry.",
+        "summary": "`GET /v1/channels`",
         "operationId": "list_channels",
         "responses": {
           "200": {
@@ -91,7 +93,8 @@
           {
             "bill8:payments:channels:read": []
           }
-        ]
+        ],
+        "description": "list the runtime channel registry."
       }
     },
     "/v1/charges": {
@@ -99,7 +102,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`GET /v1/charges` — list charges.",
+        "summary": "`GET /v1/charges`",
         "operationId": "list_charges",
         "parameters": [
           {
@@ -135,13 +138,14 @@
           {
             "bill8:payments:charges:read": []
           }
-        ]
+        ],
+        "description": "list charges."
       },
       "post": {
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/charges` — create a charge through a settlement channel.",
+        "summary": "`POST /v1/charges`",
         "operationId": "create_charge",
         "requestBody": {
           "content": {
@@ -165,20 +169,21 @@
             }
           },
           "402": {
-            "description": "Screening blocked / channel declined — nothing written"
+            "description": "Screening blocked / channel declined - nothing written"
           },
           "403": {
             "description": "Missing bill8:payments:charges:write"
           },
           "422": {
-            "description": "Domain rejection — nothing written"
+            "description": "Domain rejection - nothing written"
           }
         },
         "security": [
           {
             "bill8:payments:charges:write": []
           }
-        ]
+        ],
+        "description": "create a charge through a settlement channel."
       }
     },
     "/v1/charges/{id}": {
@@ -186,7 +191,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`GET /v1/charges/{id}` — read one charge.",
+        "summary": "`GET /v1/charges/{id}`",
         "operationId": "get_charge",
         "responses": {
           "200": {
@@ -207,7 +212,8 @@
           {
             "bill8:payments:charges:read": []
           }
-        ]
+        ],
+        "description": "read one charge."
       }
     },
     "/v1/customers": {
@@ -215,7 +221,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`GET /v1/customers` — list customers.",
+        "summary": "`GET /v1/customers`",
         "operationId": "list_customers",
         "responses": {
           "200": {
@@ -239,13 +245,14 @@
           {
             "bill8:payments:customers:read": []
           }
-        ]
+        ],
+        "description": "list customers."
       },
       "post": {
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/customers` — create a customer.",
+        "summary": "`POST /v1/customers`",
         "operationId": "create_customer",
         "requestBody": {
           "content": {
@@ -276,7 +283,8 @@
           {
             "bill8:payments:customers:write": []
           }
-        ]
+        ],
+        "description": "create a customer."
       }
     },
     "/v1/disputes": {
@@ -284,7 +292,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`GET /v1/disputes` — list disputes.",
+        "summary": "`GET /v1/disputes`",
         "operationId": "list_disputes",
         "responses": {
           "200": {
@@ -308,13 +316,14 @@
           {
             "bill8:payments:disputes:read": []
           }
-        ]
+        ],
+        "description": "list disputes."
       },
       "post": {
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/disputes` — open a dispute on a charge.",
+        "summary": "`POST /v1/disputes`",
         "operationId": "create_dispute",
         "requestBody": {
           "content": {
@@ -345,7 +354,8 @@
           {
             "bill8:payments:disputes:write": []
           }
-        ]
+        ],
+        "description": "open a dispute on a charge."
       }
     },
     "/v1/disputes/{id}/evidence": {
@@ -353,7 +363,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/disputes/{id}/evidence` — submit evidence (Storage refs).",
+        "summary": "`POST /v1/disputes/{id}/evidence`",
         "operationId": "submit_evidence",
         "requestBody": {
           "content": {
@@ -377,7 +387,8 @@
           {
             "bill8:payments:disputes:write": []
           }
-        ]
+        ],
+        "description": "submit evidence (Storage refs)."
       }
     },
     "/v1/disputes/{id}/resolve": {
@@ -385,7 +396,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/disputes/{id}/resolve` — close a dispute with an outcome\n(PAY-6). A `lost` dispute claws the funds back via a ledger\nreversal transaction (the ONLY money movement) and returns the\ncharge to `succeeded` minus the disputed amount; a `won` dispute\nkeeps the charge as-is. The `under_review → won|lost` transition is\nguarded — resolving twice is a 409, never a second clawback.",
+        "summary": "`POST /v1/disputes/{id}/resolve`",
         "operationId": "resolve_dispute",
         "requestBody": {
           "content": {
@@ -412,7 +423,8 @@
           {
             "bill8:payments:disputes:write": []
           }
-        ]
+        ],
+        "description": "close a dispute with an outcome\n(PAY-6). A `lost` dispute claws the funds back via a ledger\nreversal transaction (the ONLY money movement) and returns the\ncharge to `succeeded` minus the disputed amount; a `won` dispute\nkeeps the charge as-is. The `under_review → won|lost` transition is\nguarded - resolving twice is a 409, never a second clawback."
       }
     },
     "/v1/health": {
@@ -420,7 +432,7 @@
         "tags": [
           "meta"
         ],
-        "summary": "Health probe payload.",
+        "summary": "`GET /v1/health`",
         "operationId": "health",
         "responses": {
           "200": {
@@ -432,7 +444,8 @@
             }
           }
         },
-        "security": []
+        "security": [],
+        "description": "Health probe payload."
       }
     },
     "/v1/intents/{id}/handback": {
@@ -440,7 +453,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/intents/{id}/handback` — the SCA challenge handback\n(PAY-12). Completes a held charge from the CHANNEL-VERIFIED result —\nnever a client-asserted outcome. The handback token is single-use.",
+        "summary": "`POST /v1/intents/{id}/handback`",
         "operationId": "sca_handback",
         "requestBody": {
           "content": {
@@ -467,7 +480,8 @@
           {
             "bill8:payments:intents:write": []
           }
-        ]
+        ],
+        "description": "the SCA challenge handback\n(PAY-12). Completes a held charge from the CHANNEL-VERIFIED result -\nnever a client-asserted outcome. The handback token is single-use."
       }
     },
     "/v1/methods": {
@@ -475,7 +489,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "The static capability matrix of the built-in method types. New\nmethods register as channel data; the catalog reads from the\nchannels' capability matrices at runtime (methods ∪ across\nchannels).",
+        "summary": "`GET /v1/methods`",
         "operationId": "method_catalog",
         "responses": {
           "200": {
@@ -499,7 +513,8 @@
           {
             "bill8:payments:read": []
           }
-        ]
+        ],
+        "description": "The static capability matrix of the built-in method types. New\nmethods register as channel data; the catalog reads from the\nchannels' capability matrices at runtime (methods ∪ across\nchannels)."
       }
     },
     "/v1/payment-intents": {
@@ -507,7 +522,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`GET /v1/payment-intents` — list intents for the env.",
+        "summary": "`GET /v1/payment-intents`",
         "operationId": "list_payment_intents",
         "responses": {
           "200": {
@@ -531,13 +546,14 @@
           {
             "bill8:payments:intents:read": []
           }
-        ]
+        ],
+        "description": "list intents for the env."
       },
       "post": {
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/payment-intents` — create an intent in\n`requires_confirmation` (no money moves).",
+        "summary": "`POST /v1/payment-intents`",
         "operationId": "create_payment_intent",
         "requestBody": {
           "content": {
@@ -571,7 +587,8 @@
           {
             "bill8:payments:intents:write": []
           }
-        ]
+        ],
+        "description": "create an intent in\n`requires_confirmation` (no money moves)."
       }
     },
     "/v1/payment-intents/{id}/confirm": {
@@ -579,7 +596,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/payment-intents/{id}/confirm` — the guarded\n`requires_confirmation → processing` transition. Terminal states\nnever regress; confirming a terminal intent is a 409.",
+        "summary": "`POST /v1/payment-intents/{id}/confirm`",
         "operationId": "confirm_payment_intent",
         "responses": {
           "200": {
@@ -603,7 +620,8 @@
           {
             "bill8:payments:intents:write": []
           }
-        ]
+        ],
+        "description": "the guarded\n`requires_confirmation → processing` transition. Terminal states\nnever regress; confirming a terminal intent is a 409."
       }
     },
     "/v1/refunds": {
@@ -611,7 +629,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`GET /v1/refunds` — list refunds.",
+        "summary": "`GET /v1/refunds`",
         "operationId": "list_refunds",
         "responses": {
           "200": {
@@ -635,13 +653,14 @@
           {
             "bill8:payments:refunds:read": []
           }
-        ]
+        ],
+        "description": "list refunds."
       },
       "post": {
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/refunds` — refund a charge (bounded).",
+        "summary": "`POST /v1/refunds`",
         "operationId": "create_refund",
         "requestBody": {
           "content": {
@@ -668,14 +687,15 @@
             "description": "Missing bill8:payments:refunds:write"
           },
           "422": {
-            "description": "Over-refund / non-succeeded charge — nothing written"
+            "description": "Over-refund / non-succeeded charge - nothing written"
           }
         },
         "security": [
           {
             "bill8:payments:refunds:write": []
           }
-        ]
+        ],
+        "description": "refund a charge (bounded)."
       }
     },
     "/v1/routing-rules": {
@@ -683,7 +703,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/routing-rules` — create a routing rule.",
+        "summary": "`POST /v1/routing-rules`",
         "operationId": "create_routing_rule",
         "requestBody": {
           "content": {
@@ -707,7 +727,8 @@
           {
             "bill8:payments:routing:write": []
           }
-        ]
+        ],
+        "description": "create a routing rule."
       }
     },
     "/v1/setup-intents": {
@@ -715,7 +736,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`GET /v1/setup-intents` — list setup intents for the env.",
+        "summary": "`GET /v1/setup-intents`",
         "operationId": "list_setup_intents",
         "responses": {
           "200": {
@@ -739,13 +760,14 @@
           {
             "bill8:payments:setup-intents:read": []
           }
-        ]
+        ],
+        "description": "list setup intents for the env."
       },
       "post": {
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/setup-intents` — save a method for later use (no charge).",
+        "summary": "`POST /v1/setup-intents`",
         "operationId": "create_setup_intent",
         "requestBody": {
           "content": {
@@ -776,7 +798,8 @@
           {
             "bill8:payments:setup-intents:write": []
           }
-        ]
+        ],
+        "description": "save a method for later use (no charge)."
       }
     },
     "/v1/setup-intents/{id}/confirm": {
@@ -784,7 +807,7 @@
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/setup-intents/{id}/confirm` — the guarded\n`requires_confirmation → processing` transition for setup intents.",
+        "summary": "`POST /v1/setup-intents/{id}/confirm`",
         "operationId": "confirm_setup_intent",
         "responses": {
           "200": {
@@ -808,7 +831,8 @@
           {
             "bill8:payments:setup-intents:write": []
           }
-        ]
+        ],
+        "description": "the guarded\n`requires_confirmation → processing` transition for setup intents."
       }
     },
     "/v1/tokens": {
@@ -816,8 +840,8 @@
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/tokens` — mint a single-use token for a payment method.",
-        "description": "Authorization: either the full `bill8:payments:tokens:write`\nscope, OR a publishable credential (the Shield scope-mirror permits\nthe tokenization action for the publishable scope) — a publishable\ntoken can do nothing else (every other payments action requires its\nown scope).",
+        "summary": "`POST /v1/tokens`",
+        "description": "Authorization: either the full `bill8:payments:tokens:write`\nscope, OR a publishable credential (the Shield scope-mirror permits\nthe tokenization action for the publishable scope) - a publishable\ntoken can do nothing else (every other payments action requires its\nown scope).\n\nmint a single-use token for a payment method.",
         "operationId": "create_token",
         "requestBody": {
           "content": {
@@ -859,11 +883,11 @@
         "tags": [
           "payments"
         ],
-        "summary": "`POST /v1/tokens/{token_value}/consume` — consume a token\n(single-use guard: the first consume wins; every later consume of the\nsame token is rejected).",
+        "summary": "`POST /v1/tokens/{token_value}/consume`",
         "operationId": "consume_token",
         "responses": {
           "200": {
-            "description": "Token consumed — the payment method id"
+            "description": "Token consumed - the payment method id"
           },
           "404": {
             "description": "Token not found"
@@ -876,7 +900,8 @@
           {
             "bill8:payments:tokens:write": []
           }
-        ]
+        ],
+        "description": "consume a token\n(single-use guard: the first consume wins; every later consume of the\nsame token is rejected)."
       }
     }
   },
@@ -1102,7 +1127,7 @@
               "null"
             ],
             "format": "uuid",
-            "description": "Originating intent (optional — direct charges carry none)."
+            "description": "Originating intent (optional - direct charges carry none)."
           },
           "payment_method_id": {
             "type": [
@@ -1276,7 +1301,7 @@
           "payment_method_id": {
             "type": "string",
             "format": "uuid",
-            "description": "The payment method to tokenize (must already exist; the token is\na single-use reference to it — card data itself never transits)."
+            "description": "The payment method to tokenize (must already exist; the token is\na single-use reference to it - card data itself never transits)."
           }
         }
       },
@@ -1387,7 +1412,7 @@
       },
       "MethodCatalogEntry": {
         "type": "object",
-        "description": "The payment-method catalog (PAY-13) — method types as DATA with\ncapability metadata; routing matches a method to a capable channel.\nAdding a method type is data, not code.",
+        "description": "The payment-method catalog (PAY-13) - method types as DATA with\ncapability metadata; routing matches a method to a capable channel.\nAdding a method type is data, not code.",
         "required": [
           "method_type",
           "recurring",
@@ -1548,7 +1573,7 @@
       },
       "SetupIntent": {
         "type": "object",
-        "description": "A setup intent — saving a payment method for later use without a\ncharge (PAY-5). The lifecycle mirrors the payment intent's\nconfirmation phase minus the money movement.",
+        "description": "A setup intent - saving a payment method for later use without a\ncharge (PAY-5). The lifecycle mirrors the payment intent's\nconfirmation phase minus the money movement.",
         "required": [
           "id",
           "env_id",

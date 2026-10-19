@@ -1,13 +1,11 @@
 ---
 id: create-payment-intent
-title: "`POST /v1/payment-intents` — create an intent in
-`requires_confirmation` (no money moves)."
-description: "`POST /v1/payment-intents` — create an intent in"
-sidebar_label: "`POST /v1/payment-intents` — create an intent in
-`requires_confirmation` (no money moves)."
+title: "`POST /v1/payment-intents`"
+description: "create an intent in"
+sidebar_label: "`POST /v1/payment-intents`"
 hide_title: true
 hide_table_of_contents: true
-api: eJzVVttuGzcQ/ZUBn2xgZfkW2d0+OUYfXDR1YLtPqiGNuLMSk11yQ87KWQgC+hH9wn5JMdzVxZbqtEhaoH6xNBoeHs6cOeRCMU6DSoeqwqYky0E9JspV5JGNszeZSpX2hEyjLmFkLJNllShPn2oK/NZljUoXSrv2h3ShsKoKoyNC/0NwVmJBz6hE+cRNRSpVbvKBtOBkFLQ3lWSrVN21qDBxWQO58zB+f3v/AP35Sb9j0GsZhPFRR8J4yuQIWLo6MtO192R1I2epvJyGDYXIrE3ZsAjsjZ3usLiKeYABEDLSpsQC2tQjtdza4ItAN/e3cH56cgGrJaBdRh1IYFeSH5lsgzPcANm6KOQEufMlskpVXZtsZ4P32Bg7hRVYRDYZlZVj2W70kZpX0Z+jXWNRkO+FWjpIGWwhwUdqIvpKCCXxzGVfzV6woMWCiattBnXVy72zDAcu5mHxPWi0MCFAZtQzyqBAJn94pJbLRLHhQlpwHYXaQd5EkXRqUkvJ22iFfU0xECpnQyuN0+Nj+feifREF2hEQ+t9I5VcWWhUDO6iwAYRQkTa50dBq9KW4Y/HIzkfxw67UExUYuQ4Sa9mOkL/NAPx4f/tzp35wFnhG8GQ8wUHpLDVgAliakweEvHDIh626Z2gtFV8nj3tiLigqpMODQAVppix6A89MWBXywLuaI8WatSupo7GpxZ4zr3fPkKnHpqQdClFURo5tSgqMZfV/cIBOKK8deS/W7ZMVLCaLloHs3Hhnpf6dr/xzxG6CTPbfeAe7qM9WE3HLbiy+2KefTE660QWBrCA4GHfjF0ba2dwIFePsGPowrrzTFIKx0zH0f7WbTNTrnFBrTZRRFr/laArKxi8c65lXiUktE3W+z4e6cSxruRkJECoXDJs5vbidVAQ42wV4ZyJdmJiiuExXl33aXaXpkzdMkVogXXvDjUqHC/Vqdjp8XO5cIH99W8Mfv/3eGSng2v6M3S7f80IfWAetxZRuTuFQLLFttkpV5YL4X4U8U6nas6FKlLjy3eaV8sNnLCup+8YGN2LYDPR2bGs+1VmOl2/ywXnvzcXJRe/8zeC0NznLde9Ufzc4ywcDzHGg9ly+G7w96v97qDJ7NndRxJ10Ymt661fbrnNaNvYS3sYOdjoLbQ9m6KcUEvCU1zYLCWQmVDVLKOwYbpCqF0aTDbFyFkvZ/t3NA9zewVUl13Hv9Oi4PbllkxvyexOWiZqTDy2/46OTNiR9LNFuQf/bEnpWqLUrMH3mflWgscKq9oX81qprqOYnm+6t9fWYqJmIMB2qxWKCgX7xxXIp4U81eRmgx0TN0RucFO20JGpGmEl5hgvVauO6fU/0HoSFpBe1sNl5WyyT1YorraniV3Mft+ZEiqkSNele6aXLZI3HJ3lf4JNKlZIHv6yOJhljC1WgndY4ldwWU/7+BN3EOrg=
+api: eJzVVk1v4zYQ/SsDnhJAjvOdVD1lgx5SdJtFkp7cwKbJkc1didSSI2cFw/+9GFKOnNjNtsiiQH2JQw8f38y8eeRSkJwFkY9ELdsKLQXxmAlXo5dknL3RIhfKoyQcdwFjYwktiUx4/NpgoA9OtyJfCuXSD/lSyLoujYoIw8/BWV4Lao6V5G/U1ihy4aafUTGOxqC8qTla5OIuocLU6RYK52Hy6fb+AYaLo2HHYJAYhMlBR8J41JyCrFwTmanGe7Sq5Vxqz9mQwRCZpZCeRSBv7GyLxVWMAxlAgkZlKllCCj0Qq40Dvgt0c38Lp8dHF7DeAspp7EACuQr92OgeZ9QD2aYsOYPC+UqSyEXTGL11wCfZGjuDNVhENhqr2hEfN/6C7ZvoL9GuZVmiH4SGO4gaNpDgC7YRfS2ECmnu9LvZMxYkLJi6xmpo6kHhnSXYczFOlj+DkhamCJJIqjlqKCWh3z8Qq1UmyFDJLbiOQu0gb6JIOjWJFcf1WiHfYFwItbMhSeP48JD/vGpfRIE0Akz/B6n8ykJSMZCDWrYgIdSoTGEUJI2+FncsHtrFOH7ZlnomAklqAq8ltmNJP2YAfr2//b1TPzgLNEd4Mh5hr3IWWzABLC7Qg4SidJL2k7rn0los3yePeyQqMSqkw4OAJSpCHb2B5iasC7nnXUORYkPKVdjR6GuxI+fn07UkHJCpcItCFJXhtE2FgWRV/x8coBPKWynvxLp9soxFaKUlQLsw3lmuf+cr/x6xmyCj/xvvIBf1mTQRj+zG4rt9+s0UqFpVIvAOhL1JN35hrJwtDFMxzk5gCJPaO4UhGDubwPBP20dK9RwTGqUQNer4XyFNiXryyrFeeBWb1CoTp7t8qBvHquGbEUFC7YIhs8BXt5OIACfbAB9NpAtTU5aX+fqyz7urNH/yhjBSC6gab6gV+Wgp3ozOR4+rrQskzRvIZ38zdrM+Lyu5Zx0kD6ncAsM+e17qpshF7QIbXC1pLnKx4/4XmWDbveufIb98k1XNhe19ru92P7GbaxsDKE4KeXlWnJ8Ozi6OLganZ+fHg+lJoQbH6qfzk+L8XBbyXOy4XXu8HfL+Z6g8XLZwUaWdNmLtB8/Psm1rtGTsJXyILeqEFGDARulnGDLwWDRWhwy0CXVDvBS2/DRwzUuj0IZYNysrPvzjzQPc3sFVzbft4PjgMOVtyRQG/c6AVSYW6ENid3hwlJa4i5W0G9B//557nePGm/L9uuqGn/AbDetSGsvsGl/yMUljI7E46nv4rLLHTMxZivlILJdTGfAPX65WvPy1Qc9z8piJhfRGTss0FJmYo9RcptFSJIVcp0QGD8yCw8uG2Ww9IVbZeseVUljTm7GPG9PCRRWZmHaP8cpp3uPlEz8j5JPIheB3Pe+OXhjXlqKUdtbIGccmTP78BY1XLxE=
 sidebar_class_name: "post api-method"
 info_path: docs/api/payments/bill-8-payments
 custom_edit_url: null
@@ -25,7 +23,7 @@ import Translate from "@docusaurus/Translate";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"`POST /v1/payment-intents` — create an intent in\n`requires_confirmation` (no money moves)."}
+  children={"`POST /v1/payment-intents`"}
 >
 </Heading>
 
@@ -39,7 +37,7 @@ import Translate from "@docusaurus/Translate";
 
 
 
-`POST /v1/payment-intents` — create an intent in
+create an intent in
 `requires_confirmation` (no money moves).
 
 <Heading

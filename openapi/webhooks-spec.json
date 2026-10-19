@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "bill8-webhooks",
-    "description": "Sentin8 Bill8:Webhooks — event materialization, signed delivery.",
+    "description": "Sentin8 Bill8:Webhooks - event materialization, signed delivery.",
     "license": {
       "name": "MIT OR Apache-2.0",
       "identifier": "MIT OR Apache-2.0"
@@ -15,7 +15,7 @@
         "tags": [
           "webhooks"
         ],
-        "summary": "`GET /v1/events` — list materialized events.",
+        "summary": "`GET /v1/events`",
         "operationId": "list_events",
         "responses": {
           "200": {
@@ -39,7 +39,8 @@
           {
             "bill8:webhooks:events:read": []
           }
-        ]
+        ],
+        "description": "list materialized events."
       }
     },
     "/v1/events/{id}/deliveries": {
@@ -47,7 +48,7 @@
         "tags": [
           "webhooks"
         ],
-        "summary": "`GET /v1/events/{id}/deliveries` — the delivery log for an event.",
+        "summary": "`GET /v1/events/{id}/deliveries`",
         "operationId": "list_deliveries",
         "responses": {
           "200": {
@@ -71,7 +72,8 @@
           {
             "bill8:webhooks:events:read": []
           }
-        ]
+        ],
+        "description": "the delivery log for an event."
       }
     },
     "/v1/events/{id}/replay": {
@@ -79,7 +81,7 @@
         "tags": [
           "webhooks"
         ],
-        "summary": "`POST /v1/events/{id}/replay` — re-queue a DLQ/failed delivery for\nmanual replay (never silently dropped).",
+        "summary": "`POST /v1/events/{id}/replay`",
         "operationId": "replay_event",
         "responses": {
           "200": {
@@ -93,7 +95,8 @@
           {
             "bill8:webhooks:events:write": []
           }
-        ]
+        ],
+        "description": "re-queue a DLQ/failed delivery for\nmanual replay (never silently dropped)."
       }
     },
     "/v1/health": {
@@ -101,7 +104,7 @@
         "tags": [
           "meta"
         ],
-        "summary": "Health probe payload.",
+        "summary": "`GET /v1/health`",
         "operationId": "health",
         "responses": {
           "200": {
@@ -113,7 +116,8 @@
             }
           }
         },
-        "security": []
+        "security": [],
+        "description": "Health probe payload."
       }
     },
     "/v1/webhook-endpoints": {
@@ -121,7 +125,7 @@
         "tags": [
           "webhooks"
         ],
-        "summary": "`GET /v1/webhook-endpoints` — list endpoints.",
+        "summary": "`GET /v1/webhook-endpoints`",
         "operationId": "list_endpoints",
         "responses": {
           "200": {
@@ -145,13 +149,14 @@
           {
             "bill8:webhooks:endpoints:read": []
           }
-        ]
+        ],
+        "description": "list endpoints."
       },
       "post": {
         "tags": [
           "webhooks"
         ],
-        "summary": "`POST /v1/webhook-endpoints` — register an endpoint.",
+        "summary": "`POST /v1/webhook-endpoints`",
         "operationId": "create_endpoint",
         "requestBody": {
           "content": {
@@ -182,7 +187,8 @@
           {
             "bill8:webhooks:endpoints:write": []
           }
-        ]
+        ],
+        "description": "register an endpoint."
       }
     }
   },
@@ -291,7 +297,7 @@
           "id": {
             "type": "string",
             "format": "uuid",
-            "description": "Event id (dedupe key — duplicate delivery materializes one row)."
+            "description": "Event id (dedupe key - duplicate delivery materializes one row)."
           }
         }
       },

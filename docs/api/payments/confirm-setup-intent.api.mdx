@@ -1,13 +1,11 @@
 ---
 id: confirm-setup-intent
-title: "`POST /v1/setup-intents/{id}/confirm` — the guarded
-`requires_confirmation → processing` transition for setup intents."
-description: "`POST /v1/setup-intents/{id}/confirm` — the guarded"
-sidebar_label: "`POST /v1/setup-intents/{id}/confirm` — the guarded
-`requires_confirmation → processing` transition for setup intents."
+title: "`POST /v1/setup-intents/{id}/confirm`"
+description: "the guarded"
+sidebar_label: "`POST /v1/setup-intents/{id}/confirm`"
 hide_title: true
 hide_table_of_contents: true
-api: eJzFVU2P2zYQ/SuDuXQDyB8bpECq27anBRrsItkeCtuwaXFsMaVIhRzJNQwBPfUHFP2F+SXFULLX3l0kQHPISYLImff45vHpgKy2EfMZ1mpfkeOIiwx9TUGx8e5WY46FdxsTqmUkbuqlcUyOMcNAsfYuUsT8gK+nU3loikUwtZRijh+kAPoCGLqQhs9//wN18AXFaNwWMwFIPfMDqrq2pkjYk49RuhwwFiVVSt54XxPm6NcfqRAKl3A3EM8BP//1L0TVGrcFBcPpoCIuvYaND2AVU4AmEuwMl75hUHNXlCpsCa7ub34f/fhqDA8lgTUbKvaFJahMCD5E4JJOHXu0H+LcDSdM5KEuVZQC1/TbK+9oD5VvSarGSb9PjQmkRXyjMUNy7TK9RFbcRBEmkGLSS8UylTrIXNj0ip+tPSoTOfSSbrwQwRy1YhqxqeiZXL9IA6Eqq5FVVY+xy7BoIvuKglA5NZ49dnaNtcLmhNA0ifST5kMX2JVedOhlNxHWJAOJqiWd4IZDf+kILwLc7Zw0YnLKMZBrTfCul7bL8P90vHCr6dkNQ172/L9NErHSoMOZCHClmFVRkgbvjpcEdiW5ZJuiVM6Rnbs6+NZoimD4VaI2mOSFY17C/npyr1QQXK0G48XluWFXMIHV461cwWTuVrEpCiJNOq1ulLGkVwLfZciGLR1lu+0vcNfJypvpm69kgfMMG984jWn7T1/ZrmwgpffAFCrjlE34kYomGN5jPjvg2lj7Nj9GWJ5yYNRXx3wXDMvAFt3iqTir+7sPDzBprycXJZOD0d1kkGeVkkSGsW1U0KTn7mUJnwTbCjgoF01aksA5T6coCdC7AXOsfZQ4qxWXmOOX6WCGxm18GvwwgnT60SnAnxvbsXFv4eck0v2wLZ2qj7uYQaBN43TMQJtYNyyfIjHblFZHFybS1hTkIgm+U5XAv7t9gLv3cFOLjUevx1OhqAV0Yyi8uKHLsKUQe37T8XX/SWSolDtr/X3ncyHj6Z4x/cmT2irjhHMTrKz1o5they35fc4VM8xTGhznt8iwlHnnMzwc1irSb8F2nXz+1FAQPy8ybFUwam1722ZYktIi5eyAf9Be/nVFQbV4plW2EVbPfpxi9pPBREbsuv8An5jQBQ==
+api: eJy1VduO2zYQ/ZXBvHQDyJcNUiDV27ZPC7TYRbN9KGzDpsWxxZQiFXIk1xD02g/IJ/ZLiqFkr/eCBEjQJwkkZ86ZM4fDDlntI+YLrNWxIscRVxn6moJi492txhwL73YmVOtI3NRr45gcY4aBYu1dpIh5h2/nc/loikUwtYRijh8kAIYAGLOQhn//+Qx18AXFaNweMwFIOfMOVV1bUyTs2ccoWTqMRUmVkj8+1oQ5+u1HKoTCU7gbiJeAE4iqNW4PCsbaoCIuvYadD2AVU4AmEhwMl75hUEtXlCrsCa7ub/6c/PhmCg8lgTU7Ko6FJahMCD5E4JLOGQesH+LSjfUl6lCXKkqAa4bjlXd0hMq3JFHTpN6nxgTSIr3RmCG5dp1+IituosgSSDHptWLpSR2kK2wGvS/2HnWJHAZBd16IYI5aMU3YVPRCrF8kgVCV3ciqqqfYZ1g0kX1FQaicEy8eM7vGWmFzRmiaRPpZ8jELHEovOgyymwhbkoZE1ZJOcGPRXyrhVYC7g5NETE45BnKtCd4N0vYZfkvGJ141A7uxyeuB//dJIlYadbgQAa4UsypK0uDd6YrAoSSXbFOUyjmyS1cH3xpNEQy/SdRGk7xS5lPYX8/ulQiCq81ovLi+NOwGZrB5vJMbmC3dJjZFQaRJp92dMpb0RuD7DNmwpZNst8P17XvZeTd/95VJ4DzDzjdOYzr+01eOKxtI6SMwhco4ZRN+pKIJho+YLzrcGmvf56cBlqcpMBmiY34IhqVhq371XByReN+ooEkv3evCPBtWG+CgXDRpS8bI5cSJcq+HHmOOtY8yomrFJeY4a69nT3jNOqP72QiFGRq386mdo7Cppsl5KL+0q2Pj3sPPqfT78RhMYBhhMYNAu8bpmIE2sW5YliIx2zSBTs5KlK0pyEUSdKcqAf/t9gHufoebWqw5eTudC0EtkDtD4dUDfYYthTiwm0+vhyURoVLuIvXm/u7DA3xZjs3zcrvHJ+J/adp4h5j+5lltlXHCvQlWkIcGLrC9ltl8yRkzzNNNP3VxlWEpXc8X2HVbFemPYPtelj81FMSrqwxbFYza2sGSGZaktEi66PAvOsorVhRUi3NaZRth9eJJFCOfbSZyYt//B/LmvlE=
 sidebar_class_name: "post api-method"
 info_path: docs/api/payments/bill-8-payments
 custom_edit_url: null
@@ -25,7 +23,7 @@ import Translate from "@docusaurus/Translate";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"`POST /v1/setup-intents/{id}/confirm` — the guarded\n`requires_confirmation → processing` transition for setup intents."}
+  children={"`POST /v1/setup-intents/{id}/confirm`"}
 >
 </Heading>
 
@@ -39,7 +37,7 @@ import Translate from "@docusaurus/Translate";
 
 
 
-`POST /v1/setup-intents/{id}/confirm` — the guarded
+the guarded
 `requires_confirmation → processing` transition for setup intents.
 
 <ParamsDetails>

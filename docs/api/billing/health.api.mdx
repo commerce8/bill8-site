@@ -1,11 +1,11 @@
 ---
 id: health
-title: "Health probe payload."
+title: "`GET /v1/health`"
 description: "Carries the binary's build identity (`version`/`build`, BUILDID-1) so"
-sidebar_label: "Health probe payload."
+sidebar_label: "`GET /v1/health`"
 hide_title: true
 hide_table_of_contents: true
-api: eJztU01v00AQ/SvDXJJI23z0VPmWtFWJKC1KWySURM3GnsZL17PL7tpgWZb4EfxCfgnaOJRSuHDHB1saz8yb9+ZNg0HuPCZLLChIXAvMyKdO2aAMY4Kn0jlFHkJOsFUsXd3zsC2VzkBlxEGFGvqbipxXhjejzf7XRsDsbn55Nj87mgzAmxWn0gapuOehMKyCcWCNLbUM5GFTyEcCH2Qo/abn4f354mZ+fQWp0WXB8P3rt4i+4tSwLwvFO5jNr6aLDz3/NIIApoocSPC5dJRB6mSgnoc+cfWqv+LT6eLi+v7dm4v7Q/cB5OQIHFnjAmVgWNcdSemoK4cDK/isQg5sVtzxzqXPQXIGbMA686A0QSHdI7nBEAUaS05G9eYZJpiT1CFHgY68NezJY9Lg8XgcP79LfakqYvIe+gdg0Qk9QIGp4UAcYpG0Vqt0jzD66GNlgz7NqZCYNG18BHpKS6dCjclyLeJmcxOH2VFAgVaGHBMcVZPR03SKH0xsFFTQhAluldYnR/GteIcvTXETVecTmMWsZNZl7Rfly+1ToheguDIqJS+iUJ0qAgoK5BTvolhapcSeIjTLIiK/nd/C9QKmVqY5HR0Px3G6/ZofFLm/JrQCD4phguPhpAtZ40Mh+Vnr13u2cZQtgZW1NjIbviTX/NL6v/n/2fyhtlHpQF/CyGqpOG6idDrq2vluidUExc+7WAvMjQ8x3DRb6enO6baN4U8luYN/K+mU3EZfLtftvjSLTlg2+Eg1JjhNU7LR2ZXUZYT/40Ta51dwcX6LbfsDfqu4Kw==
+api: eJztU8lu2zAQ/ZXpXGwD9JZToJudBK7RNCmyFChsI6KlicWGGrIkpdYQ9O8FLTdJ0x57LA8kMJz1vTcNBrnzmKywpCBxIzAnnzllgzKMCZ5J5xR5CAXBVrF0+56HbaV0DionDirsoZ/W5LwynI7Tw1cqYH6/vDxfng+nA/BmzZm0QSrueSgNq2AcWGMrLQN5SEv5ROCDDJVPex4+X9zcLq+vIDO6KhmGsfaaM8O+KhXvYL68mt186fnnBgQw1eRAgi+koxwyJwP1PPSJ63f9NZ/NbhbXD58+LB6OuQdQkCNwZI0LlINhve9GlI66cDjOBN9VKIDNmrupC+kLkJwDG7DOPCpNUEr3RG4wWvOa35PUoYhfWwIr99rIfIQCjSUnI6jLHBMsDl4o0JG3hj15TBo8mUzi8zsDl6omJu+hf+xIdPgPUGBmOBCHGCSt1So7VBh/9TGyQZ8VVEpMmjYegZ6yyqmwx2S1EZHwwsRmdhRQoJWhwATH9XT83J3iRxMTBRU0YYJbpfXpMN6Kd/hWK7eRDj6FefRK5p0XDMFX22c3L0BxbVRGXkSQOkwElBTIKd5FqLTKiD3FwizLWPfj8g6ub2BmZVbQ8GQ0ib0d2H9U5P7q0Ao84oUJTkbTzmSND6XkV6nTxcUdvAydvp2qeQH5/zL8q2UIexuxD/QjjK2WiiM3ldMR7k6HK6ynKH7tyUZgYXyI5qbZSk/3TrdtNH+ryB31XEun5DbqdLVpD6F51MaqwSfaY4KzLCMblV5LXcXyf6xM+3orFhd32LY/AR2Jwvk=
 sidebar_class_name: "get api-method"
 info_path: docs/api/billing/bill-8-billing
 custom_edit_url: null
@@ -23,7 +23,7 @@ import Translate from "@docusaurus/Translate";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Health probe payload."}
+  children={"`GET /v1/health`"}
 >
 </Heading>
 
@@ -38,10 +38,12 @@ import Translate from "@docusaurus/Translate";
 
 
 Carries the binary's build identity (`version`/`build`, BUILDID-1) so
-captain's monitor populates `make status`'s VERSION column — the
+captain's monitor populates `make status`'s VERSION column - the
 consuming BINARY's identity, never a shared crate's (env!(
 CARGO_PKG_VERSION) here reported only the bare crate version with no
 build hash and no profile marker).
+
+Health probe payload.
 
 <ParamsDetails>
   

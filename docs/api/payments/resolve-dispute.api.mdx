@@ -1,21 +1,11 @@
 ---
 id: resolve-dispute
-title: "`POST /v1/disputes/{id}/resolve` — close a dispute with an outcome
-(PAY-6). A `lost` dispute claws the funds back via a ledger
-reversal transaction (the ONLY money movement) and returns the
-charge to `succeeded` minus the disputed amount; a `won` dispute
-keeps the charge as-is. The `under_review → won|lost` transition is
-guarded — resolving twice is a 409, never a second clawback."
-description: "`POST /v1/disputes/{id}/resolve` — close a dispute with an outcome"
-sidebar_label: "`POST /v1/disputes/{id}/resolve` — close a dispute with an outcome
-(PAY-6). A `lost` dispute claws the funds back via a ledger
-reversal transaction (the ONLY money movement) and returns the
-charge to `succeeded` minus the disputed amount; a `won` dispute
-keeps the charge as-is. The `under_review → won|lost` transition is
-guarded — resolving twice is a 409, never a second clawback."
+title: "`POST /v1/disputes/{id}/resolve`"
+description: "close a dispute with an outcome"
+sidebar_label: "`POST /v1/disputes/{id}/resolve`"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVU2P2zYQ/SuDOe0C8scGiyJRTpu2hwBtd7HZHgLbiMfi2GKWIhWSsiI4AnrqDyjyC/NL2qFkbzbp3nuoLxbIx+GbN284B4y0C5gvsKauYhsDrjJ0NXuK2tnXCnP0HJzZ8zulQ91Exgw9f2g4xFdOdZgfsHA2so3ySXVtdJHOzt4HZ2UtFCVXJF+xqxlzdJv3XETMUHEovK4FjTneDlFh41QHW+chlgzjpZBINIKcjgS0ZyXEXRMLV7Hwrr0wj5qD3HbceLg4RK/t7ruL70qGEZzDunV2DWfbxqoAIVJ3Ds7D2rgQT8uFoZYVbKi4P59i32cYdTScckha/TSwHjPCXiAPnKNvOC2E2tkwkH02n8vfY2JjGCiMC6ywz/Byfvk0zLoIW9fYEfniaSQZz6S6U+A+w8BF43XsMF8ccKONeZ4fLZGPRQh563VkzBerfvWtiOub6zd3MNtfzI7o2UGrfja6Zw1f/vg83Ad0qmqrYwlkj+ov7dnN1dvJD+dTuDpKrk4aUBuSJYYaiPiw1wQEhtWO/dJ63rMPZCB6soEKYQZncuT6t1/eQuUsd1C5PUtW50BWgefYeJviLm1Rkt8xRAfr0BQFs2K1hkrbJnztRQVUucbGl0CjW8aNpb1nrgfsGIvCRIcpiMPWjVXs33nea27hy59/QevspyHJRFgnvjos7a4hr/4xmEg26KftDmKrCwYdgOBy/iIDK+kCQeDCWZUEElGkPyqOpZPerV2QRqsplpjjk9XBDKVbbx/6+uePVNWGH/XRsX/6DLXdutRYo++TYSanN+Rbc7xhG7V9Dq+Sr25G2GCJJFTIwHMqbHZUM2QQOEaTqiUwa9kEyc7ogm1I3CwlYr++voPrW7iqqSh58mw6xwy1kku3mv2/AvoMxS0Dv/n0YlgSvSqyX4X+39f/IV8/ctXpWY/8Mc5qQ9pKCRtvZG+w/AL3F3JuLB1mmGuVBsjg+1WGpbRIvsDDYUOBf/em72X5Q8NeHsNVhnvymjZmePgyLJmUmGpxwHvuMMcfh/k3uRM6AjeN0PpuFsqjeepMsRVmuBlnaOWUnPHUCjtqMUeUQSyn04BIawc0JCruBDvElN/f+cbB0A==
+api: eJztVU1v3DYQ/SuDOdkA98OBUSTqyWl7CNDWhuMegt1FdlYcrxhTpEJSqyw2uvYH9Cf2lxRDadeOU197qi4SqMfhmzdvhgdMtI1YLLChfc0uRVwp9A0HSsa7dxoLDBy93fFHbWLTJkaFgT+3HNNbr/dYHLD0LrFL8klNY02Z984+Re9kLZYV1yRfad8wFug3n7hMqFBzLINpBI0F3g5RYeP1Hu59gFQxjIdCJtEKcjoSMIG1EPdtKn3NwrsJwjwZjnLa8cfjwTEF47bfHXxXMYzgAtadd2s4u2+djhAT7c/BB1hbH9NpubTUsYYNlQ/nU+x7hckkyzmHrNXPA+sxI+wF8sg5hZbzQmy8iwPZV/O5vL4lNoaB0vrIGnuFl/PLl2HOJ7j3rRuRb15Gkg1Men8K3CuMXLbBpD0WiwNujLWvi6MlirEIseiCSYzFYtWvnouYQwGdCtaZVAG5o7BLd3Zz9WHyw/kUro5q6lN61MVc7UFe0RV2hoDAst5yWLrAOw6RLKRALlIph8KZbLn+/dcPUHvHe6j9joXwOZDTEDi1weW4S1dWFLYMycM6tmXJrFmvoTaujU9tpoFq37r0I9BohPHH0j0wNwN2jEVxYuIUxDzr1mkOHwPvDHfw959/Qefd1yHJTNhkviYu3baloFnDZHD0zrgtpM6UDCYCweX8jQInyQJB5NI7neURScT4NafKS1M2PkoHNZQqLHC2u5gdizQ7GN3PxqZFhdKGt48N+8sXqhvL3zTIsTF6hcbd+9wxo6GzEyan4fC86u/ZJeNew9tsmJsRBpNRpKggcC6qOioZFUROyeZKCcw5tlFys6ZkFzMzR5nWb+/u4PoWrhoqK568ms5RodFy5L3h8K+AXqE4ZWA3n14MS6JWTe5J6PXN9fs7eFG39fNMn0y5/63+n1h9nNmJv6RZY8k4KWQbrNRisP0CdxdSp7GAqLAwOt8Og/dXCitpk2KBh8OGIv8RbN/L8ueWg0y6lcIdBUMbO0w1hRWTFmstDvjAeyzwp6HskzuhI3DbCq3vLjqZiKfuFHOhws14QdZey55AnbCjDgtEuWVld57+ee2AlkS0rWCHmPL8A5trsDM=
 sidebar_class_name: "post api-method"
 info_path: docs/api/payments/bill-8-payments
 custom_edit_url: null
@@ -33,7 +23,7 @@ import Translate from "@docusaurus/Translate";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"`POST /v1/disputes/{id}/resolve` — close a dispute with an outcome\n(PAY-6). A `lost` dispute claws the funds back via a ledger\nreversal transaction (the ONLY money movement) and returns the\ncharge to `succeeded` minus the disputed amount; a `won` dispute\nkeeps the charge as-is. The `under_review → won|lost` transition is\nguarded — resolving twice is a 409, never a second clawback."}
+  children={"`POST /v1/disputes/{id}/resolve`"}
 >
 </Heading>
 
@@ -47,12 +37,12 @@ import Translate from "@docusaurus/Translate";
 
 
 
-`POST /v1/disputes/{id}/resolve` — close a dispute with an outcome
+close a dispute with an outcome
 (PAY-6). A `lost` dispute claws the funds back via a ledger
 reversal transaction (the ONLY money movement) and returns the
 charge to `succeeded` minus the disputed amount; a `won` dispute
 keeps the charge as-is. The `under_review → won|lost` transition is
-guarded — resolving twice is a 409, never a second clawback.
+guarded - resolving twice is a 409, never a second clawback.
 
 <Heading
   id={"request"}

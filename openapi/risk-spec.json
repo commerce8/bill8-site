@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "bill8-risk",
-    "description": "Sentin8 Bill8:Risk — rules, screening, review queue.",
+    "description": "Sentin8 Bill8:Risk - rules, screening, review queue.",
     "license": {
       "name": "MIT OR Apache-2.0",
       "identifier": "MIT OR Apache-2.0"
@@ -15,7 +15,7 @@
         "tags": [
           "meta"
         ],
-        "summary": "Health probe payload.",
+        "summary": "`GET /v1/health`",
         "operationId": "health",
         "responses": {
           "200": {
@@ -27,7 +27,8 @@
             }
           }
         },
-        "security": []
+        "security": [],
+        "description": "Health probe payload."
       }
     },
     "/v1/reviews": {
@@ -35,7 +36,7 @@
         "tags": [
           "risk"
         ],
-        "summary": "`GET /v1/reviews` — list the review queue.",
+        "summary": "`GET /v1/reviews`",
         "operationId": "list_reviews",
         "responses": {
           "200": {
@@ -59,7 +60,8 @@
           {
             "bill8:risk:reviews:read": []
           }
-        ]
+        ],
+        "description": "list the review queue."
       }
     },
     "/v1/reviews/{id}/resolve": {
@@ -67,7 +69,7 @@
         "tags": [
           "risk"
         ],
-        "summary": "`POST /v1/reviews/{id}/resolve` — resolve a review (idempotent).",
+        "summary": "`POST /v1/reviews/{id}/resolve`",
         "operationId": "resolve_review",
         "requestBody": {
           "content": {
@@ -92,7 +94,8 @@
           {
             "bill8:risk:reviews:write": []
           }
-        ]
+        ],
+        "description": "resolve a review (idempotent)."
       }
     },
     "/v1/rules": {
@@ -100,7 +103,7 @@
         "tags": [
           "risk"
         ],
-        "summary": "`GET /v1/rules` — list rules.",
+        "summary": "`GET /v1/rules`",
         "operationId": "list_rules",
         "responses": {
           "200": {
@@ -124,13 +127,14 @@
           {
             "bill8:risk:rules:read": []
           }
-        ]
+        ],
+        "description": "list rules."
       },
       "post": {
         "tags": [
           "risk"
         ],
-        "summary": "`POST /v1/rules` — create a rule.",
+        "summary": "`POST /v1/rules`",
         "operationId": "create_rule",
         "requestBody": {
           "content": {
@@ -161,7 +165,8 @@
           {
             "bill8:risk:rules:write": []
           }
-        ]
+        ],
+        "description": "create a rule."
       }
     },
     "/v1/screenings": {
@@ -169,7 +174,7 @@
         "tags": [
           "risk"
         ],
-        "summary": "`POST /v1/screenings` — screen a charge context (M2M from payments).\nThe evaluator is pure; the outcome persists as an auditable screening.",
+        "summary": "`POST /v1/screenings`",
         "operationId": "screen",
         "requestBody": {
           "content": {
@@ -200,7 +205,8 @@
           {
             "bill8:risk:screenings:write": []
           }
-        ]
+        ],
+        "description": "screen a charge context (M2M from payments).\nThe evaluator is pure; the outcome persists as an auditable screening."
       }
     }
   },
@@ -374,7 +380,7 @@
           },
           "outcome": {
             "type": "string",
-            "description": "Outcome (`allow` / `review` / `block`) — fail-closed on evaluation\nerror (a `block`, never an `allow`)."
+            "description": "Outcome (`allow` / `review` / `block`) - fail-closed on evaluation\nerror (a `block`, never an `allow`)."
           }
         }
       }

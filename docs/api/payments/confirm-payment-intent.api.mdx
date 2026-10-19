@@ -1,15 +1,11 @@
 ---
 id: confirm-payment-intent
-title: "`POST /v1/payment-intents/{id}/confirm` — the guarded
-`requires_confirmation → processing` transition. Terminal states
-never regress; confirming a terminal intent is a 409."
-description: "`POST /v1/payment-intents/{id}/confirm` — the guarded"
-sidebar_label: "`POST /v1/payment-intents/{id}/confirm` — the guarded
-`requires_confirmation → processing` transition. Terminal states
-never regress; confirming a terminal intent is a 409."
+title: "`POST /v1/payment-intents/{id}/confirm`"
+description: "the guarded"
+sidebar_label: "`POST /v1/payment-intents/{id}/confirm`"
 hide_title: true
 hide_table_of_contents: true
-api: eJzVVk2P2zYQ/SuDOW0Bre1dLNBEOSU9bdHWQXd7cgybJkcWU4lUyJG3hiEgp/6Aor8wv6QYSrL3K12gOfVkmxq+efNm5skHZLWNmC+wUfuaHEdcZugbCoqtd9cGc9TeFTbUqyFiZR2TY8wwUGy8ixQxP+DlbCYfhqIOtpHLmON1CoUBgQx8+fMvaILXFKN1W8wEPKHlB1RNU1md8k4/Rrl/wKhLqpV8431DmKPffCQtyR8meuugpwXsoVF7UBAb0rawGlTtW8eTRPhTawMZqdcazJDcbpW+9DHCpw2BnN5jhpEVt1HOAikms1Is4jRB5GHblz1cPBGMHPrKHhFMcaAiKPjxZv4L9HHgHXBJcGcDwVntHe3BRnC0owAKisor/m6CXYa6VM5RJXSPyRanbK6tKmFX+FArxhzbNhX2kMUNMVdUp570eBCpIs1koPABuLRxFPIs+JYTxZa1r2mgcdLimZqP2Y1iOmdb0xMKPwiAlbJtTZFV3fS4o+4vKnl9M4ery4vvYbwC2hsaQCL7msK3ifRe7aXsESwhD4PybyU/izW/c4LF5JRjILezwTvRP6H+F8RhpaxJCONO1sSlN99cd5qMHgs2vnVG1knms5+JlHJYixf79JMtSO91RSA3CM7Ww/rF1eAHaQ7WMIX1yRLWMP3gTpFKH2NiqzWRIZN+FcpWZNYylF2GbLmiUwm9Rth18uxqdvVVY3KeoZA6MQW+/mqgqgIpswemUFunqpQ1km6D5T3miwNubFW9ykcXzXvBYn4XLEszlt3ysUDr9/ObW5juLqbDrfPh0vRgTTcdRFrDl89/px5sWxUMmfvy3BfykbeugYNy0cqjCdwOvPtexA+ud5hA20AxvhkdWmZVHYscncCKaV3NXouF9sOBOTY+il82ikvM8aUqMEPrCp+mZuhVEuz8+Np5alWOrXsF75KuQ2NjEkOXKmwpZhCoaJ2JGRgbm5blKD5xuCi0K6vJRZL8TtWS/ufrW5j/Cm8bpUs6v5zMhKKRpIWl8GxAl+GOQuz5zSYX/ZEIUSt3D/p/2dgH6h93m+kPnjaVsk5KbUMlz/qeL3B3gUcHGkvEDPPkLWPjlxmWMir5Ag+HjYr0W6i6To4/tRRkd5YZ7lSwalP1i5JhScpIDxYH/J328vbUmhoZt52qWuH15L+CrNdxNkV/7Lp/AGqKHno=
+api: eJzNVk1v4zYQ/SuDOaWAHDtBgO6qp21PKdp60aQnr2HT5MjmViK15MipIOjaH9Cf2F9SDCXZ2STbAN1LT5bp4Zv33nzIHbLaR8xXWKu2IscR1xn6moJi692twRy1d4UN1WaM2FjH5BgzDBRr7yJFzDu8Xizkw1DUwdZyGXO8TaEwIpCBv//8C+rgNcVo3R4zAU9oeYeqrkurU975xyj3O4z6QJWSJ25rwhz97iNpSf55oncOBlrAHmrVgoJYk7aF1aAq3zi+TIQ/NTaQEb3WYIbkjpv0MMQInyYEcrrFDCMrbqKcBVJMZqNYzKmD2MN2kD1ePBOMHAZlTwimOFARFPx4t/wFhjjwDvhA8GADwUXlHbVgIzg6UgAFRekVf3OJfYb6oJyjUuiekq3O2VxTlsKu8KFSjDk2TRL2OYs7Yi6pSjUZ8CBSSZrJQOED8MHGyciL4BtOFBvWvqKRxtmLFzSfshvFNGNb0TMKPwiAFdm2osiqqgfcyfdXnby9W8LN9dW3MF0B7Q2NIJF9ReHrTHqvWpE9gSXksVH+TfKLWMsHJ1hMTjkGckcbvBP/E+p/QRxHypqEMM1kRXzw5qt1p84YsGDnG2dknKQ/h55IKcexeLVOP9mCdKtLArlBcLEdxy9uxn2Q+mALc9ieV8IW5h/cOVLpU0xstCYyZNK3QtmSzFaass+QLZd0ljB4hH0vv90sbr64mJxnKEQnpsC3XwxUZSBlWmAKlXWqTFkj6SZYbjFfdbizZfkmn7ZoPhgW84dgWYqx7tdPDRJf940KhsxjyY/NebIvt8BBuWjlp0u4H7kM/sYPbtgagfaBYvxu2rrSf+pEfJpuK4voZvFW1uJQcMyx9lF2YK34gDnOj1fzUc9slDPvrOnnIzBmaF3hUyeM/icTZqdXyfP149i6N/B98mosVoSZLKOwp5hBoKJxJmZgbKwblqP4bGdFIV1aTS6SZHeqkuQ/397D8ld4Vyt9oNn15UIIGklZWAovBvQZHinEgd3i8mo4Ehsq5R5Bb98v7+7hNUO2TwV359fb/6fa49Qy/cHzulTWieQmlEJ3qPwKj1d42i2TVMwwT1tjKv86w4M0TL7CrtupSL+Fsu/l+FNDQaZineFRBat25TACGR5IGanFqsPfqZX3otZUS9MdVdkIr2f/AmRwTh0qdcC+/wd/vg3C
 sidebar_class_name: "post api-method"
 info_path: docs/api/payments/bill-8-payments
 custom_edit_url: null
@@ -27,7 +23,7 @@ import Translate from "@docusaurus/Translate";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"`POST /v1/payment-intents/{id}/confirm` — the guarded\n`requires_confirmation → processing` transition. Terminal states\nnever regress; confirming a terminal intent is a 409."}
+  children={"`POST /v1/payment-intents/{id}/confirm`"}
 >
 </Heading>
 
@@ -41,7 +37,7 @@ import Translate from "@docusaurus/Translate";
 
 
 
-`POST /v1/payment-intents/{id}/confirm` — the guarded
+the guarded
 `requires_confirmation → processing` transition. Terminal states
 never regress; confirming a terminal intent is a 409.
 

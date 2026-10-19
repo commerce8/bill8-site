@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Coupon created"},"403":{"description":"Missing bill8:billing:coupons:write"}}}

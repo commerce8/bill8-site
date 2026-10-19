@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","description":"Request body for `POST /v1/screenings` (M2M from payments).","required":["charge_context"],"properties":{"charge_context":{"description":"The charge context to screen (amount, currency, method, region)."}},"title":"ScreenRequest"}}},"required":true}}

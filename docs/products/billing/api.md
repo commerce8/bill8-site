@@ -11,7 +11,7 @@ Sentin8 Bill8:Billing - subscriptions, invoices, proration, metering.
 > served live at `GET /openapi.json`) - the source of truth is the
 > service’s own `#[utoipa::path]` annotations.
 
-**20 endpoints**.
+**21 endpoints** across 2 groups.
 
 ## billing
 
@@ -331,4 +331,17 @@ Gate: `bill8:billing:usage-records:write`
 | --- | --- | --- |
 | 200 | Usage recorded | `UsageRecord` |
 | 403 | Missing `bill8:billing:usage-records:write` | - |
+
+
+## meta
+
+### `GET /v1/health`
+
+Health probe payload.
+
+**Responses**:
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Liveness (version, build) | - |
 

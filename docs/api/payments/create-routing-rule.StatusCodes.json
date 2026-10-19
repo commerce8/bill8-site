@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Rule created"},"403":{"description":"Missing bill8:payments:routing:write"}}}

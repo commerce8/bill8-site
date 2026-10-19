@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Review resolved"},"404":{"description":"Review not found"},"409":{"description":"Already resolved"}}}

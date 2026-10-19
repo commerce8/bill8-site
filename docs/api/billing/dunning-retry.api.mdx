@@ -1,0 +1,68 @@
+---
+id: dunning-retry
+title: "`POST /v1/internal/dunning/retry` — the dunning-ladder tick (BIL-12):
+re-charge past-due invoices on the configured schedule. The ladder
+is DATA (`dunning_configs` rows): count + backoff per env; after the
+final failure the subscription cancels (guarded terminal)."
+description: "`POST /v1/internal/dunning/retry` — the dunning-ladder tick (BIL-12):"
+sidebar_label: "`POST /v1/internal/dunning/retry` — the dunning-ladder tick (BIL-12):
+re-charge past-due invoices on the configured schedule. The ladder
+is DATA (`dunning_configs` rows): count + backoff per env; after the
+final failure the subscription cancels (guarded terminal)."
+hide_title: true
+hide_table_of_contents: true
+api: eJztU8tu2zAQ/JXFnhKUfuUUsKcYuQRokaJxT45R09RKIkIv1SXlNDAE9CP6hf2SgmISJEH6Bz0JWO3ODmdmj5hME1Gvcee8d9zgRmHoSExyga8q1Fj1zI6b70JJHlChUOwCR4qoj3g2n+dPRdGK6/IMarwsE5CcvYNOgqUYqcJhUBjJ9uLSA+r1ESNxcnyurQTW9+ISoV5vho16g7f9cn2zgtlhMXOcSNj42SOp2UhqC39+/YbUEjyWJ95UFUkhcLK8+jRZnJ3qWxaa2NZIQ9CZmCZVT+D4EJylCIFHBBu4dk0vVEG0LVW9pymsWoICecsuwuXF6gJOtk/ClJG4BQn38VSDDT0n+AA7Y+9CXUNHAsSHj2DqlEm1dMu1Y+OhNs73QuPi2O+e3wzWsCUf4aTpjVRUQSLZ55HTKSrcU2pDtqYLMaHCzqQWNf5bIFTouA7ZqeSSJ9Sj3eeTJ9PfKn5TnIFl7tLL0jWq/JJmVM/yqexzCY2CPSUSx03m6p0ljpRXs9nnzZ+vVnD9FS46Y1uanE3nmV2VF9aO5N2GQeGBJBZu8+milPLr94ZfQP8PyuugvDL1iOmhyyol+plmnTeOs4q9+PyvZGiNh8UYlqJehijcx7vPSdoobHPq9BqPx52J9E38MOTyj54k3/VG4cGIMztfzvlFXrM9OAx/AQ0djrU=
+sidebar_class_name: "post api-method"
+info_path: docs/api/billing/bill-8-billing
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"`POST /v1/internal/dunning/retry` — the dunning-ladder tick (BIL-12):\nre-charge past-due invoices on the configured schedule. The ladder\nis DATA (`dunning_configs` rows): count + backoff per env; after the\nfinal failure the subscription cancels (guarded terminal)."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/internal/dunning/retry"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+`POST /v1/internal/dunning/retry` — the dunning-ladder tick (BIL-12):
+re-charge past-due invoices on the configured schedule. The ladder
+is DATA (`dunning_configs` rows): count + backoff per env; after the
+final failure the subscription cancels (guarded terminal).
+
+<ParamsDetails>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./dunning-retry.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./dunning-retry.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

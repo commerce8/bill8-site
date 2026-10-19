@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","description":"Request body for the dispute resolution.","required":["outcome"],"properties":{"outcome":{"type":"string","description":"The outcome: `won` (funds stay) or `lost` (funds clawed back)."}},"title":"ResolveDisputeRequest"}}},"required":true}}

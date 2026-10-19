@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Token consumed — the payment method id"},"404":{"description":"Token not found"},"409":{"description":"Token already used or expired"}}}

@@ -11,7 +11,20 @@ Sentin8 Bill8:Reporting - report types, runs, scheduled reports.
 > served live at `GET /openapi.json`) - the source of truth is the
 > service’s own `#[utoipa::path]` annotations.
 
-**10 endpoints**.
+**11 endpoints** across 2 groups.
+
+## meta
+
+### `GET /v1/health`
+
+Health probe payload.
+
+**Responses**:
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Liveness (version, build) | - |
+
 
 ## reporting
 

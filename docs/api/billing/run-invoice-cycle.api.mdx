@@ -1,0 +1,71 @@
+---
+id: run-invoice-cycle
+title: "`POST /v1/internal/invoices/run` — the Cron proxy-back tick: find
+subscriptions due this cycle, aggregate usage, finalize invoices,
+charge via the payments public API. Idempotent per
+(subscription, cycle): a subscription with an open/paid/retrying
+invoice covering its current period is skipped."
+description: "`POST /v1/internal/invoices/run` — the Cron proxy-back tick: find"
+sidebar_label: "`POST /v1/internal/invoices/run` — the Cron proxy-back tick: find
+subscriptions due this cycle, aggregate usage, finalize invoices,
+charge via the payments public API. Idempotent per
+(subscription, cycle): a subscription with an open/paid/retrying
+invoice covering its current period is skipped."
+hide_title: true
+hide_table_of_contents: true
+api: eJztVMFu2zAM/RWCpw1Q4qSnQrd2pxyGFmt3SoJWkRmbiENpkuw2CwzsI/aF+5JBdrqlxXbYfScbFMlHvvfAIyZTRdRL3HDTsFS4Vug8BZPYyaJEjaGVB5bOsaUHe7ANocJA0TuJFFEf8WI2y5+Sog3scx1qXIwVEFoBH5ylGKnEvlcYybaB0wH18oiRJLFcahuc6KfAiVAv1/1avWn3eHtzdw9FNy9YEgUxTXGaKRahlUf48e07pJrgQ3AD4PNhsjF2B4ntTsOWpVxJbDe/ekYoW4JUc4RhKQWmqgJVJhG00VSkcpFp+CvBC5Jaia1NqAg6NgOaN4c9SYrg203DFq5uF1NYlLT3LpEk8BRW8u4cV41w7zUYOI/DE6cajIDzJIU3XBaBUjiwVCs5DQDWdRRYKuAUwbYhnDDYlcAR4o69p3KKCveUapfV8y4mVOhNqlHjXwlEhSxbl3VMnBpCPRjicvJii7eC3I3CwXXO0tdj1qDCK5bVb/KyKqOtFOwpDYvkURu2JJEytJh9Rv64uIebT3Dlja1pcjGd5enKDLhlCn9M6BV2FOI422w6H0N5+b2Rs9b/ffRvPnol+hHTwWcWEz2nwjeGJbPchia/jRZbYjcfzDSyO/yOW+ez0Uq+L3X2pF7i8bgxkT6Hpu9z+EtLIV+FtcLOBDabZjwGZ27O6mHf/wSyoq0H
+sidebar_class_name: "post api-method"
+info_path: docs/api/billing/bill-8-billing
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"`POST /v1/internal/invoices/run` — the Cron proxy-back tick: find\nsubscriptions due this cycle, aggregate usage, finalize invoices,\ncharge via the payments public API. Idempotent per\n(subscription, cycle): a subscription with an open/paid/retrying\ninvoice covering its current period is skipped."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/internal/invoices/run"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+`POST /v1/internal/invoices/run` — the Cron proxy-back tick: find
+subscriptions due this cycle, aggregate usage, finalize invoices,
+charge via the payments public API. Idempotent per
+(subscription, cycle): a subscription with an open/paid/retrying
+invoice covering its current period is skipped.
+
+<ParamsDetails>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./run-invoice-cycle.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./run-invoice-cycle.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

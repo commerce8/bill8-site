@@ -1,0 +1,68 @@
+---
+id: run-payout-schedules
+title: "`POST /v1/internal/payout-schedules/run` — the Cron proxy-back tick.
+Creates a payout for each enabled schedule whose available balance
+meets its minimum. At most one payout per tick (the balance guard
+itself enforces it: the available row lock serializes)."
+description: "`POST /v1/internal/payout-schedules/run` — the Cron proxy-back tick."
+sidebar_label: "`POST /v1/internal/payout-schedules/run` — the Cron proxy-back tick.
+Creates a payout for each enabled schedule whose available balance
+meets its minimum. At most one payout per tick (the balance guard
+itself enforces it: the available row lock serializes)."
+hide_title: true
+hide_table_of_contents: true
+api: eJztVMtu2zAQ/JXFnlpAfuUU8JbmFKBFisY9OUZCU2uLMLVUdyk7riGgH9Ev7JcUlOw0CQr0B3oSQO7ODmdmdcRkN4pmgYHKDQkuC4wNiU0+8k2JBqXlh8YeYpse1FVUtoEUCxTSJrKSojnixXSaPyWpE9/kVjQ4924LjURHqlRi1xWo5Frx6YBmcUQlTp4vjZPIZi8+EZrFslsWb3AeP9/ezWGym008JxK2YTLwGT3zmUjLj/Drx09IFcG1RM6Dnw6jlXVbSN5tx/d8LWQTKVgY2mEdBci6CojtKlAJZzzYV1EJ7M76kG9gZYNlR/dcEyUFnxRqz75u6zFcJaijJohMZ+CGpB8K7zKdUzNsWivlPfukFNZAvI7iKIOZnvWfaRL3EKLbgpJ4G/x30vdjLLCmVMVsSRM1YYGNTRUa/KcyWKDndcwOJZ8CocGVD+FydLL8reB3gzHwIReZj31RL24Z21WgEXGSA9SR6QDEG89UnB+pxUkDLSCJZV2TaOYevCNWyhzY1pnCp5s53H6Bq8a6ikYX42mmWebRa0/y14KuwB2JDiyn49lwlNWoLb+A/p+YU2Je+XrEdGiyPIme0qQJ1nOWr5WQ74YwLXA36+MyyNaH7LVwefVbzr+JKqfQLPB4XFmlrxK6Lh9/a0nygi8L3FnxmV+/1y/ym+3BrvsNXzKVfA==
+sidebar_class_name: "post api-method"
+info_path: docs/api/ledger/bill-8-ledger
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"`POST /v1/internal/payout-schedules/run` — the Cron proxy-back tick.\nCreates a payout for each enabled schedule whose available balance\nmeets its minimum. At most one payout per tick (the balance guard\nitself enforces it: the available row lock serializes)."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/internal/payout-schedules/run"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+`POST /v1/internal/payout-schedules/run` — the Cron proxy-back tick.
+Creates a payout for each enabled schedule whose available balance
+meets its minimum. At most one payout per tick (the balance guard
+itself enforces it: the available row lock serializes).
+
+<ParamsDetails>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./run-payout-schedules.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./run-payout-schedules.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

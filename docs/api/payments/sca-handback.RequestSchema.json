@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","description":"Request body for the SCA handback.","required":["handback_token"],"properties":{"handback_token":{"type":"string","description":"The single-use handback token issued at challenge creation."}},"title":"HandbackRequest"}}},"required":true}}

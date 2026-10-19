@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","description":"Request body for `POST /v1/disputes/{id}/evidence`.","required":["evidence_refs"],"properties":{"evidence_refs":{"type":"array","items":{"type":"string"},"description":"Storage references to evidence documents."}},"title":"SubmitEvidenceRequest"}}},"required":true}}

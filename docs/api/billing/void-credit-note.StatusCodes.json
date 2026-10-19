@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Credit note voided"},"404":{"description":"Credit note not found"},"409":{"description":"Already void"}}}

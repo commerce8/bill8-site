@@ -1,0 +1,71 @@
+---
+id: post-transaction
+title: "`POST /v1/balance-transactions` — post one double-entry movement."
+description: "The money path: BEGIN → tenant context → idempotency check →"
+sidebar_label: "`POST /v1/balance-transactions` — post one double-entry movement."
+hide_title: true
+hide_table_of_contents: true
+api: eJztV81u2zgQfpUBTwkgOYmTpl3dmmzR9WIdF4335AQ2LY5sNhSpkpQTwzDQ0z7AYp9hH6xPsjuUHMs/TVMgx/pimZr55v/zcME8nziWDJhCMUHLbiMm0KVWFl4azRLWnyLkRuMcCu6nCVy8e9+5gq9//Q0eNdceUqM9PvhwJAXmhfGo0zmkU0zv6PRGp6W1dHa0eoAZV1JwMhH0rLmPlflffGz8FMZccZ2iC694UaAW4Kd4o73l2vH0US0vPfe4oURQlaIp/dg8wIHjOYJ/OAyHl71ut9Nv3ei3YPETph4FjLlPp3BvpUcHV73+b52r93Ag8xpRRPDodi5dTtIRGHujpXZllslUovYgcCw9ZKUWDrhSkHGpoLAYB+DDFouYKdCGmDuCJawwzg8bEbGIWfxcovMXRsxZsmAhs9rTIy8KJdOgfPTJUWEWzKVTzDk9+XmBLGFmTBGx7QpSqAEXvAGyCkYjCFOOFcaovZ1DbmaYUxQHpaOMzCnfUPA5HTrgWtzosVRK6gk4tDNJ1ZlJTmLSQmqNc3H9ArrtLtwbe6cMFy4ETvalRUF9FvI0rHM7lIJFLLUots94bkpNsaxyzyLWSNYwhHwbscJSVr1EF9JUaa1T4ryVerKbkiAH3AEHganMuYJKtMWW+xzag5gZm3PPElaWweNNC5cBAhRO4ECg81JX3V5jHlZ2VrF91+HOdQ/O2iev162YGoEBZCehP+zrr6F1g6vOlDbFTS8bQz28w4azg7UBXSq1yx2XXCm0sSupe1Fs0MMdzgN6ZXHD7z24TwfQs3ISEqwnYLGOQYomfoX8bM/3Ih6M0im3ExzBEYwKPjelp8evX/6tErXTn98ta3c1dyTWYksCkV6RxgfjfH8N+LEaYbYkmfU8eVtiOHCF0a4agvbxMX1t0XiDOokDMAzeCxGMrlk6NlrNv8EsoU0pnUQ+K7IOxFJNG73i2vgp2m3KqCv+crwRVLlHMeT+ZUjk9+veVc0gYHRgz3tpccUmK1tPjabgHmMvc9zHJRV50FvneV78ZKk9LPXjkM2h2KSLn3S0hW+RVpstU6NgIkMbfmSIoxtNDw/ht5CuKD0OLc7QOq5Gh5sMd1GVr1EEYrdlxM6OT3cJrCudo/BpDXmTVNtqUndA3AjVJWHhogSctdu7OJ3Hve5xG41Xax18/fIPEAeRIYLxqIPLDtPSSj9nyWDBnutBMrhd3kYsRz81q4WPRYzWaJawo9nJ0T5lFjHi34/rVfDdA88LhU1qWhdwDwmw04y/eZWdn8WvXp+8js9enbfj8WmWxu30l/PT7PycZ/y8yZAb/bA9ps9F29kS1qCNmXou2saYrJF2W3r1jhhAZyb0eN1foU5xfa/ZbvVr1F7qN3ARivlHEArl3/r3oosP6onUGD3eSyKoRsBFsBoAR/9ZSqaoXSiU5jm50O30ofcR3hY8nWLcbh1XidJeZhLtXoFlxGhcKi+PWyfVEfVOznUDevShd92Hb3XRKMTy9LLf2k5K48bx89r3cte+ulEpW0eF4lJTQUurKOEVGQzY7IRFbC8d3EZsSsSRDNhiMeYO/7RquaTjzyVaYqTbiM24lXysKs6J2BS5oPYaLFg1ipdVXeN+tf3MuCrJpZ2lbxmtNN6mKRb+Sdkmt1EzUgT1zTU3gnQsv6dVjt+zhIX7bxVSsqjOFkxxPSn5hGQrTPr8B4Dn2HA=
+sidebar_class_name: "post api-method"
+info_path: docs/api/ledger/bill-8-ledger
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"`POST /v1/balance-transactions` — post one double-entry movement."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/balance-transactions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+The money path: BEGIN → tenant context → idempotency check →
+currency/currency validation → row-lock both balances → append the
+transaction → mutate both balance rows → outbox (same tx) → COMMIT.
+A rejected batch writes NOTHING (imbalanced, currency mismatch, or
+insufficient debit funds all fail pre-write).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./post-transaction.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./post-transaction.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

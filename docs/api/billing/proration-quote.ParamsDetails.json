@@ -1,0 +1,1 @@
+{"parameters":[{"name":"subscription_id","in":"query","description":"The subscription","required":true,"schema":{"type":"string","format":"uuid"}},{"name":"new_unit_amount","in":"query","description":"The new price's unit amount","required":true,"schema":{"type":"string"}}]}

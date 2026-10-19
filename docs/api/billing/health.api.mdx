@@ -1,0 +1,63 @@
+---
+id: health
+title: "Health probe payload."
+description: "Carries the binary's build identity (`version`/`build`, BUILDID-1) so"
+sidebar_label: "Health probe payload."
+hide_title: true
+hide_table_of_contents: true
+api: eJztU01v00AQ/SvDXJJI23z0VPmWtFWJKC1KWySURM3GnsZL17PL7tpgWZb4EfxCfgnaOJRSuHDHB1saz8yb9+ZNg0HuPCZLLChIXAvMyKdO2aAMY4Kn0jlFHkJOsFUsXd3zsC2VzkBlxEGFGvqbipxXhjejzf7XRsDsbn55Nj87mgzAmxWn0gapuOehMKyCcWCNLbUM5GFTyEcCH2Qo/abn4f354mZ+fQWp0WXB8P3rt4i+4tSwLwvFO5jNr6aLDz3/NIIApoocSPC5dJRB6mSgnoc+cfWqv+LT6eLi+v7dm4v7Q/cB5OQIHFnjAmVgWNcdSemoK4cDK/isQg5sVtzxzqXPQXIGbMA686A0QSHdI7nBEAUaS05G9eYZJpiT1CFHgY68NezJY9Lg8XgcP79LfakqYvIe+gdg0Qk9QIGp4UAcYpG0Vqt0jzD66GNlgz7NqZCYNG18BHpKS6dCjclyLeJmcxOH2VFAgVaGHBMcVZPR03SKH0xsFFTQhAluldYnR/GteIcvTXETVecTmMWsZNZl7Rfly+1ToheguDIqJS+iUJ0qAgoK5BTvolhapcSeIjTLIiK/nd/C9QKmVqY5HR0Px3G6/ZofFLm/JrQCD4phguPhpAtZ40Mh+Vnr13u2cZQtgZW1NjIbviTX/NL6v/n/2fyhtlHpQF/CyGqpOG6idDrq2vluidUExc+7WAvMjQ8x3DRb6enO6baN4U8luYN/K+mU3EZfLtftvjSLTlg2+Eg1JjhNU7LR2ZXUZYT/40Ta51dwcX6LbfsDfqu4Kw==
+sidebar_class_name: "get api-method"
+info_path: docs/api/billing/bill-8-billing
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Health probe payload."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/health"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Carries the binary's build identity (`version`/`build`, BUILDID-1) so
+captain's monitor populates `make status`'s VERSION column — the
+consuming BINARY's identity, never a shared crate's (env!(
+CARGO_PKG_VERSION) here reported only the bare crate version with no
+build hash and no profile marker).
+
+<ParamsDetails>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./health.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./health.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

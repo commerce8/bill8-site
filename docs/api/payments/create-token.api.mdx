@@ -1,0 +1,71 @@
+---
+id: create-token
+title: "`POST /v1/tokens` — mint a single-use token for a payment method."
+description: "Authorization: either the full `bill8:payments:tokens:write`"
+sidebar_label: "`POST /v1/tokens` — mint a single-use token for a payment method."
+hide_title: true
+hide_table_of_contents: true
+api: eJztVs1y2zYQfpWdPTkzpPyvuMzJ6fSQmWbisdWT7LEhcCkiAQEGWMpWNJzpQ/QJ+ySdBaVYslK3hx6rCylgfz7st/uBK2Q1j1hMsVXLhhxHvMuwpKiDadl4hwVedlz7YL4p+V8AGa4pANcEVWctPMyMtRfFxr9g/4VcLB6DYXq4dVH7ljL4dA0K2m5mTazVzBLoQCU5NsrCgcS6qQ3ZEpJ53pgQfICWQmM43joxSHHXKEDp9Kj8AGQ7cIrwBv78/Y/djLcuRQCtHJQenOfauDmQjQQHtKCwBJ9OtjnJJkmgr50JFCFB8Y9unWKEGfqWQkL0ocQCdSDFdJ/yYIbiSJHf+3KJxQq1d0yO5VW1rTU6OR5+jlLlFUZdU6PkjZctYYF+9pk040s6roeoMPPlMhXg4erTzQQOF8eHQ+kfRuvcJlC5Re19Q1z78t6UwnEbBDsbipJy3+QZR+Rg3BwzrHxoFGOBXWfKPVwT4WEIA0MYYL9hjeCg6SKDsoFUuQR6MpHfwXdewcRbpyAaN7eUd5EgUEWBnBYDMJz41CqUUCpWQgXZCpzwBhyUi4bjmxH2fYZs2ArunxMbEwm/rhn2sv9cGg4dpYXYeheHSpwcHcnjxdkSxsY4Jjn4f8bkkBd89c8kpoqnvfuFsh1hhvTUSl/eK94ndGvvNSZLxZSzaQj7DP8N6/0uiB/Y757x5pnRgejkBwex9oHzyeTXd6C9i11DJchAmxAZukgvuFyzONRLaOwzPDs63Wfqo4nSRLtqkeYVk8vZvsvVbtM6z1D5zpUJQCTdBcNLLKYrfEXpsJje9XcZDkGwwNZHYbxVXGOBz8RihtIn18/a8MuTalpLfzOGeFqpi/NqfJafvz1+m5+dj0/y2Wml8xP90/i0Go9VpcaJPVf5xMe6ZAls/l3W94gR8XUX8D6d6WqjeWnMahXmFDOZwc6VMYPSxLZjWYrEbCnVS9fKObJROtUaTcJMsUKnGkn/8cNERP+yVbqm/GR0hNJgkrQyFH5o0Ge4oBAHfEej42FJCtkotxV6b1YSaplO2JGQoeFEItULZRq9LMeWOv9/371y362HnemJD1urjBOGumCH5pVWn+LieKNU6WOilkEoprhazVSk34Lte1n+2lGQqbrLcKGCEcRphjKsSZXSIdMVfqGlCPlATT6R5GKelGdfevts43GpNbX8qu32rEo/YYaz9UXd+FJ8gnoUDVaPWGC66sU7iWtaW6FVbt6pudgOMeX3F0zUSo8=
+sidebar_class_name: "post api-method"
+info_path: docs/api/payments/bill-8-payments
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"`POST /v1/tokens` — mint a single-use token for a payment method."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/tokens"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Authorization: either the full `bill8:payments:tokens:write`
+scope, OR a publishable credential (the Shield scope-mirror permits
+the tokenization action for the publishable scope) — a publishable
+token can do nothing else (every other payments action requires its
+own scope).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./create-token.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./create-token.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

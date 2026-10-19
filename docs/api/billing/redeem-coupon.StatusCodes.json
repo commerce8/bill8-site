@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Coupon redeemed"},"404":{"description":"Coupon not found"},"409":{"description":"Limit exhausted or expired"}}}

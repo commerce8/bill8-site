@@ -11,7 +11,7 @@ Sentin8 Bill8:Payments - charges, refunds, disputes, settlement channels.
 > served live at `GET /openapi.json`) - the source of truth is the
 > service’s own `#[utoipa::path]` annotations.
 
-**21 endpoints**.
+**26 endpoints** across 2 groups.
 
 ## payments
 
@@ -229,6 +229,39 @@ Gate: `bill8:payments:disputes:write`
 | 404 | Dispute not found | - |
 | 409 | Dispute already closed | - |
 
+### `POST /v1/intents/{id}/handback`
+
+`POST /v1/intents/&#123;id&#125;/handback` - the SCA challenge handback (PAY-12). Completes a held charge from the CHANNEL-VERIFIED result - never a client-asserted outcome. The handback token is single-use.
+
+Gate: `bill8:payments:intents:write`
+
+**Request body** (`application/json`):
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `handback_token` | string | yes | The single-use handback token issued at challenge creation. |
+
+**Responses**:
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Held charge completed | - |
+| 404 | No held charge for the intent | - |
+| 409 | Handback token already used or expired | - |
+
+### `GET /v1/methods`
+
+The static capability matrix of the built-in method types. New methods register as channel data; the catalog reads from the channels' capability matrices at runtime (methods ∪ across channels).
+
+Gate: `bill8:payments:read`
+
+**Responses**:
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Capability matrix of the built-in method types | `MethodCatalogEntry`[] |
+| 403 | Missing payments read scope | - |
+
 ### `GET /v1/payment-intents`
 
 `GET /v1/payment-intents` - list intents for the env.
@@ -384,4 +417,51 @@ Gate: `bill8:payments:setup-intents:write`
 | 200 | Setup intent confirmed → processing | `SetupIntent` |
 | 404 | Setup intent not found | - |
 | 409 | Setup intent already terminal | - |
+
+### `POST /v1/tokens`
+
+`POST /v1/tokens` - mint a single-use token for a payment method.
+
+Gate: `bill8:payments:tokens:write`
+
+**Request body** (`application/json`):
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `payment_method_id` | string | yes | The payment method to tokenize (must already exist; the token is a single-use reference to it - card data itself never transits). |
+
+**Responses**:
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Token minted | `TokenResponse` |
+| 403 | Missing tokenization scope | - |
+| 404 | Payment method not found | - |
+
+### `POST /v1/tokens/{token_value}/consume`
+
+`POST /v1/tokens/&#123;token_value&#125;/consume` - consume a token (single-use guard: the first consume wins; every later consume of the same token is rejected).
+
+Gate: `bill8:payments:tokens:write`
+
+**Responses**:
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Token consumed - the payment method id | - |
+| 404 | Token not found | - |
+| 409 | Token already used or expired | - |
+
+
+## meta
+
+### `GET /v1/health`
+
+Health probe payload.
+
+**Responses**:
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Liveness (version, build) | - |
 

@@ -1,0 +1,50 @@
+{
+  "payments": {
+    "specPath": "openapi/payments-spec.json",
+    "outputDir": "docs/api/payments",
+    "sidebarOptions": {
+      "groupPathsBy": "tag",
+      "categoryLinkSource": "info"
+    }
+  },
+  "billing": {
+    "specPath": "openapi/billing-spec.json",
+    "outputDir": "docs/api/billing",
+    "sidebarOptions": {
+      "groupPathsBy": "tag",
+      "categoryLinkSource": "info"
+    }
+  },
+  "ledger": {
+    "specPath": "openapi/ledger-spec.json",
+    "outputDir": "docs/api/ledger",
+    "sidebarOptions": {
+      "groupPathsBy": "tag",
+      "categoryLinkSource": "info"
+    }
+  },
+  "webhooks": {
+    "specPath": "openapi/webhooks-spec.json",
+    "outputDir": "docs/api/webhooks",
+    "sidebarOptions": {
+      "groupPathsBy": "tag",
+      "categoryLinkSource": "info"
+    }
+  },
+  "risk": {
+    "specPath": "openapi/risk-spec.json",
+    "outputDir": "docs/api/risk",
+    "sidebarOptions": {
+      "groupPathsBy": "tag",
+      "categoryLinkSource": "info"
+    }
+  },
+  "reporting": {
+    "specPath": "openapi/reporting-spec.json",
+    "outputDir": "docs/api/reporting",
+    "sidebarOptions": {
+      "groupPathsBy": "tag",
+      "categoryLinkSource": "info"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Credit note issued"},"404":{"description":"Invoice not found"},"422":{"description":"Over-credit — nothing written"}}}

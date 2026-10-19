@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Tax rate saved"},"403":{"description":"Missing bill8:billing:tax-rates:write"}}}

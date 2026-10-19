@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","description":"Request body for `POST /v1/customers`.","required":["display_name"],"properties":{"display_name":{"type":"string","description":"Display name."},"email":{"type":["string","null"],"description":"Email address."}},"title":"CreateCustomerRequest"}}},"required":true}}

@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Held charge completed"},"404":{"description":"No held charge for the intent"},"409":{"description":"Handback token already used or expired"}}}

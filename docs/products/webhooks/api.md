@@ -11,7 +11,7 @@ Sentin8 Bill8:Webhooks - event materialization, signed delivery.
 > served live at `GET /openapi.json`) - the source of truth is the
 > service’s own `#[utoipa::path]` annotations.
 
-**5 endpoints**.
+**6 endpoints** across 2 groups.
 
 ## webhooks
 
@@ -86,4 +86,17 @@ Gate: `bill8:webhooks:endpoints:write`
 | --- | --- | --- |
 | 200 | Endpoint created | `WebhookEndpoint` |
 | 403 | Missing `bill8:webhooks:endpoints:write` | - |
+
+
+## meta
+
+### `GET /v1/health`
+
+Health probe payload.
+
+**Responses**:
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Liveness (version, build) | - |
 

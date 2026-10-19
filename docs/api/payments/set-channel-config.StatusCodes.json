@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Default channel saved"},"403":{"description":"Missing bill8:payments:routing:write"}}}

@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","description":"Request body for `PUT /v1/channel-config`.","required":["default_channel"],"properties":{"default_channel":{"type":"string","format":"uuid"}},"title":"SetChannelConfigRequest"}}},"required":true}}

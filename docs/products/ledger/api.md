@@ -11,7 +11,7 @@ Sentin8 Bill8:Ledger - double-entry money engine, balances, payouts, transfers.
 > served live at `GET /openapi.json`) - the source of truth is the
 > service’s own `#[utoipa::path]` annotations.
 
-**17 endpoints**.
+**18 endpoints** across 2 groups.
 
 ## ledger
 
@@ -309,4 +309,17 @@ Gate: `bill8:ledger:transfers:write`
 | 200 | Transfer created | `Transfer` |
 | 403 | Missing `bill8:ledger:transfers:write` | - |
 | 422 | Insufficient funds - nothing written | - |
+
+
+## meta
+
+### `GET /v1/health`
+
+Health probe payload.
+
+**Responses**:
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Liveness (version, build) | - |
 

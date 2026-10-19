@@ -11,7 +11,20 @@ Sentin8 Bill8:Risk - rules, screening, review queue.
 > served live at `GET /openapi.json`) - the source of truth is the
 > service’s own `#[utoipa::path]` annotations.
 
-**5 endpoints**.
+**6 endpoints** across 2 groups.
+
+## meta
+
+### `GET /v1/health`
+
+Health probe payload.
+
+**Responses**:
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Liveness (version, build) | - |
+
 
 ## risk
 

@@ -1,4 +1,4 @@
-# README.md: Bill8:Site - bill8.dev
+# Bill8:Site - bill8.dev
 
 > The Bill8 public website at [bill8.dev](https://bill8.dev): every
 > product, app, and SDK of the vertical, with its domain invariants

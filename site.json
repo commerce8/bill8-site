@@ -3,7 +3,7 @@
   "name": "Bill8",
   "org": "commerce8",
   "domain": "bill8.dev",
-  "tagline": "Open-Source Post-Quantum Billing & Payments Platform - Invoicing and Collection That Heals and Scales Itself.",
+  "tagline": "Open-Source Secure Post-Quantum-Safe Billing & Payment Platform That Heals and Scales Itself.",
   "accent": "#7B4FBF",
   "pillarsLead": "Bill8 inherits the Sentin8 security model and adds commerce guarantees - one money authority, screened charges, and signed webhook delivery.",
   "pillars": [

@@ -3,7 +3,7 @@
   "name": "Bill8",
   "org": "commerce8",
   "domain": "bill8.dev",
-  "tagline": "Open-Source Post-Quantum Billing & Payments Platform (Apache 2.0): invoicing and collection in Rust - heals and scales itself.",
+  "tagline": "Open-Source Post-Quantum Billing & Payments Platform - Invoicing and Collection That Heals and Scales Itself.",
   "accent": "#7B4FBF",
   "pillarsLead": "Bill8 inherits the Sentin8 security model and adds commerce guarantees - one money authority, screened charges, and signed webhook delivery.",
   "pillars": [
@@ -172,5 +172,6 @@
       "label": "Bill8 payments settle through Bank8:Payments",
       "url": "https://bank8.dev/docs/products/payments/"
     }
-  ]
+  ],
+  "heroTagline": "Open-Source Post-Quantum Billing & Payments Platform - invoicing and collection; heals and scales itself."
 }

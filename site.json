@@ -4,6 +4,9 @@
   "org": "commerce8",
   "domain": "bill8.dev",
   "tagline": "Open-Source Secure Post-Quantum-Safe Billing & Payment Platform That Heals and Scales Itself.",
+  "heroEyebrow": "Open-Source Billing & Payments",
+  "heroTitle": "Bill8: Autonomous Quantum-Safe Billing & Payments",
+  "heroDescription": "Recurring revenue and payment collection in one vertical: payment intents from authorization through capture and settlement to refunds and disputes; subscriptions with proration, invoices, metered usage, coupons and credits; fraud and sanctions screening before money moves; and signed, retried webhooks to merchant endpoints. One ledger mutates every balance - no service writes money on its own.",
   "accent": "#7B4FBF",
   "pillarsLead": "Bill8 inherits the Sentin8 security model and adds commerce guarantees - one money authority, screened charges, and signed webhook delivery.",
   "pillars": [
@@ -172,6 +175,5 @@
       "label": "Bill8 payments settle through Bank8:Payments",
       "url": "https://bank8.dev/docs/products/payments/"
     }
-  ],
-  "heroTagline": "Open-Source Post-Quantum Billing & Payments Platform - invoicing and collection; heals and scales itself."
+  ]
 }

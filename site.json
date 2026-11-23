@@ -6,7 +6,7 @@
   "tagline": "Open-Source Secure Post-Quantum-Safe Billing & Payment Platform That Heals and Scales Itself.",
   "heroEyebrow": "Open-Source Billing & Payments",
   "heroTitle": "Bill8: Autonomous Quantum-Safe Billing & Payments",
-  "heroDescription": "Recurring revenue and payment collection in one vertical: payment intents from authorization through capture and settlement to refunds and disputes; subscriptions with proration, invoices, metered usage, coupons and credits; fraud and sanctions screening before money moves; and signed, retried webhooks to merchant endpoints. One ledger mutates every balance - no service writes money on its own.",
+  "heroDescription": "Recurring revenue and payments in one vertical. Intents through capture, refunds and disputes, subscriptions with proration, fraud screening, and signed retried webhooks.",
   "accent": "#7B4FBF",
   "pillarsLead": "Bill8 inherits the Sentin8 security model and adds commerce guarantees - one money authority, screened charges, and signed webhook delivery.",
   "pillars": [
